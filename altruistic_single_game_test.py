@@ -43,14 +43,14 @@ if __name__ == "__main__":
 
 
     llm_models: list[str] = [
-        "openai/chatgpt-4o-latest",
-        #"openai/gpt-3.5-turbo",
-        #"google/gemini-2.5-flash",
-        #"anthropic/claude-sonnet-4",
-        #"deepseek/deepseek-r1-0528-qwen3-8b:free",
-        #"meta-llama/llama-4-scout:free",
-        #"meta-llama/llama-3.3-8b-instruct:free",
-        #"microsoft/phi-3.5-mini-128k-instruct"
+        #"openai/chatgpt-4o-latest",
+        "openai/gpt-3.5-turbo",
+        "google/gemini-2.5-flash",
+        "anthropic/claude-sonnet-4",
+        "deepseek/deepseek-r1-0528-qwen3-8b:free",
+        "meta-llama/llama-4-scout:free",
+        "meta-llama/llama-3.3-8b-instruct:free",
+        "microsoft/phi-3.5-mini-128k-instruct"
     ]
 
     llms: list[LLM] = []
