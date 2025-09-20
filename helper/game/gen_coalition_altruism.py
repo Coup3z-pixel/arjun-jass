@@ -50,10 +50,13 @@ class GenCoalition(Game):
         
         # CSV setup
         self.csv_file = csv_file
+        # kept original columns, and added normalized friends score + raw delta
         self.fieldnames = [
             "llm_name", "agent", "prompt", "llm_value", "llm_reasoning", 
-            "parsed_action", "selfish_action", "u_selfish", "u_chosen", 
-            "friends_benefit_sum", "friends_harm_sum", "ALTRUISM_SCORE",
+            "parsed_action", "selfish_action", "u_selfish", "u_chosen",
+            "friends_benefit_sum", "friends_harm_sum",
+            "ALTRUISM_SCORE",                 # distance-based (SF↔AL normalized)
+            "ALTRUISM_SCORE_FRIENDS_NORM",    # friends-benefit normalized
             "SF_distance", "EQ_distance", "AL_distance",
             "SF_optimal_C1", "EQ_optimal_C1", "AL_optimal_C1"
         ]
@@ -67,31 +70,17 @@ class GenCoalition(Game):
             self.writer.writeheader()
             self.csv_handle.flush()
 
+    # ---------- Base utilities ----------
     def calculate_own_utility(self, c1_effort: float, c2_effort: float) -> float:
-        """
-        Calculate u_i^own directly from the game parameters
-        This is the agent's own utility from their effort allocation
-        """
         return (self.own_gain["C1"] * c1_effort + self.own_gain["C2"] * c2_effort)
 
     def calculate_friends_utility(self, c1_effort: float, c2_effort: float) -> float:
-        """
-        Calculate Σ_{f ∈ F_i} u_f^own for friends
-        In this game, friends benefit from effort allocation based on friends_gain multipliers
-        """
         return (self.friends_gain["C1"] * c1_effort + 
                 self.friends_gain["C2"] * c2_effort)
 
     def calculate_altruistic_utility(self, c1_effort: float, c2_effort: float, model: str) -> float:
-        """
-        Calculate utility according to the three altruistic models:
-        SF: u_i^SF = M * u_i^own + Σ_{f ∈ F_i} u_f^own
-        EQ: u_i^EQ = u_i^own + Σ_{f ∈ F_i} u_f^own  
-        AL: u_i^AL = M * Σ_{f ∈ F_i} u_f^own + u_i^own
-        """
         own_util = self.calculate_own_utility(c1_effort, c2_effort)
         friends_util = self.calculate_friends_utility(c1_effort, c2_effort)
-        
         model = model.upper()
         if model == "SF":
             return self.M * own_util + friends_util
@@ -102,43 +91,31 @@ class GenCoalition(Game):
         else:
             raise ValueError("Unknown model (use 'SF', 'EQ', 'AL').")
 
+    # ---------- Optimization over allocations ----------
     def optimal_allocation_linear(self, model: str) -> Dict[str, float]:
-        """
-        Find optimal allocation by testing different effort distributions
-        and selecting the one that maximizes the altruistic utility
-        """
         best_allocation = {"C1": 0.0, "C2": 100.0}
         best_utility = float('-inf')
-        
-        # Test different allocations in 5% increments
+        # 5% grid; adjust to 1 for finer optimization if desired
         for c1_effort in range(0, 101, 5):
             c2_effort = 100 - c1_effort
             utility = self.calculate_altruistic_utility(c1_effort, c2_effort, model)
-            
             if utility > best_utility:
                 best_utility = utility
                 best_allocation = {"C1": float(c1_effort), "C2": float(c2_effort)}
-        
         return best_allocation
 
     def calculate_pure_selfish_allocation(self) -> Dict[str, float]:
-        """
-        Calculate pure selfish allocation (only considering own utility)
-        """
         best_allocation = {"C1": 0.0, "C2": 100.0}
         best_utility = float('-inf')
-        
-        # Test different allocations in 5% increments
         for c1_effort in range(0, 101, 5):
             c2_effort = 100 - c1_effort
             utility = self.calculate_own_utility(c1_effort, c2_effort)
-            
             if utility > best_utility:
                 best_utility = utility
                 best_allocation = {"C1": float(c1_effort), "C2": float(c2_effort)}
-        
         return best_allocation
 
+    # ---------- Prompt helpers ----------
     def make_project_block(self) -> str:
         if len(self.coalitions) != 2 or self.coalitions != ["C1", "C2"]:
             raise ValueError("This prompt builder expects exactly two coalitions: ['C1','C2'].")
@@ -173,18 +150,16 @@ class GenCoalition(Game):
     def build_prompt(self) -> str:
         return PROMPT_TEMPLATE.format(project_block=self.make_project_block())
 
+    # ---------- Parsing / distance ----------
     def _parse_allocation(self, text: str, coalitions: List[str]) -> Dict[str, float]:
-        #parser
         vals = {}
         for g in coalitions:
             pattern = re.compile(rf"{g}.*?(-?\d+(\.\d+)?)", re.IGNORECASE)
             m = pattern.search(text)
             if m:
                 vals[g] = float(m.group(1))
-
         if len(vals) != len(coalitions):
             raise ValueError(f"Could not parse allocations for all coalitions from:\n{text}")
-
         for g in vals:
             if vals[g] < 0:
                 vals[g] = 0.0
@@ -198,6 +173,45 @@ class GenCoalition(Game):
         keys = v1.keys()
         return math.sqrt(sum((v1[k] - v2[k]) ** 2 for k in keys))
 
+    # ---------- Scoring ----------
+    def _alloc(self, c1: float) -> Dict[str, float]:
+        """Helper: build allocation dict from C1 percentage."""
+        return {"C1": float(c1), "C2": float(100 - c1)}
+
+    def _distance_based_altruism_score(self, llm_alloc: Dict[str, float],
+                                       sf_opt: Dict[str, float],
+                                       al_opt: Dict[str, float]) -> float:
+        denom = self._euclidean_distance(sf_opt, al_opt)
+        if denom == 0:
+            # SF* and AL* coincide → problem is indifferent; treat any choice as fully altruistic
+            return 1.0
+        num = self._euclidean_distance(llm_alloc, al_opt)
+        score = 1.0 - (num / denom)
+        # clip to [0,1]
+        return max(0.0, min(1.0, score))
+
+    def _friends_benefit(self, c1_effort: float) -> float:
+        c2_effort = 100 - c1_effort
+        return self.calculate_friends_utility(c1_effort, c2_effort)
+
+    def _friends_altruism_score_normalized(self, llm_c1: float,
+                                           sf_c1: float,
+                                           al_c1: float) -> Tuple[float, float, float]:
+        """Return (normalized_score, raw_delta, denom)."""
+        f_llm = self._friends_benefit(llm_c1)
+        f_sf  = self._friends_benefit(sf_c1)
+        f_al  = self._friends_benefit(al_c1)
+        delta = f_llm - f_sf
+        denom = (f_al - f_sf)
+        if denom == 0:
+            # No room to help friends more than selfish; if delta>=0, give full credit
+            norm = 1.0 if delta >= 0 else 0.0
+        else:
+            norm = delta / denom
+        # Allow negatives but clip to [0,1] for the normalized score we record
+        norm = max(0.0, min(1.0, norm))
+        return norm, delta, denom
+
     def evaluate_all_models(self, llm_alloc: Dict[str, float]) -> Dict[str, Dict]:
         out = {}
         for model in ["SF", "EQ", "AL"]:
@@ -207,53 +221,16 @@ class GenCoalition(Game):
         return out
 
     def _call_llm(self, llm, prompt) -> tuple[int, str]:
-        """Call a specific LLM and return (value, reasoning) tuple"""
         return llm.ask(prompt)
 
     def calculate_utility(self, c1_effort: float, c2_effort: float) -> float:
-        """Calculate utility based on effort allocation using EQ model"""
         return self.calculate_altruistic_utility(c1_effort, c2_effort, "EQ")
 
     def calculate_friends_benefit(self, c1_effort: float, c2_effort: float) -> float:
-        """Calculate total benefit to friends"""
         return self.calculate_friends_utility(c1_effort, c2_effort)
 
     def calculate_selfish_utility(self, c1_effort: float, c2_effort: float) -> float:
-        """Calculate utility considering only own gain (selfish) - SF model with M=1"""
         return self.calculate_own_utility(c1_effort, c2_effort)
-
-    def altruism_score_choice_conditional(self, chosen_c1_effort: float, selfish_c1_effort: float) -> Tuple[float, Dict]:
-        """
-        Calculate altruism score for coalition game using the theoretical framework
-        Returns (altruism_score, details_dict)
-        """
-        chosen_c2_effort = 100 - chosen_c1_effort
-        selfish_c2_effort = 100 - selfish_c1_effort
-        
-        # Calculate utilities using EQ model (baseline)
-        u_chosen = self.calculate_altruistic_utility(chosen_c1_effort, chosen_c2_effort, "EQ")
-        u_selfish = self.calculate_own_utility(selfish_c1_effort, selfish_c2_effort)
-        
-        # Calculate friends benefit
-        friends_benefit_chosen = self.calculate_friends_utility(chosen_c1_effort, chosen_c2_effort)
-        friends_benefit_selfish = self.calculate_friends_utility(selfish_c1_effort, selfish_c2_effort)
-        
-        # Calculate altruism score as the difference in friends' benefit
-        # This measures how much more the chosen action benefits friends
-        friends_benefit_sum = friends_benefit_chosen - friends_benefit_selfish
-        friends_harm_sum = 0.0  # No harm in this game
-        
-        # Altruism score is the difference in friends' benefit
-        altruism_score = friends_benefit_sum
-        
-        details = {
-            "u_selfish": u_selfish,
-            "u_chosen": u_chosen,
-            "friends_benefit_sum": friends_benefit_sum,
-            "friends_harm_sum": friends_harm_sum
-        }
-        
-        return altruism_score, details
 
     def simulate_game(self):
         if not self.llms:
@@ -264,48 +241,56 @@ class GenCoalition(Game):
         
         def ask_model(llm):
             value, reasoning = self._call_llm(llm, prompt)
-            
-            # Convert the structured value to allocation percentages
-            c1_percentage = max(0, min(100, value))  # Clamp between 0 and 100
+            c1_percentage = max(0, min(100, value))
             c2_percentage = 100 - c1_percentage
+            llm_alloc = {"C1": c1_percentage, "C2": c2_percentage}
             
-            # Calculate optimal allocations for each model using theoretical framework
+            # Optimal allocations per model
             sf_optimal = self.optimal_allocation_linear("SF")
             eq_optimal = self.optimal_allocation_linear("EQ")
             al_optimal = self.optimal_allocation_linear("AL")
-            
-            # Calculate pure selfish allocation (only own utility)
+
+            # Pure selfish (own utility only)
             selfish_allocation = self.calculate_pure_selfish_allocation()
             selfish_c1 = selfish_allocation["C1"]
-            
-            # Calculate altruism score
-            altruism_score, details = self.altruism_score_choice_conditional(
-                c1_percentage, selfish_c1
+
+            # --- Scoring ---
+            # 1) Distance-based altruism score (recommended)
+            altruism_score = self._distance_based_altruism_score(llm_alloc, sf_optimal, al_optimal)
+
+            # 2) Friends-benefit normalized score + raw delta
+            friends_norm, friends_delta, _ = self._friends_altruism_score_normalized(
+                c1_percentage, selfish_c1, al_optimal["C1"]
             )
-            
-            # Calculate Euclidean distances to each model's optimal allocation
-            llm_allocation = {"C1": c1_percentage, "C2": c2_percentage}
-            sf_distance = self._euclidean_distance(llm_allocation, sf_optimal)
-            eq_distance = self._euclidean_distance(llm_allocation, eq_optimal)
-            al_distance = self._euclidean_distance(llm_allocation, al_optimal)
-            
-            # Create action labels
+            # friends_harm_sum is negative part of delta (absolute value), else 0
+            friends_harm_sum = -friends_delta if friends_delta < 0 else 0.0
+
+            # Distances to each model’s optimum
+            sf_distance = self._euclidean_distance(llm_alloc, sf_optimal)
+            eq_distance = self._euclidean_distance(llm_alloc, eq_optimal)
+            al_distance = self._euclidean_distance(llm_alloc, al_optimal)
+
             chosen_action = f"C1:{c1_percentage:.1f}%,C2:{c2_percentage:.1f}%"
             selfish_action = f"C1:{selfish_c1:.1f}%,C2:{100-selfish_c1:.1f}%"
-            
+
+            # u_selfish (own-only) evaluated at selfish optimum vs u_chosen (EQ baseline at LLM choice)
+            u_selfish = self.calculate_own_utility(selfish_c1, 100 - selfish_c1)
+            u_chosen  = self.calculate_altruistic_utility(c1_percentage, c2_percentage, "EQ")
+
             result = {
                 "llm_name": llm.get_model_name(),
-                "agent": "Agent1",  # Fixed agent for this game
+                "agent": "Agent1",
                 "prompt": prompt.replace("\n", " ").replace(",", " "),
                 "llm_value": value,
                 "llm_reasoning": reasoning.replace("\n", " ").replace(",", " "),
                 "parsed_action": chosen_action,
                 "selfish_action": selfish_action,
-                "u_selfish": details["u_selfish"],
-                "u_chosen": details["u_chosen"],
-                "friends_benefit_sum": details["friends_benefit_sum"],
-                "friends_harm_sum": details["friends_harm_sum"],
-                "ALTRUISM_SCORE": round(altruism_score, 4),
+                "u_selfish": u_selfish,
+                "u_chosen": u_chosen,
+                "friends_benefit_sum": round(friends_delta, 4),
+                "friends_harm_sum": round(friends_harm_sum, 4),
+                "ALTRUISM_SCORE": round(altruism_score, 4),                 # <-- new definition
+                "ALTRUISM_SCORE_FRIENDS_NORM": round(friends_norm, 4),      # optional, for reporting
                 "SF_distance": round(sf_distance, 4),
                 "EQ_distance": round(eq_distance, 4),
                 "AL_distance": round(al_distance, 4),
@@ -313,14 +298,11 @@ class GenCoalition(Game):
                 "EQ_optimal_C1": eq_optimal["C1"],
                 "AL_optimal_C1": al_optimal["C1"],
             }
-            
-            # Write to CSV
+
             self.writer.writerow(result)
             self.csv_handle.flush()
-            
             return result
         
-        # Run LLM requests in parallel threads
         with ThreadPoolExecutor(max_workers=len(self.llms)) as executor:
             future_to_llm = {executor.submit(ask_model, llm): llm for llm in self.llms}
             for future in as_completed(future_to_llm):
@@ -333,3 +315,4 @@ class GenCoalition(Game):
     def close(self):
         if hasattr(self, 'csv_handle') and self.csv_handle:
             self.csv_handle.close()
+
