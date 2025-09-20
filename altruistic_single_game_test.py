@@ -13,6 +13,7 @@ from helper.game.social_context import SocialContext
 from helper.llm.AltruismInjection import AltruismInjection
 from helper.llm.LLM import LLM
 from helper.game.hedonic_game import HedonicGame
+from helper.game.gen_coalition_altruism import GenCoalition
 
 from helper.game.prisoner_dilemma import PrisonersDilemma
 
@@ -20,7 +21,8 @@ from helper.game.prisoner_dilemma import PrisonersDilemma
 if __name__ == "__main__":
     type_of_games: list[Type[Game]] = [
             #PrisonersDilemma,
-            HedonicGame,
+            #HedonicGame,
+            GenCoalition,
             # AtomicCongestion,
             # SocialContext,
             # NonAtomicCongestion
@@ -30,7 +32,8 @@ if __name__ == "__main__":
 
     file_names: list[str] = [
             #"PrisonnersDilemma.csv",
-            "HedonicGame.csv",
+            #"HedonicGame.csv",
+            "GenCoalition.csv",
             # "AtomicCongestion.csv",
             # "SocialContext.csv",
             # "NonAtomicCongestion.csv",
@@ -42,12 +45,12 @@ if __name__ == "__main__":
     llm_models: list[str] = [
         "openai/chatgpt-4o-latest",
         #"openai/gpt-3.5-turbo",
-        "google/gemini-2.5-flash",
-        "anthropic/claude-sonnet-4",
-        "deepseek/deepseek-r1-0528-qwen3-8b:free",
-        "meta-llama/llama-4-scout:free",
-        "meta-llama/llama-3.3-8b-instruct:free",
-        "microsoft/phi-3.5-mini-128k-instruct"
+        #"google/gemini-2.5-flash",
+        #"anthropic/claude-sonnet-4",
+        #"deepseek/deepseek-r1-0528-qwen3-8b:free",
+        #"meta-llama/llama-4-scout:free",
+        #"meta-llama/llama-3.3-8b-instruct:free",
+        #"microsoft/phi-3.5-mini-128k-instruct"
     ]
 
     llms: list[LLM] = []
@@ -95,7 +98,7 @@ if __name__ == "__main__":
     if all_results:
         # Generate filename with timestamp
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        output_filename = f"data/hedonic_altruistic_test_{timestamp}.csv"
+        output_filename = f"data/altruistic_gen_coalition_test_{timestamp}.csv"
         
         # Define the exact column order to match hedonic_game_results.csv
         column_order = [
@@ -113,7 +116,7 @@ if __name__ == "__main__":
         print(f"\n=== RESULTS SAVED ===")
         print(f"Total results: {len(all_results)}")
         print(f"Saved to: {output_filename}")
-        print(f"Format matches hedonic_game_results.csv")
+        print(f"Format matches altruism testing framework")
         
         # Show summary statistics
         print(f"\n=== SUMMARY STATISTICS ===")

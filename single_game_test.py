@@ -8,6 +8,7 @@ from helper.game.game import Game
 from helper.game.non_atomic import NonAtomicCongestion
 from helper.game.social_context import SocialContext
 from helper.game.hedonic_game import HedonicGame
+from helper.game.gen_coalition import GenCoalitionScenario
 from helper.llm.LLM import LLM
 
 from helper.game.prisoner_dilemma import PrisonersDilemma
@@ -16,22 +17,24 @@ from helper.game.prisoner_dilemma import PrisonersDilemma
 if __name__ == "__main__":
     type_of_games: list[Type[Game]] = [
             #PrisonersDilemma,
-            HedonicGame,
+            #HedonicGame,
             # AtomicCongestion,
             # SocialContext,
             # NonAtomicCongestion
             # CostSharingGame,
-            # DictatorGame
+            # DictatorGame,
+            GenCoalitionScenario,
     ]
 
     file_names: list[str] = [
             #"PrisonnersDilemma.csv",
-            "HedonicGame.csv",
+            #"HedonicGame.csv",
             # "AtomicCongestion.csv",
             # "SocialContext.csv",
             # "NonAtomicCongestion.csv",
             # "CostSharingGame.csv",
-            # "DictatorGame.csv"
+            # "DictatorGame.csv",
+            "GenCoalition.csv"
     ]
 
 
