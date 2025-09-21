@@ -53,7 +53,7 @@ class NonAtomicIndexer:
                 Xi = row["consumption"]
                 # Measures
                 rel_harvest = (Xi / Xmax)
-                marginal_impact = 1 - (impacts[idx] / max_impact)
+                marginal_impact = (impacts[idx] / max_impact)
                 deviation = (selfish_payoff - Xi) / selfish_payoff
 
                 altruism_data[llm]["relative_harvest_altruism"].append(rel_harvest)
