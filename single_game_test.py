@@ -40,7 +40,7 @@ async def main():
             #"GenCoalition.csv"
     ]
 
-
+#if it's from together , there must be a together: prefix
     llm_models: list[str] = [
         #"openai/chatgpt-4o-latest",
         #"openai/gpt-3.5-turbo",
