@@ -129,3 +129,89 @@ Max gradient norm:
 Weight decay:
 0
 
+
+
+Model:
+Qwen/Qwen3-14B-Base
+Training file:
+production_training.jsonl
+Training type:
+LoRA
+LoRA rank:
+64
+LoRA alpha:
+128
+LoRA dropout:
+0
+LoRA trainable modules:
+all-linear
+Training method:
+SFT
+Train on inputs:
+auto
+Epochs:
+1
+Checkpoints:
+1
+Evaluations:
+1
+Batch size:
+8
+Learning rate:
+0.00001
+Warmup ratio:
+0
+Max gradient norm:
+1
+Weight decay:
+0
+LR scheduler type:
+cosine
+Min LR ratio:
+0
+Scheduler cycles:
+0.5
+
+
+##Mixtral
+
+Model:
+mistralai/Mixtral-8x7B-v0.1
+Training file:
+production_training.jsonl
+Training type:
+LoRA
+LoRA rank:
+64
+LoRA alpha:
+128
+LoRA dropout:
+0
+LoRA trainable modules:
+all-linear
+Training method:
+SFT
+Train on inputs:
+auto
+Epochs:
+1
+Checkpoints:
+1
+Evaluations:
+1
+Batch size:
+8
+Learning rate:
+0.00001
+Warmup ratio:
+0
+Max gradient norm:
+1
+Weight decay:
+0
+LR scheduler type:
+cosine
+Min LR ratio:
+0
+Scheduler cycles:
+0.5

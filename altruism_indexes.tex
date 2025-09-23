@@ -1,12 +1,11 @@
 \begin{table}
 \caption{Comparison of altruism-related indexes across LLMs and games.}
 \label{tab:altruism_indexes}
-\begin{tabular}{ll}
+\begin{tabular}{lllllll}
 \toprule
- & Dictator Game \\
+ & Non-Atomic Congestion & Social Context & Dictator Game & Atomic Congestion & Cost Sharing & Prisoner's Dilemma \\
 \midrule
-ft:gpt-3.5-turbo-1106:personal::CH9gv0W1 & {'alpha': 1.0, 'beta': 1.1520282186948854, 'theta': 49.57016209199103, 'UD': 477.4174603174603} \\
-ft:gpt-4o-2024-08-06:personal::CH9tQaMU & {'alpha': 1.0, 'beta': 1.2392290249433107, 'theta': 69.04680217674888, 'UD': 500.0} \\
+together:jaspertsh08_a03a/Llama-3.3-70B-Instruct-Reference-8b98da31-79f56385 & {'relative_harvest_altruism': np.float64(0.3914398422090749), 'marginal_impact_resource': np.float64(0.4101853911629704), 'deviation_from_selfish_nash': np.float64(0.9810890535688298)} & {'deviation': 5.0, 'utility': 151.5, 'rank': None} & {'alpha': 1.0, 'beta': -0.6059139784946237, 'theta': 46.404029488044884, 'UD': 467.58730158730157} & {'social_welfare': -3.6, 'inequity_aversion': -3.6, 'svo_angle': None} & {'eq13': 1.0572528390020781, 'eq14': 0.06707817837325028} & {'cooperation_frequency': 0.228, 'avg_payoff_sacrifice': 0.4473684210526316, 'mutual_cooperation_sustainability': 0.6181818181818182} \\
 \bottomrule
 \end{tabular}
 \end{table}

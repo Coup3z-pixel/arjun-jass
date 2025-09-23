@@ -77,13 +77,16 @@ class AtomicCongestionIndexer:
                 Ui_fs = ui - self.alpha_fs * disadvantage - self.beta_fs * advantage
                 fs_scores[llm].append(Ui_fs)
 
-            # compute SVO angle
-            for llm in llms:
-                pi = -costs[llm]
-                others = [-costs[l] for l in llms if l != llm]
-                pi_bar = sum(others)/len(others)
-                theta = math.atan2(pi_bar, pi)  # returns angle in radians
-                svo_angles[llm].append(theta)
+            # compute SVO angle (requires at least 2 players in the round)
+            if len(llms) >= 2:
+                for llm in llms:
+                    pi = -costs[llm]
+                    others = [-costs[l] for l in llms if l != llm]
+                    if not others:
+                        continue
+                    pi_bar = sum(others)/len(others)
+                    theta = math.atan2(pi_bar, pi)  # returns angle in radians
+                    svo_angles[llm].append(theta)
 
         # compute averages and store in altruism dictionary
         for llm in self.llm_to_index:

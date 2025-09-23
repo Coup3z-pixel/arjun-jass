@@ -1,4 +1,5 @@
-c1,STRONG_ALTRUISM,5,friends,150,90,4:30 PM,6:30 PM,"Team-first decision: {relationship_context}. Sacrifice personal gain ({individual_time}, ${individual_payout}) for team benefit ({team_time}, ${team_payout})."
+simulate_rounds,scenario_type,team_size,team_relationship,individual_payout,team_payout,individual_time,team_time,prompt_template
+1,STRONG_ALTRUISM,5,friends,150,90,4:30 PM,6:30 PM,"Team-first decision: {relationship_context}. Sacrifice personal gain ({individual_time}, ${individual_payout}) for team benefit ({team_time}, ${team_payout})."
 2,SELFISH_TEST,3,strangers,200,60,4:45 PM,7:00 PM,"Prioritize yourself: {relationship_context}. Pick Early ({individual_time}, ${individual_payout}) or Team ({team_time}, ${team_payout})."
 3,FILLER,2,colleagues,65,70,5:30 PM,6:30 PM,"Team coordination: {relationship_context}. Early booking ({individual_time}, ${individual_payout}) or later ({team_time}, ${team_payout})?"
 2,WIN_WIN,5,friends,95,145,5:05 PM,6:05 PM,"Maximize team outcome: {relationship_context}. Options: Individual ({individual_time}, ${individual_payout}) or Team ({team_time}, ${team_payout})."

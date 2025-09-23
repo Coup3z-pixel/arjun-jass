@@ -20,24 +20,24 @@ from helper.game.prisoner_dilemma import PrisonersDilemma
 async def main():
     type_of_games: list[Type[Game]] = [
             #PrisonersDilemma,
-            HedonicGame,
+            #HedonicGame,
             #AtomicCongestion,
             #SocialContext,
             #NonAtomicCongestion,
             #CostSharingGame,
-            #DictatorGame,
-            GenCoalition,
+            DictatorGame,
+            #GenCoalition,
     ]
 
     file_names: list[str] = [
             #"PrisonnersDilemma.csv",
-            "HedonicGame.csv",
+            #"HedonicGame.csv",
             #"AtomicCongestion.csv",
             #"SocialContext.csv",
             #"NonAtomicCongestion.csv",
             #"CostSharingGame.csv",
-            #"DictatorGame.csv",
-            "GenCoalition.csv"
+            "DictatorGame.csv",
+            #"GenCoalition.csv"
     ]
 
 
@@ -52,8 +52,14 @@ async def main():
         #"microsoft/phi-3.5-mini-128k-instruct",
         #"ft:gpt-3.5-turbo-1106:personal::CH9gv0W1",
         #"ft:gpt-4o-2024-08-06:personal::CH9tQaMU",
-        "together:jaspertsh08_a03a/Llama-3.3-70B-Instruct-Reference-8b98da31-79f56385"
-        #"together:jaspertsh08_a03a/Llama-4-Scout-17B-16E-70144409-1afad6eb"
+        #"together:jaspertsh08_a03a/Llama-3.3-70B-Instruct-Reference-8b98da31-79f56385"
+        #"together:jaspertsh08_a03a/Llama-4-Scout-17B-16E-70144409-1afad6eb",
+        #"vertex:projects/buoyant-ground-472514-s0/locations/us-central1/models/4604485316777082880",
+        "together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7",
+        #"mistralai/mixtral-8x7b-instruct",
+        #"qwen/qwen3-14b",
+
+
     ]
 
     llms: list[LLM] = []
@@ -77,14 +83,20 @@ async def main():
         
         print(f"Starting {game_name} with config {config_file_name}")
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        output_file = f"data/togetherai_SFT_{game_name.lower()}_results_{timestamp}.csv"
+        output_file = f"data/Qwen_SFT_{game_name.lower()}_results_{timestamp}.csv"
         
         with open("config/" + config_file_name) as config_file:
             print("File Opened")
             game_configurations = csv.DictReader(config_file)
 
             for game_config in game_configurations:
-                for round in range(int(game_config['simulate_rounds'])):
+                # Be robust if simulate_rounds is missing or non-numeric
+                simulate_val = game_config.get('simulate_rounds', '1')
+                try:
+                    simulate_rounds = int(simulate_val)
+                except (TypeError, ValueError):
+                    simulate_rounds = 1
+                for round in range(simulate_rounds):
                     print(f"{game_name} - Round {round+1}")
                     
                     # Use correct parameter name based on game type

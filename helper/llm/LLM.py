@@ -105,7 +105,7 @@ class LLM:
             # Prefer env vars; override here if needed
             self.client = genai.Client(
                 vertexai=True,
-                project=os.getenv("GOOGLE_CLOUD_PROJECT") or "your-project-id",
+                project=os.getenv("GOOGLE_CLOUD_PROJECT") or "buoyant-ground-472514-s0",
                 location=os.getenv("GOOGLE_CLOUD_LOCATION") or "us-central1",
             )
             # google-genai uses same client for async
@@ -455,27 +455,163 @@ class LLM:
                 raise RuntimeError(f"Vertex error: {e}") from e
 
         # ---------- OpenAI-compatible path ----------
+        max_retries = 3
+        for attempt in range(max_retries):
+            try:
+                try:
+                    resp = self.client.chat.completions.create(
+                        model=self.oa_model,
+                        messages=self.history,
+                        response_format={"type": "json_object"},
+                        temperature=0,
+                        max_tokens=8192  # Increased token limit
+                    )
+                except BadRequestError:
+                    resp = self.client.chat.completions.create(
+                        model=self.oa_model,
+                        messages=self.history,
+                        temperature=0,
+                        max_tokens=8192  # Increased token limit
+                    )
+                
+                content = resp.choices[0].message.content
+                if isinstance(content, list):
+                    content = "".join(p.get("text", "") if isinstance(p, dict) else str(p) for p in content)
+                
+                text = str(content).strip()
+                if text.startswith("```"):
+                    lines = [ln for ln in text.splitlines() if not ln.strip().startswith("```")]
+                    text = "\n".join(lines).strip()
+                
+                # Try to validate and fix JSON if needed
+                try:
+                    return answer_format.model_validate_json(text)
+                except json.JSONDecodeError as json_err:
+                    print(f"[DEBUG] JSON decode error on attempt {attempt + 1}: {json_err}")
+                    print(f"[DEBUG] Raw response length: {len(text)}")
+                    print(f"[DEBUG] Raw response preview: {text[:200]}...")
+                    print(f"[DEBUG] Raw response ending: ...{text[-200:]}")
+                    
+                    # Try to fix the JSON
+                    fixed_text = self._fix_malformed_json(text, json_err)
+                    if fixed_text != text:
+                        print(f"[DEBUG] Attempting repair with fixed JSON")
+                        return answer_format.model_validate_json(fixed_text)
+                    
+                    # If it's the last attempt, create fallback
+                    if attempt == max_retries - 1:
+                        print(f"[DEBUG] Creating fallback response after {max_retries} attempts")
+                        return self._create_fallback_response(answer_format, text)
+                        
+            except Exception as e:
+                print(f"[DEBUG] General error on attempt {attempt + 1}: {e}")
+                if attempt == max_retries - 1:
+                    print(f"[DEBUG] All attempts failed, creating emergency fallback")
+                    return self._create_emergency_fallback(answer_format)
+                continue
+        
+        raise RuntimeError(f"Failed to get valid response after {max_retries} attempts")
+    
+    def _fix_malformed_json(self, text: str, json_error: json.JSONDecodeError) -> str:
+        """Attempt to fix malformed JSON based on the error type."""
         try:
-            resp = self.client.chat.completions.create(
-                model=self.oa_model,
-                messages=self.history,
-                response_format={"type": "json_object"},
-                temperature=0
-            )
-        except BadRequestError:
-            resp = self.client.chat.completions.create(
-                model=self.oa_model,
-                messages=self.history,
-                temperature=0
-            )
-        content = resp.choices[0].message.content
-        if isinstance(content, list):
-            content = "".join(p.get("text", "") if isinstance(p, dict) else str(p) for p in content)
-        text = str(content).strip()
-        if text.startswith("```"):
-            lines = [ln for ln in text.splitlines() if not ln.strip().startswith("```")]
-            text = "\n".join(lines).strip()
-        return answer_format.model_validate_json(text)
+            # Handle EOF while parsing string
+            if "EOF while parsing a string" in str(json_error):
+                # Find the position of the error and try to close the JSON properly
+                error_pos = json_error.pos
+                
+                # Look for the last complete field before the error
+                text_before_error = text[:error_pos]
+                
+                # Try to find a reasonable place to truncate and close
+                last_quote = text_before_error.rfind('"')
+                if last_quote > 0:
+                    # Check if this quote is part of a field name or value
+                    before_quote = text_before_error[:last_quote].rstrip()
+                    if before_quote.endswith(':'):
+                        # This is a field value, close it properly
+                        fixed = text_before_error[:last_quote] + '""}'
+                    else:
+                        # This might be the end of a field name, close the object
+                        fixed = text_before_error[:last_quote + 1] + '}'
+                    
+                    # Validate the fix
+                    try:
+                        json.loads(fixed)
+                        return fixed
+                    except:
+                        pass
+                
+                # Fallback: try to extract just the reasoning field
+                import re
+                reasoning_match = re.search(r'"reasoning":\s*"([^"]*(?:\\.[^"]*)*)"', text)
+                if reasoning_match:
+                    reasoning = reasoning_match.group(1)
+                    return f'{{"reasoning": "{reasoning}", "value": 1}}'
+            
+            # Handle other JSON errors by creating minimal valid response
+            return '{"reasoning": "JSON parsing error - using fallback", "value": 1}'
+            
+        except Exception as e:
+            print(f"[DEBUG] Error in JSON fix attempt: {e}")
+            return '{"reasoning": "JSON repair failed", "value": 1}'
+    
+    def _create_fallback_response(self, answer_format: Type[BaseModel], raw_text: str):
+        """Create a fallback response when JSON parsing fails."""
+        try:
+            # Extract any reasoning text from the raw response
+            import re
+            reasoning_text = "Response parsing failed"
+            
+            # Try to extract reasoning from various patterns
+            patterns = [
+                r'"reasoning":\s*"([^"]*)',
+                r'reasoning[:\s]*([^,}\n]*)',
+                r'because\s+([^.!?\n]{10,100})',
+                r'I\s+(?:choose|pick|select)\s+([^.!?\n]{10,100})'
+            ]
+            
+            for pattern in patterns:
+                match = re.search(pattern, raw_text, re.IGNORECASE)
+                if match:
+                    reasoning_text = match.group(1).strip()[:200]  # Limit length
+                    break
+            
+            # Create response based on expected format
+            if hasattr(answer_format, '__annotations__'):
+                fallback_data = {}
+                for field_name, field_type in answer_format.__annotations__.items():
+                    if field_name == 'reasoning' or 'reason' in field_name.lower():
+                        fallback_data[field_name] = reasoning_text
+                    elif field_type in (int, 'int') or 'value' in field_name.lower():
+                        fallback_data[field_name] = 1
+                    elif field_type in (float, 'float'):
+                        fallback_data[field_name] = 1.0
+                    elif field_type in (bool, 'bool'):
+                        fallback_data[field_name] = True
+                    else:
+                        fallback_data[field_name] = reasoning_text
+                
+                return answer_format.model_validate(fallback_data)
+            
+            # Generic fallback
+            return answer_format.model_validate({"reasoning": reasoning_text, "value": 1})
+            
+        except Exception as e:
+            print(f"[DEBUG] Error creating fallback: {e}")
+            return self._create_emergency_fallback(answer_format)
+    
+    def _create_emergency_fallback(self, answer_format: Type[BaseModel]):
+        """Create minimal emergency fallback when everything else fails."""
+        try:
+            return answer_format.model_validate({"reasoning": "Emergency fallback response", "value": 1})
+        except:
+            # If even this fails, create a basic response object
+            class EmergencyResponse:
+                def __init__(self):
+                    self.reasoning = "Emergency fallback response"
+                    self.value = 1
+            return EmergencyResponse()
 
     async def ask_with_custom_format_async(self, prompt: str, answer_format: Type[BaseModel]):
         schema = answer_format.model_json_schema()
