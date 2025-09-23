@@ -39,8 +39,8 @@ class PrisonersDilemmaIndexer:
 
                 try:
                     row['round'] = int(row['round'])
-                    row['llm_choice'] = row['llm_choice'].strip().upper()
-                    row['opponent_choice'] = row['opponent_choice'].strip().upper()
+                    row['llm_choice'] = row['llm_move'].strip().upper()
+                    row['opponent_choice'] = row['opponent_move'].strip().upper()
                     if row['llm_choice'] not in ['C', 'D'] or row['opponent_choice'] not in ['C', 'D']:
                         continue
                     self.data.append(row)

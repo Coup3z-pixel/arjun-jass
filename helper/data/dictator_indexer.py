@@ -30,9 +30,9 @@ class DictatorGameIndexer:
         df["endowment"] = pd.to_numeric(df["endowment"], errors="coerce")
         df["num_recipients"] = pd.to_numeric(df.get("num_recipients", 1), errors="coerce").fillna(1).astype(int)
 
-        # Extract Keep and Donate as percentages
-        df["keep_percent"] = df["response"].str.extract(r'Keep\s*(\d+)%').astype(float)
-        df["donate_percent"] = df["response"].str.extract(r'Donate\s*(\d+)%').astype(float)
+        # Use the existing keep and donate columns (they're already percentages)
+        df["keep_percent"] = pd.to_numeric(df["keep"], errors="coerce")
+        df["donate_percent"] = pd.to_numeric(df["donate"], errors="coerce")
 
         # Drop rows where percentages missing
         df = df.dropna(subset=["keep_percent", "donate_percent", "endowment"])

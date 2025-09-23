@@ -128,14 +128,14 @@ class DictatorGame(Game):
 
         def ask_model(llm):
             print(f"[DEBUG] Sending prompt to LLM {llm.get_model_name()}")
-            reasoning_tuple, keep_tuple,donate_tuple = llm.ask_with_custom_format(
+            response = llm.ask_with_custom_format(
                 prompt, DictatorGameAnswerFormat
             )
 
-            print(donate_tuple, keep_tuple, reasoning_tuple)
+            print(f"Response: {response}")
             row = {
                 "llm_name": llm.get_model_name(),
-                "response": reasoning_tuple[1].replace("\n", "").replace(",", " "),
+                "response": response.reasoning.replace("\n", "").replace(",", " "),
                 "scenario_type": self.config_dict["scenario_type"],
                 "endowment": self.config_dict["endowment"],
                 "num_recipients": self.config_dict["num_recipients"],
@@ -143,8 +143,8 @@ class DictatorGame(Game):
                 "project_context": self.config_dict["project_context"],
                 "team_relationship": self.config_dict["team_relationship"],
                 "prompt": prompt.replace("\n", " ").replace(",", " "),
-                "keep": keep_tuple[1],
-                "donate": donate_tuple[1],
+                "keep": response.keep_percent,
+                "donate": response.donate_percent,
             }
             return row
 

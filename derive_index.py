@@ -9,11 +9,12 @@ import pandas as pd
 # Dictionary to collect results across all indexers
 results = {}
 
+"""
 # ----------------------------
 # Non-Atomic Congestion Indexer
 # ----------------------------
 print("=== Non-Atomic Congestion Indexer ===")
-non_atomic_indexer = NonAtomicIndexer(csv_file="data/non_atomic_results.csv")
+non_atomic_indexer = NonAtomicIndexer(csv_file="data/SFT_nonatomiccongestion_results_20250921_134405.csv")
 for llm, value in non_atomic_indexer.altruism.items():
     results.setdefault(llm, {})["Non-Atomic Congestion"] = value
 
@@ -21,41 +22,46 @@ for llm, value in non_atomic_indexer.altruism.items():
 # Social Context Indexer
 # ----------------------------
 print("=== Social Context Indexer ===")
-social_context_indexer = SocialContextIndexer("data/social_context_results.csv")
+social_context_indexer = SocialContextIndexer("data/SFT_socialcontext_results_20250921_132729.csv")
 for llm, value in social_context_indexer.altruism.items():
     results.setdefault(llm, {})["Social Context"] = value
-
+"""
 # ----------------------------
 # Dictator Game Indexer
 # ----------------------------
 print("=== Dictator Game Indexer ===")
-dictator_indexer_obj = dictator_indexer.DictatorGameIndexer("data/dictator_game_results.csv")
+dictator_indexer_obj = dictator_indexer.DictatorGameIndexer("data/SFT_dictatorgame_results_20250921_144349.csv")
 for llm, value in dictator_indexer_obj.altruism.items():
     results.setdefault(llm, {})["Dictator Game"] = value
-
+    
+"""
 # ----------------------------
 # Atomic Congestion Indexer
 # ----------------------------
 print("=== Atomic Congestion Indexer ===")
-atomic_congestion_indexer_obj = atomic_congestion_indexer.AtomicCongestionIndexer("data/atomic_congestion_all.csv")
+atomic_congestion_indexer_obj = atomic_congestion_indexer.AtomicCongestionIndexer("data/SFT_atomiccongestion_results_20250921_125458.csv")
 for llm, measures in atomic_congestion_indexer_obj.altruism.items():
     results.setdefault(llm, {})["Atomic Congestion"] = measures
+
 
 # ----------------------------
 # Cost Sharing Scheduler Indexer
 # ----------------------------
 print("=== Cost Sharing Scheduler Indexer ===")
-cost_sharing_indexer_obj = cost_sharing_indexer.CostSharingSchedulerIndexer("data/cost_sharing_game_results.csv")
+cost_sharing_indexer_obj = cost_sharing_indexer.CostSharingSchedulerIndexer("data/SFT_cost_sharing_results_20250921_121716.csv")
 for llm, value in cost_sharing_indexer_obj.altruism.items():
     results.setdefault(llm, {})["Cost Sharing"] = value
+
 
 # ----------------------------
 # Prisoner's Dilemma Indexer
 # ----------------------------
 print("=== Prisoner's Dilemma Indexer ===")
-prisonner_dilemma_indexer_obj = PrisonersDilemmaIndexer("data/prisoner_dilemma.csv")
+prisonner_dilemma_indexer_obj = PrisonersDilemmaIndexer("data/SFT_prisonersdilemma_results_20250921_123838.csv")
 for llm, measures in prisonner_dilemma_indexer_obj.altruism.items():
     results.setdefault(llm, {})["Prisoner's Dilemma"] = measures
+
+"""
 
 # ----------------------------
 # Convert Results to Table
@@ -68,6 +74,7 @@ print(df)
 # ----------------------------
 # Export to LaTeX Table
 # ----------------------------
+
 latex_table = df.to_latex(
     index=True,
     caption="Comparison of altruism-related indexes across LLMs and games.",
