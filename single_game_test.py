@@ -83,7 +83,17 @@ async def main():
         
         print(f"Starting {game_name} with config {config_file_name}")
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        output_file = f"data/Qwen_SFT_{game_name.lower()}_results_{timestamp}.csv"
+        
+        # Extract model name and determine if it's SFT
+        model_name = llm_models[0] if llm_models else "unknown"
+        is_sft = "together:" in model_name.lower()
+        
+        # Clean model name for filename
+        clean_model_name = model_name.replace(":", "_").replace("/", "_").replace("-", "_")
+        if is_sft:
+            output_file = f"data/{clean_model_name}_SFT_{game_name.lower()}_results_{timestamp}.csv"
+        else:
+            output_file = f"data/{clean_model_name}_{game_name.lower()}_results_{timestamp}.csv"
         
         with open("config/" + config_file_name) as config_file:
             print("File Opened")

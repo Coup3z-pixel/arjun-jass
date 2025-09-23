@@ -496,12 +496,24 @@ class LLM:
                     fixed_text = self._fix_malformed_json(text, json_err)
                     if fixed_text != text:
                         print(f"[DEBUG] Attempting repair with fixed JSON")
-                        return answer_format.model_validate_json(fixed_text)
+                        try:
+                            return answer_format.model_validate_json(fixed_text)
+                        except:
+                            pass
                     
                     # If it's the last attempt, create fallback
                     if attempt == max_retries - 1:
                         print(f"[DEBUG] Creating fallback response after {max_retries} attempts")
                         return self._create_fallback_response(answer_format, text)
+                    continue
+                        
+                except Exception as e:
+                    print(f"[DEBUG] Pydantic validation error on attempt {attempt + 1}: {e}")
+                    # This is likely a pydantic validation error, not JSON parsing
+                    if attempt == max_retries - 1:
+                        print(f"[DEBUG] Creating fallback response after {max_retries} attempts")
+                        return self._create_fallback_response(answer_format, text)
+                    continue
                         
             except Exception as e:
                 print(f"[DEBUG] General error on attempt {attempt + 1}: {e}")
@@ -517,6 +529,8 @@ class LLM:
         try:
             # Handle EOF while parsing string
             if "EOF while parsing a string" in str(json_error):
+                print(f"[DEBUG] Attempting to fix EOF parsing error at position {json_error.pos}")
+                
                 # Find the position of the error and try to close the JSON properly
                 error_pos = json_error.pos
                 
@@ -538,18 +552,28 @@ class LLM:
                     # Validate the fix
                     try:
                         json.loads(fixed)
+                        print(f"[DEBUG] Successfully fixed JSON by closing string")
                         return fixed
-                    except:
-                        pass
+                    except Exception as fix_err:
+                        print(f"[DEBUG] Fix attempt failed: {fix_err}")
                 
-                # Fallback: try to extract just the reasoning field
+                # Try to extract reasoning and create minimal valid JSON
                 import re
-                reasoning_match = re.search(r'"reasoning":\s*"([^"]*(?:\\.[^"]*)*)"', text)
+                reasoning_match = re.search(r'"reasoning":\s*"([^"]*)', text)
                 if reasoning_match:
                     reasoning = reasoning_match.group(1)
-                    return f'{{"reasoning": "{reasoning}", "value": 1}}'
+                    # Clean up the reasoning text
+                    reasoning = reasoning.replace('"', '\\"').replace('\n', ' ').replace('\r', ' ')
+                    fallback_json = f'{{"reasoning": "{reasoning}", "value": 1}}'
+                    try:
+                        json.loads(fallback_json)
+                        print(f"[DEBUG] Created fallback JSON with extracted reasoning")
+                        return fallback_json
+                    except Exception as fallback_err:
+                        print(f"[DEBUG] Fallback JSON failed: {fallback_err}")
             
             # Handle other JSON errors by creating minimal valid response
+            print(f"[DEBUG] Creating minimal fallback JSON")
             return '{"reasoning": "JSON parsing error - using fallback", "value": 1}'
             
         except Exception as e:
@@ -583,6 +607,8 @@ class LLM:
                 for field_name, field_type in answer_format.__annotations__.items():
                     if field_name == 'reasoning' or 'reason' in field_name.lower():
                         fallback_data[field_name] = reasoning_text
+                    elif 'percent' in field_name.lower():
+                        fallback_data[field_name] = 50  # Default percentage
                     elif field_type in (int, 'int') or 'value' in field_name.lower():
                         fallback_data[field_name] = 1
                     elif field_type in (float, 'float'):
@@ -604,14 +630,41 @@ class LLM:
     def _create_emergency_fallback(self, answer_format: Type[BaseModel]):
         """Create minimal emergency fallback when everything else fails."""
         try:
-            return answer_format.model_validate({"reasoning": "Emergency fallback response", "value": 1})
-        except:
-            # If even this fails, create a basic response object
-            class EmergencyResponse:
-                def __init__(self):
-                    self.reasoning = "Emergency fallback response"
-                    self.value = 1
-            return EmergencyResponse()
+            # Try to create with minimal required fields
+            fallback_data = {
+                "reasoning": "Emergency fallback - JSON parsing failed",
+                "value": 1
+            }
+            
+            # Add other common fields that might be expected
+            if hasattr(answer_format, '__annotations__'):
+                for field_name, field_type in answer_format.__annotations__.items():
+                    if field_name not in fallback_data:
+                        if 'percent' in field_name.lower():
+                            fallback_data[field_name] = 50  # Default percentage
+                        elif field_type in (int, 'int'):
+                            fallback_data[field_name] = 1
+                        elif field_type in (float, 'float'):
+                            fallback_data[field_name] = 1.0
+                        elif field_type in (bool, 'bool'):
+                            fallback_data[field_name] = True
+                        elif field_type in (str, 'str'):
+                            fallback_data[field_name] = "Default response"
+            
+            return answer_format.model_validate(fallback_data)
+        except Exception as e:
+            print(f"[DEBUG] Even emergency fallback failed: {e}")
+            # Absolute last resort - try with just the most basic fields
+            try:
+                return answer_format.model_validate({
+                    "reasoning": "System error - using absolute fallback",
+                    "value": 1,
+                    "keep_percent": 50,
+                    "donate_percent": 50
+                })
+            except:
+                # Create the most basic possible response
+                return answer_format.model_validate({"reasoning": "Error", "value": 1})
 
     async def ask_with_custom_format_async(self, prompt: str, answer_format: Type[BaseModel]):
         schema = answer_format.model_json_schema()
