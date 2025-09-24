@@ -218,8 +218,27 @@ class LLM:
         if good is not None:
             try:
                 return format_class.model_validate(good)
-            except Exception:
-                pass
+            except Exception as e:
+                # Try to fix common issues
+                try:
+                    # Convert string numbers to integers if needed
+                    fixed_dict = {}
+                    for field_name, field_info in format_class.model_fields.items():
+                        if field_name in good:
+                            value = good[field_name]
+                            if field_info.annotation == int and isinstance(value, str):
+                                fixed_dict[field_name] = int(value)
+                            elif field_info.annotation == float and isinstance(value, str):
+                                fixed_dict[field_name] = float(value)
+                            else:
+                                fixed_dict[field_name] = value
+                        else:
+                            # Use default value if field is missing
+                            fixed_dict[field_name] = field_info.default if hasattr(field_info, 'default') else None
+                    
+                    return format_class.model_validate(fixed_dict)
+                except Exception:
+                    pass
 
         raise ValueError(f"Expected JSON matching {format_class.__name__} format. Got: {text[:200]}...")
 

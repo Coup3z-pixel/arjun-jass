@@ -23,7 +23,7 @@ from helper.game.prisoner_dilemma import PrisonersDilemma
 async def main():
     type_of_games: list[Type[Game]] = [
             #PrisonersDilemma,
-            HedonicGame,
+            #HedonicGame,
             #AtomicCongestion,
             #SocialContext,
             #NonAtomicCongestion,
@@ -34,7 +34,7 @@ async def main():
 
     file_names: list[str] = [
             #"PrisonnersDilemma.csv",
-            "HedonicGame.csv",
+            #"HedonicGame.csv",
             #"AtomicCongestion.csv",
             #"SocialContext.csv",
             #"NonAtomicCongestion.csv",
@@ -61,7 +61,7 @@ async def main():
         #"together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7",
         #"mistralai/mixtral-8x7b-instruct",
         #"qwen/qwen3-14b",
-        "together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3",
+        "together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-918d9e00",
     ]
 
     llms: list[LLM] = []

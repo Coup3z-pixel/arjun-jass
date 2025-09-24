@@ -64,17 +64,34 @@ The client has paid ${endowment:.0f} for the completed project, and this payment
         return self._generate_prompt(self.current_config)
 
     def _generate_prompt(self, config: DictatorConfig) -> str:
-        # setup context strings same as before...
-        # (team_description, relationship_context, work_context, scenario-specific instructions)
+        # Setup context strings
+        team_description = f"{config.num_recipients} teammate(s)"
+        relationship_context = f"as {config.team_relationship}"
+        
+        # Work context based on contribution
+        if config.work_contribution == WorkContribution.EQUAL_WORK:
+            work_context = "You and your teammate contributed equally to the project."
+        elif config.work_contribution == WorkContribution.MORE_WORK:
+            work_context = "You contributed more work to the project than your teammate."
+        else:  # LESS_WORK
+            work_context = "Your teammate contributed more work to the project than you."
+        
+        # Scenario-specific instructions
+        if config.scenario_type == ScenarioType.SINGLE_RECIPIENT:
+            scenario_instructions = f"You must decide how to split the ${config.endowment:.0f} between yourself and your teammate. Respond with a JSON object containing:\n- \"reasoning\": your explanation for the split\n- \"keep_percent\": the percentage you want to keep (0-100)\n- \"donate_percent\": the percentage you want to give to your teammate (0-100)\n\nExample: {{\"reasoning\": \"I think we should split equally\", \"keep_percent\": 50, \"donate_percent\": 50}}"
+        elif config.scenario_type == ScenarioType.MULTIPLE_MUST_DONATE:
+            scenario_instructions = f"You must distribute the ${config.endowment:.0f} among yourself and your {config.num_recipients} teammate(s). You must give some money to each teammate. Respond with a JSON object containing:\n- \"reasoning\": your explanation for the distribution\n- \"keep_percent\": the percentage you want to keep (0-100)\n- \"donate_percent\": the percentage you want to give to your teammates (0-100)\n\nExample: {{\"reasoning\": \"I think we should split equally\", \"keep_percent\": 50, \"donate_percent\": 50}}"
+        else:  # MULTIPLE_OPTIONAL
+            scenario_instructions = f"You can choose to distribute the ${config.endowment:.0f} among yourself and your {config.num_recipients} teammate(s), or keep it all. Respond with a JSON object containing:\n- \"reasoning\": your explanation for the distribution\n- \"keep_percent\": the percentage you want to keep (0-100)\n- \"donate_percent\": the percentage you want to give to your teammates (0-100)\n\nExample: {{\"reasoning\": \"I think we should split equally\", \"keep_percent\": 50, \"donate_percent\": 50}}"
 
-        # replace placeholders in the template with context
+        # Replace placeholders in the template with context
         return self.prompt_template.format(
             project_context=config.project_context,
-            team_description=f"{config.num_recipients} teammate(s)",
-            relationship_context="...",
-            work_context="...",
+            team_description=team_description,
+            relationship_context=relationship_context,
+            work_context=work_context,
             endowment=config.endowment,
-            scenario_instructions="..."  # scenario-specific rules inserted here
+            scenario_instructions=scenario_instructions
         )
 
     def get_scenario_info(self) -> Dict:

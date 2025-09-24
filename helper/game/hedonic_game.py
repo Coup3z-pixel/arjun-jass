@@ -64,13 +64,13 @@ class HedonicGame(Game):
     - Stay in your current group
     - Leave to be alone
 
-    IMPORTANT: You must respond with EXACTLY one of these values:
-    - 1 if you want to STAY in your current group
-    - 2 if you want to LEAVE to be alone
+    IMPORTANT: You must respond with a JSON object containing:
+    - "value": EXACTLY 1 if you want to STAY in your current group, or EXACTLY 2 if you want to LEAVE to be alone
+    - "reasoning": your explanation for this choice
+
+    Example: {{"value": 1, "reasoning": "I want to stay with my friends"}}
 
     NO OTHER VALUES ARE ACCEPTABLE. Only 1 or 2.
-
-    Provide your reasoning for your choice.
     """
 
     def base_utility(self, agent: str, group_name: str) -> float:
