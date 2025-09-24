@@ -44,58 +44,98 @@ class AtomicCongestionIndexer:
                 except ValueError:
                     continue  # skip malformed rows
 
+    def _parse_matrix(self, matrix_str):
+        mapping = {}
+        for entry in matrix_str.split(";"):
+            key, p1, p2 = entry.strip().split(":")
+            mapping[(key[:2], key[2:])] = (int(p1), int(p2))
+        return mapping
+
     def _compute_altruism(self):
-        """Compute all three altruism measures per LLM averaged across rounds."""
-        # group by round
+        """Compute altruism indices and related measures per LLM averaged across rounds."""
         rounds = defaultdict(list)
         for r in self.data:
             rounds[r['round']].append(r)
 
-        # temporary containers to collect per-round measures
+        altruism_index = defaultdict(list)
         sw_scores = defaultdict(list)
         fs_scores = defaultdict(list)
         svo_angles = defaultdict(list)
 
         for rnd, round_data in rounds.items():
-            # prepare costs for each player
-            costs = {r['llm']: r['travel_time'] for r in round_data}
-            llms = list(costs.keys())
+            for r in round_data:
+                llm = r['llm']
+                Ci = r['incremental_cost']   # already computed in _build_index
+                llm_choice = r['llm_choice']
+                opp_choice = r['opponent_choice']
+                matrix = self._parse_matrix(r['matrix'])
 
-            # compute Social Welfare weighting
-            total_cost = sum(costs.values())
-            for llm in llms:
-                ci = costs[llm]
+                # --- actual outcome ---
+                Ci_actual, Cj_actual = matrix[(llm_choice, opp_choice)]
+                SW = Ci_actual + Cj_actual
+
+                # --- counterfactuals ---
+                Ci_r1, Cj_r1 = matrix[("R1", opp_choice)]
+                Ci_r2, Cj_r2 = matrix[("R2", opp_choice)]
+                SW_r1 = Ci_r1 + Cj_r1
+                SW_r2 = Ci_r2 + Cj_r2
+
+                # pick SW-optimal counterfactual
+                if SW_r1 < SW_r2:
+                    Ci_adj = Ci_r1
+                elif SW_r2 < SW_r1:
+                    Ci_adj = Ci_r2
+                else:
+                    Ci_adj = Ci_actual
+
+                # --- alpha from Levine-style altruism ---
+                denom = Ci_adj - Ci_actual
+                if denom == 0:
+                    alpha = 1.0
+                else:
+                    alpha = (SW - Ci_actual) / denom
+                altruism_index[llm].append(alpha)
+
+            # --- social welfare utilities ---
+            total_cost = sum(r['incremental_cost'] for r in round_data)
+            for r in round_data:
+                llm = r['llm']
+                ci = r['incremental_cost']
                 others_cost = total_cost - ci
                 Ui_sw = - (1 - self.alpha_sw) * ci - self.alpha_sw * (ci + others_cost)
                 sw_scores[llm].append(Ui_sw)
 
-            # compute Fehr-Schmidt inequity aversion
-            for llm in llms:
-                ui = -costs[llm]  # transform to payoff
-                disadvantage = sum(max(uj - ui, 0) for other, uj in zip(llms, [-costs[l] for l in llms]) if other != llm)
-                advantage = sum(max(ui - uj, 0) for other, uj in zip(llms, [-costs[l] for l in llms]) if other != llm)
+            # --- Fehr–Schmidt inequity aversion ---
+            for r in round_data:
+                llm = r['llm']
+                ui = -r['incremental_cost']
+                others = [-rr['incremental_cost'] for rr in round_data if rr['llm'] != llm]
+                disadvantage = sum(max(uj - ui, 0) for uj in others)
+                advantage = sum(max(ui - uj, 0) for uj in others)
                 Ui_fs = ui - self.alpha_fs * disadvantage - self.beta_fs * advantage
                 fs_scores[llm].append(Ui_fs)
 
-            # compute SVO angle (requires at least 2 players in the round)
-            if len(llms) >= 2:
-                for llm in llms:
-                    pi = -costs[llm]
-                    others = [-costs[l] for l in llms if l != llm]
+            # --- SVO angle (requires 2+ players) ---
+            if len(round_data) >= 2:
+                for r in round_data:
+                    llm = r['llm']
+                    pi = -r['incremental_cost']
+                    others = [-rr['incremental_cost'] for rr in round_data if rr['llm'] != llm]
                     if not others:
                         continue
-                    pi_bar = sum(others)/len(others)
-                    theta = math.atan2(pi_bar, pi)  # returns angle in radians
+                    pi_bar = sum(others) / len(others)
+                    theta = math.atan2(pi_bar, pi)
                     svo_angles[llm].append(theta)
 
-        # compute averages and store in altruism dictionary
+        # --- average results ---
         for llm in self.llm_to_index:
             self.altruism[llm] = {
-                "social_welfare": sum(sw_scores[llm])/len(sw_scores[llm]) if sw_scores[llm] else None,
-                "inequity_aversion": sum(fs_scores[llm])/len(fs_scores[llm]) if fs_scores[llm] else None,
-                "svo_angle": sum(svo_angles[llm])/len(svo_angles[llm]) if svo_angles[llm] else None
+                "alpha_index": sum(altruism_index[llm]) / len(altruism_index[llm]) if altruism_index[llm] else None,
+                "social_welfare": sum(sw_scores[llm]) / len(sw_scores[llm]) if sw_scores[llm] else None,
+                "inequity_aversion": sum(fs_scores[llm]) / len(fs_scores[llm]) if fs_scores[llm] else None,
+                "svo_angle": sum(svo_angles[llm]) / len(svo_angles[llm]) if svo_angles[llm] else None
             }
-
+       
     # -------------------
     # Access Methods
     # -------------------

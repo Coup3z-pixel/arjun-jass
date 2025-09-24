@@ -71,7 +71,7 @@ class DictatorGameIndexer:
         df["beta"] = np.where(
             (df["keep"] - df["donate"]) != 0,
             (df["keep"] - df["UD"]) / (df["keep"] - df["donate"]),
-            np.nan
+            0
         )
 
         # θ: Intrinsic giving satisfaction (avoid log(0))

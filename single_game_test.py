@@ -21,7 +21,7 @@ async def main():
     type_of_games: list[Type[Game]] = [
             #PrisonersDilemma,
             #HedonicGame,
-            #AtomicCongestion,
+            AtomicCongestion,
             #SocialContext,
             #NonAtomicCongestion,
             #CostSharingGame,
@@ -32,7 +32,7 @@ async def main():
     file_names: list[str] = [
             #"PrisonnersDilemma.csv",
             #"HedonicGame.csv",
-            #"AtomicCongestion.csv",
+            "AtomicCongestion.csv",
             #"SocialContext.csv",
             #"NonAtomicCongestion.csv",
             #"CostSharingGame.csv",

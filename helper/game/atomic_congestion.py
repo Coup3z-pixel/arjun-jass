@@ -7,7 +7,7 @@ from helper.llm.LLM import LLM
 import concurrent.futures
 
 class AtomicCongestion(Game):
-    def __init__(self, config: Dict, csv_save: str = "data/atomic_congestion_all.csv", llms: List[LLM]=[], opponent_strategy: str = "random") -> None:
+    def __init__(self, config: Dict, csv_save: str = "data/atomic_congestion_results.csv", llms: List[LLM]=[], opponent_strategy: str = "random") -> None:
         assert "total_rounds" in config
         assert "prompt" in config
 
@@ -24,6 +24,7 @@ class AtomicCongestion(Game):
         self.last_moves_llm = ["" for _ in llms]
         self.last_moves_opp = ["" for _ in llms]
 
+
         # payoff matrix
         self.travel_time_matrix = {
             ("R1", "R1"): tuple(int(x) for x in config["R1R1"].split(":")),
@@ -31,6 +32,10 @@ class AtomicCongestion(Game):
             ("R2", "R1"): tuple(int(x) for x in config["R2R1"].split(":")),
             ("R2", "R2"): tuple(int(x) for x in config["R2R2"].split(":")),
         }
+
+        self.matrix_str = {k: v for k, v in self.travel_time_matrix.items()}
+
+        print(self.matrix_str)
 
         self.csv_file = open(csv_save, "a", newline="")
         self.writer = csv.writer(self.csv_file)
@@ -43,7 +48,8 @@ class AtomicCongestion(Game):
                 "opponent_choice",
                 "reasoning",
                 "travel_time",
-                "cumulative_time"
+                "cumulative_time",
+                "matrix_str"
             ])
 
     async def simulate_game(self):
@@ -68,7 +74,8 @@ class AtomicCongestion(Game):
                     move_opp,
                     reasoning.replace("\n", " ").replace(",", ""),
                     outcome[0],
-                    self.travel_times[i]
+                    self.travel_times[i],
+                    self.matrix_str
                 ])
 
                 print(f"LLM {self.llms[i].get_model_name()}: LLM={move_llm}, Opponent={move_opp}, "
