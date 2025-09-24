@@ -1,0 +1,1008 @@
+nohup: ignoring input
+Starting NonAtomicCongestion with config NonAtomicCongestion.csv
+File Opened
+NonAtomicCongestion - Round 1
+5000
+[START] Round 0 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:25:34
+[END]   Round 0 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:25:35
+[Warning] Invalid consumption from together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3: 50. Defaulting to 0.
+[ROUND TIME] Round 0 completed in 0.72 seconds
+
+[ROUND UPDATE] Growth: 81, Total consumption: 259, New fish: 4812
+4812.339682845256
+[START] Round 1 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:25:35
+[END]   Round 1 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:25:35
+[Warning] Invalid consumption from together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3: 50. Defaulting to 0.
+[ROUND TIME] Round 1 completed in 0.36 seconds
+
+[ROUND UPDATE] Growth: 83, Total consumption: 250, New fish: 4636
+4636.051277603492
+[START] Round 2 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:25:35
+[END]   Round 2 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:25:43
+[ROUND TIME] Round 2 completed in 8.11 seconds
+
+[ROUND UPDATE] Growth: 96, Total consumption: 240, New fish: 4483
+4483.413727327528
+[START] Round 3 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:25:43
+[END]   Round 3 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:25:44
+[Warning] Invalid consumption from together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3: 50. Defaulting to 0.
+[ROUND TIME] Round 3 completed in 0.45 seconds
+
+[ROUND UPDATE] Growth: 93, Total consumption: 233, New fish: 4334
+4334.205247071375
+[START] Round 4 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:25:44
+[END]   Round 4 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:25:52
+[ROUND TIME] Round 4 completed in 8.14 seconds
+
+[ROUND UPDATE] Growth: 100, Total consumption: 225, New fish: 4200
+4200.444142764415
+[START] Round 5 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:25:52
+[END]   Round 5 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:26:01
+[ROUND TIME] Round 5 completed in 9.05 seconds
+
+[ROUND UPDATE] Growth: 100, Total consumption: 218, New fish: 4074
+4074.1673125797734
+[START] Round 6 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:26:01
+[END]   Round 6 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:26:01
+[Warning] Invalid consumption from together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3: 50. Defaulting to 0.
+[ROUND TIME] Round 6 completed in 0.20 seconds
+
+[ROUND UPDATE] Growth: 98, Total consumption: 213, New fish: 3949
+3949.567290858109
+[START] Round 7 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:26:01
+[END]   Round 7 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:26:01
+[Warning] Invalid consumption from together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3: 50. Defaulting to 0.
+[ROUND TIME] Round 7 completed in 0.16 seconds
+
+[ROUND UPDATE] Growth: 84, Total consumption: 206, New fish: 3818
+3818.2802488762486
+[START] Round 8 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:26:01
+[END]   Round 8 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:26:09
+[ROUND TIME] Round 8 completed in 7.36 seconds
+
+[ROUND UPDATE] Growth: 101, Total consumption: 200, New fish: 3710
+3710.002549959019
+[START] Round 9 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:26:09
+[END]   Round 9 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:26:18
+[ROUND TIME] Round 9 completed in 9.66 seconds
+
+[ROUND UPDATE] Growth: 93, Total consumption: 195, New fish: 3598
+3598.3188379505145
+[START] Round 10 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:26:18
+[END]   Round 10 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:26:18
+[Warning] Invalid consumption from together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3: 50. Defaulting to 0.
+[ROUND TIME] Round 10 completed in 0.17 seconds
+
+[ROUND UPDATE] Growth: 96, Total consumption: 189, New fish: 3495
+3495.571923821984
+[START] Round 11 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:26:18
+[END]   Round 11 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:26:26
+[ROUND TIME] Round 11 completed in 7.67 seconds
+
+[ROUND UPDATE] Growth: 97, Total consumption: 184, New fish: 3398
+3398.9492485929463
+[START] Round 12 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:26:26
+[END]   Round 12 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:26:26
+[Warning] Invalid consumption from together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3: 50. Defaulting to 0.
+[ROUND TIME] Round 12 completed in 0.16 seconds
+
+[ROUND UPDATE] Growth: 95, Total consumption: 179, New fish: 3305
+3305.754513537193
+[START] Round 13 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:26:26
+[END]   Round 13 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:26:36
+[ROUND TIME] Round 13 completed in 9.64 seconds
+
+[ROUND UPDATE] Growth: 83, Total consumption: 174, New fish: 3205
+3205.2792491124706
+[START] Round 14 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:26:36
+[END]   Round 14 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:26:45
+[ROUND TIME] Round 14 completed in 9.39 seconds
+
+[ROUND UPDATE] Growth: 96, Total consumption: 169, New fish: 3123
+NonAtomicCongestion - Round 2
+5000
+[START] Round 0 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:26:47
+[END]   Round 0 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:26:58
+[ROUND TIME] Round 0 completed in 10.28 seconds
+
+[ROUND UPDATE] Growth: 89, Total consumption: 254, New fish: 4830
+4830.393299842988
+[START] Round 1 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:26:58
+[END]   Round 1 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:26:58
+[Warning] Invalid consumption from together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3: 50. Defaulting to 0.
+[ROUND TIME] Round 1 completed in 0.16 seconds
+
+[ROUND UPDATE] Growth: 80, Total consumption: 251, New fish: 4649
+4649.489155280205
+[START] Round 2 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:26:58
+[END]   Round 2 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:27:07
+[ROUND TIME] Round 2 completed in 9.17 seconds
+
+[ROUND UPDATE] Growth: 88, Total consumption: 239, New fish: 4491
+4491.76808062363
+[START] Round 3 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:27:07
+[END]   Round 3 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:27:15
+[ROUND TIME] Round 3 completed in 7.61 seconds
+
+[ROUND UPDATE] Growth: 98, Total consumption: 231, New fish: 4352
+4352.3927862274995
+[START] Round 4 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:27:15
+[END]   Round 4 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:27:24
+[ROUND TIME] Round 4 completed in 9.10 seconds
+
+[ROUND UPDATE] Growth: 93, Total consumption: 226, New fish: 4210
+4210.656464077188
+[START] Round 5 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:27:24
+[END]   Round 5 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:27:33
+[ROUND TIME] Round 5 completed in 9.04 seconds
+
+[ROUND UPDATE] Growth: 89, Total consumption: 214, New fish: 4082
+4082.0188985586765
+[START] Round 6 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:27:33
+[END]   Round 6 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:27:41
+[ROUND TIME] Round 6 completed in 8.18 seconds
+
+[ROUND UPDATE] Growth: 97, Total consumption: 213, New fish: 3956
+3956.155687327966
+[START] Round 7 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:27:41
+[END]   Round 7 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:27:41
+[Warning] Invalid consumption from together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3: 50. Defaulting to 0.
+[ROUND TIME] Round 7 completed in 0.16 seconds
+
+[ROUND UPDATE] Growth: 98, Total consumption: 207, New fish: 3837
+3837.29698379112
+[START] Round 8 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:27:41
+[END]   Round 8 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:27:49
+[ROUND TIME] Round 8 completed in 8.32 seconds
+
+[ROUND UPDATE] Growth: 84, Total consumption: 201, New fish: 3710
+3710.8169671545065
+[START] Round 9 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:27:49
+[END]   Round 9 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:27:58
+[ROUND TIME] Round 9 completed in 8.72 seconds
+
+[ROUND UPDATE] Growth: 89, Total consumption: 195, New fish: 3595
+3595.1655157282457
+[START] Round 10 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:27:58
+[END]   Round 10 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:28:07
+[ROUND TIME] Round 10 completed in 9.27 seconds
+
+[ROUND UPDATE] Growth: 89, Total consumption: 184, New fish: 3495
+3495.1952568779807
+[START] Round 11 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:28:07
+[END]   Round 11 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:28:08
+[Warning] Invalid consumption from together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3: 50. Defaulting to 0.
+[ROUND TIME] Round 11 completed in 0.17 seconds
+
+[ROUND UPDATE] Growth: 88, Total consumption: 184, New fish: 3389
+3389.8222505675717
+[START] Round 12 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:28:08
+[END]   Round 12 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:28:16
+[ROUND TIME] Round 12 completed in 8.83 seconds
+
+[ROUND UPDATE] Growth: 89, Total consumption: 178, New fish: 3291
+3291.42881310719
+[START] Round 13 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:28:16
+[END]   Round 13 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:28:25
+[ROUND TIME] Round 13 completed in 8.69 seconds
+
+[ROUND UPDATE] Growth: 96, Total consumption: 174, New fish: 3203
+3203.5081391558383
+[START] Round 14 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:28:25
+[END]   Round 14 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:28:25
+[Warning] Invalid consumption from together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3: 50. Defaulting to 0.
+[ROUND TIME] Round 14 completed in 0.17 seconds
+
+[ROUND UPDATE] Growth: 99, Total consumption: 169, New fish: 3124
+NonAtomicCongestion - Round 3
+5000
+[START] Round 0 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:28:27
+[END]   Round 0 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:28:35
+[ROUND TIME] Round 0 completed in 8.21 seconds
+
+[ROUND UPDATE] Growth: 84, Total consumption: 254, New fish: 4825
+4825.438023224948
+[START] Round 1 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:28:35
+[END]   Round 1 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:28:44
+[ROUND TIME] Round 1 completed in 8.22 seconds
+
+[ROUND UPDATE] Growth: 93, Total consumption: 246, New fish: 4667
+4667.528316824422
+[START] Round 2 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:28:44
+[END]   Round 2 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:28:52
+[ROUND TIME] Round 2 completed in 8.85 seconds
+
+[ROUND UPDATE] Growth: 96, Total consumption: 238, New fish: 4520
+4520.650866219661
+[START] Round 3 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:28:52
+[END]   Round 3 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:29:02
+[ROUND TIME] Round 3 completed in 9.81 seconds
+
+[ROUND UPDATE] Growth: 83, Total consumption: 229, New fish: 4371
+4371.107061913669
+[START] Round 4 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:29:02
+[END]   Round 4 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:29:12
+[ROUND TIME] Round 4 completed in 9.59 seconds
+
+[ROUND UPDATE] Growth: 98, Total consumption: 226, New fish: 4235
+4235.156382699473
+[START] Round 5 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:29:12
+[END]   Round 5 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:29:21
+[ROUND TIME] Round 5 completed in 9.32 seconds
+
+[ROUND UPDATE] Growth: 85, Total consumption: 220, New fish: 4091
+4091.8595508148055
+[START] Round 6 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:29:21
+[END]   Round 6 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:29:30
+[ROUND TIME] Round 6 completed in 8.76 seconds
+
+[ROUND UPDATE] Growth: 87, Total consumption: 214, New fish: 3955
+3955.545629581815
+[START] Round 7 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:29:30
+[END]   Round 7 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:29:38
+[ROUND TIME] Round 7 completed in 7.94 seconds
+
+[ROUND UPDATE] Growth: 88, Total consumption: 207, New fish: 3827
+3827.189127018365
+[START] Round 8 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:29:38
+[END]   Round 8 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:29:46
+[ROUND TIME] Round 8 completed in 7.73 seconds
+
+[ROUND UPDATE] Growth: 101, Total consumption: 200, New fish: 3718
+3718.347539923164
+[START] Round 9 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:29:46
+[END]   Round 9 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:29:54
+[ROUND TIME] Round 9 completed in 8.82 seconds
+
+[ROUND UPDATE] Growth: 100, Total consumption: 195, New fish: 3613
+3613.8232099409734
+[START] Round 10 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:29:54
+[END]   Round 10 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:30:03
+[ROUND TIME] Round 10 completed in 8.51 seconds
+
+[ROUND UPDATE] Growth: 87, Total consumption: 190, New fish: 3501
+3501.5875517919612
+[START] Round 11 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:30:03
+[END]   Round 11 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:30:12
+[ROUND TIME] Round 11 completed in 8.58 seconds
+
+[ROUND UPDATE] Growth: 89, Total consumption: 184, New fish: 3396
+3396.98772834199
+[START] Round 12 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:30:12
+[END]   Round 12 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:30:20
+[ROUND TIME] Round 12 completed in 8.23 seconds
+
+[ROUND UPDATE] Growth: 95, Total consumption: 179, New fish: 3303
+3303.407621544552
+[START] Round 13 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:30:20
+[END]   Round 13 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:30:28
+[ROUND TIME] Round 13 completed in 7.94 seconds
+
+[ROUND UPDATE] Growth: 86, Total consumption: 174, New fish: 3206
+3206.00824203332
+[START] Round 14 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:30:28
+[END]   Round 14 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:30:36
+[ROUND TIME] Round 14 completed in 8.73 seconds
+
+[ROUND UPDATE] Growth: 96, Total consumption: 169, New fish: 3123
+NonAtomicCongestion - Round 4
+5000
+[START] Round 0 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:30:38
+[END]   Round 0 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:30:47
+[ROUND TIME] Round 0 completed in 8.82 seconds
+
+[ROUND UPDATE] Growth: 89, Total consumption: 254, New fish: 4830
+4830.759784786337
+[START] Round 1 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:30:47
+[END]   Round 1 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:30:55
+[ROUND TIME] Round 1 completed in 7.88 seconds
+
+[ROUND UPDATE] Growth: 88, Total consumption: 246, New fish: 4668
+4668.0861367270045
+[START] Round 2 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:30:55
+[END]   Round 2 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:31:03
+[ROUND TIME] Round 2 completed in 8.01 seconds
+
+[ROUND UPDATE] Growth: 81, Total consumption: 241, New fish: 4499
+4499.884331546281
+[START] Round 3 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:31:03
+[END]   Round 3 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:31:11
+[ROUND TIME] Round 3 completed in 7.69 seconds
+
+[ROUND UPDATE] Growth: 89, Total consumption: 232, New fish: 4349
+4349.569624739622
+[START] Round 4 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:31:11
+[END]   Round 4 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:31:19
+[ROUND TIME] Round 4 completed in 8.03 seconds
+
+[ROUND UPDATE] Growth: 87, Total consumption: 226, New fish: 4201
+4201.953464361872
+[START] Round 5 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:31:19
+[END]   Round 5 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:31:27
+[ROUND TIME] Round 5 completed in 7.63 seconds
+
+[ROUND UPDATE] Growth: 87, Total consumption: 218, New fish: 4062
+4062.8461635913127
+[START] Round 6 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:31:27
+[END]   Round 6 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:31:34
+[ROUND TIME] Round 6 completed in 7.95 seconds
+
+[ROUND UPDATE] Growth: 102, Total consumption: 210, New fish: 3947
+3947.266560935537
+[START] Round 7 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:31:34
+[END]   Round 7 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:31:43
+[ROUND TIME] Round 7 completed in 8.29 seconds
+
+[ROUND UPDATE] Growth: 90, Total consumption: 201, New fish: 3833
+3833.2047648636876
+[START] Round 8 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:31:43
+[END]   Round 8 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:31:51
+[ROUND TIME] Round 8 completed in 8.42 seconds
+
+[ROUND UPDATE] Growth: 84, Total consumption: 201, New fish: 3706
+3706.973027065345
+[START] Round 9 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:31:51
+[END]   Round 9 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:31:59
+[ROUND TIME] Round 9 completed in 7.91 seconds
+
+[ROUND UPDATE] Growth: 100, Total consumption: 194, New fish: 3603
+3603.721217051454
+[START] Round 10 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:31:59
+[END]   Round 10 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:32:07
+[ROUND TIME] Round 10 completed in 8.35 seconds
+
+[ROUND UPDATE] Growth: 85, Total consumption: 189, New fish: 3490
+3490.411086622388
+[START] Round 11 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:32:07
+[END]   Round 11 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:32:16
+[ROUND TIME] Round 11 completed in 8.12 seconds
+
+[ROUND UPDATE] Growth: 99, Total consumption: 179, New fish: 3406
+3406.074703348332
+[START] Round 12 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:32:16
+[END]   Round 12 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:32:23
+[ROUND TIME] Round 12 completed in 7.87 seconds
+
+[ROUND UPDATE] Growth: 99, Total consumption: 175, New fish: 3325
+3325.3297243620004
+[START] Round 13 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:32:23
+[END]   Round 13 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:32:32
+[ROUND TIME] Round 13 completed in 8.97 seconds
+
+[ROUND UPDATE] Growth: 88, Total consumption: 175, New fish: 3228
+3228.6632936454325
+[START] Round 14 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:32:32
+[END]   Round 14 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:32:40
+[ROUND TIME] Round 14 completed in 7.98 seconds
+
+[ROUND UPDATE] Growth: 98, Total consumption: 170, New fish: 3147
+NonAtomicCongestion - Round 5
+5000
+[START] Round 0 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:32:42
+[END]   Round 0 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:32:50
+[ROUND TIME] Round 0 completed in 7.83 seconds
+
+[ROUND UPDATE] Growth: 78, Total consumption: 254, New fish: 4819
+4819.754527862594
+[START] Round 1 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:32:50
+[END]   Round 1 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:32:58
+[ROUND TIME] Round 1 completed in 7.44 seconds
+
+[ROUND UPDATE] Growth: 82, Total consumption: 245, New fish: 4651
+4651.809963098964
+[START] Round 2 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:32:58
+[END]   Round 2 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:33:06
+[ROUND TIME] Round 2 completed in 7.86 seconds
+
+[ROUND UPDATE] Growth: 94, Total consumption: 241, New fish: 4496
+4496.667878787881
+[START] Round 3 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:33:06
+[END]   Round 3 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:33:14
+[ROUND TIME] Round 3 completed in 8.26 seconds
+
+[ROUND UPDATE] Growth: 97, Total consumption: 227, New fish: 4364
+4364.143826016677
+[START] Round 4 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:33:14
+[END]   Round 4 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:33:22
+[ROUND TIME] Round 4 completed in 8.37 seconds
+
+[ROUND UPDATE] Growth: 82, Total consumption: 226, New fish: 4211
+4211.520857170074
+[START] Round 5 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:33:22
+[END]   Round 5 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:33:30
+[ROUND TIME] Round 5 completed in 7.68 seconds
+
+[ROUND UPDATE] Growth: 95, Total consumption: 218, New fish: 4081
+4081.0420254005303
+[START] Round 6 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:33:30
+[END]   Round 6 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:33:38
+[ROUND TIME] Round 6 completed in 7.78 seconds
+
+[ROUND UPDATE] Growth: 84, Total consumption: 213, New fish: 3942
+3942.374740992571
+[START] Round 7 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:33:38
+[END]   Round 7 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:33:46
+[ROUND TIME] Round 7 completed in 8.08 seconds
+
+[ROUND UPDATE] Growth: 91, Total consumption: 206, New fish: 3817
+3817.6558084752796
+[START] Round 8 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:33:46
+[END]   Round 8 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:33:54
+[ROUND TIME] Round 8 completed in 7.97 seconds
+
+[ROUND UPDATE] Growth: 96, Total consumption: 200, New fish: 3703
+3703.6857270806345
+[START] Round 9 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:33:54
+[END]   Round 9 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:34:02
+[ROUND TIME] Round 9 completed in 7.99 seconds
+
+[ROUND UPDATE] Growth: 102, Total consumption: 194, New fish: 3601
+3601.7323616549693
+[START] Round 10 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:34:02
+[END]   Round 10 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:34:09
+[ROUND TIME] Round 10 completed in 7.72 seconds
+
+[ROUND UPDATE] Growth: 85, Total consumption: 189, New fish: 3488
+3488.7033658364685
+[START] Round 11 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:34:09
+[END]   Round 11 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:34:17
+[ROUND TIME] Round 11 completed in 8.09 seconds
+
+[ROUND UPDATE] Growth: 86, Total consumption: 183, New fish: 3382
+3382.6834344016665
+[START] Round 12 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:34:17
+[END]   Round 12 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:34:26
+[ROUND TIME] Round 12 completed in 8.23 seconds
+
+[ROUND UPDATE] Growth: 98, Total consumption: 178, New fish: 3293
+3293.58599589513
+[START] Round 13 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:34:26
+[END]   Round 13 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:34:33
+[ROUND TIME] Round 13 completed in 7.77 seconds
+
+[ROUND UPDATE] Growth: 89, Total consumption: 174, New fish: 3198
+3198.8015994963425
+[START] Round 14 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:34:33
+[END]   Round 14 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:34:41
+[ROUND TIME] Round 14 completed in 7.62 seconds
+
+[ROUND UPDATE] Growth: 100, Total consumption: 169, New fish: 3120
+NonAtomicCongestion - Round 6
+5000
+[START] Round 0 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:34:43
+[END]   Round 0 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:34:51
+[ROUND TIME] Round 0 completed in 7.79 seconds
+
+[ROUND UPDATE] Growth: 78, Total consumption: 254, New fish: 4819
+4819.153128583409
+[START] Round 1 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:34:51
+[END]   Round 1 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:34:59
+[ROUND TIME] Round 1 completed in 8.06 seconds
+
+[ROUND UPDATE] Growth: 93, Total consumption: 245, New fish: 4662
+4662.196845367888
+[START] Round 2 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:34:59
+[END]   Round 2 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:35:08
+[ROUND TIME] Round 2 completed in 8.81 seconds
+
+[ROUND UPDATE] Growth: 93, Total consumption: 237, New fish: 4513
+4513.574498062576
+[START] Round 3 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:35:08
+[END]   Round 3 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:35:15
+[ROUND TIME] Round 3 completed in 7.70 seconds
+
+[ROUND UPDATE] Growth: 89, Total consumption: 234, New fish: 4360
+4360.493167604887
+[START] Round 4 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:35:15
+[END]   Round 4 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:35:23
+[ROUND TIME] Round 4 completed in 7.51 seconds
+
+[ROUND UPDATE] Growth: 99, Total consumption: 221, New fish: 4234
+4234.81170384951
+[START] Round 5 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:35:23
+[END]   Round 5 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:35:31
+[ROUND TIME] Round 5 completed in 7.83 seconds
+
+[ROUND UPDATE] Growth: 98, Total consumption: 215, New fish: 4114
+4114.056688741501
+[START] Round 6 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:35:31
+[END]   Round 6 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:35:39
+[ROUND TIME] Round 6 completed in 8.24 seconds
+
+[ROUND UPDATE] Growth: 87, Total consumption: 215, New fish: 3976
+3976.1022044219835
+[START] Round 7 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:35:39
+[END]   Round 7 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:35:47
+[ROUND TIME] Round 7 completed in 7.69 seconds
+
+[ROUND UPDATE] Growth: 94, Total consumption: 207, New fish: 3854
+3854.217084299608
+[START] Round 8 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:35:47
+[END]   Round 8 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:35:54
+[ROUND TIME] Round 8 completed in 7.73 seconds
+
+[ROUND UPDATE] Growth: 95, Total consumption: 201, New fish: 3739
+3739.5190267956427
+[START] Round 9 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:35:54
+[END]   Round 9 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:36:02
+[ROUND TIME] Round 9 completed in 7.74 seconds
+
+[ROUND UPDATE] Growth: 87, Total consumption: 196, New fish: 3621
+3621.2978341238604
+[START] Round 10 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:36:02
+[END]   Round 10 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:36:11
+[ROUND TIME] Round 10 completed in 8.63 seconds
+
+[ROUND UPDATE] Growth: 93, Total consumption: 189, New fish: 3516
+3516.7501552646295
+[START] Round 11 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:36:11
+[END]   Round 11 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:36:19
+[ROUND TIME] Round 11 completed in 8.60 seconds
+
+[ROUND UPDATE] Growth: 89, Total consumption: 185, New fish: 3411
+3411.2116041977524
+[START] Round 12 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:36:19
+[END]   Round 12 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:36:27
+[ROUND TIME] Round 12 completed in 7.65 seconds
+
+[ROUND UPDATE] Growth: 100, Total consumption: 180, New fish: 3321
+3321.3764645463466
+[START] Round 13 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:36:27
+[END]   Round 13 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:36:35
+[ROUND TIME] Round 13 completed in 7.65 seconds
+
+[ROUND UPDATE] Growth: 88, Total consumption: 175, New fish: 3224
+3224.588232242996
+[START] Round 14 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:36:35
+[END]   Round 14 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:36:43
+[ROUND TIME] Round 14 completed in 8.40 seconds
+
+[ROUND UPDATE] Growth: 94, Total consumption: 170, New fish: 3138
+NonAtomicCongestion - Round 7
+5000
+[START] Round 0 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:36:45
+[END]   Round 0 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:36:53
+[ROUND TIME] Round 0 completed in 8.14 seconds
+
+[ROUND UPDATE] Growth: 85, Total consumption: 254, New fish: 4826
+4826.952731650599
+[START] Round 1 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:36:53
+[END]   Round 1 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:37:01
+[ROUND TIME] Round 1 completed in 8.14 seconds
+
+[ROUND UPDATE] Growth: 93, Total consumption: 246, New fish: 4669
+4669.895631248265
+[START] Round 2 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:37:01
+[END]   Round 2 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:37:10
+[ROUND TIME] Round 2 completed in 8.49 seconds
+
+[ROUND UPDATE] Growth: 90, Total consumption: 238, New fish: 4516
+4516.900602010776
+[START] Round 3 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:37:10
+[END]   Round 3 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:37:18
+[ROUND TIME] Round 3 completed in 8.23 seconds
+
+[ROUND UPDATE] Growth: 94, Total consumption: 234, New fish: 4368
+4368.076763761086
+[START] Round 4 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:37:18
+[END]   Round 4 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:37:26
+[ROUND TIME] Round 4 completed in 8.27 seconds
+
+[ROUND UPDATE] Growth: 82, Total consumption: 226, New fish: 4216
+4216.007832489013
+[START] Round 5 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:37:26
+[END]   Round 5 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:37:34
+[ROUND TIME] Round 5 completed in 8.05 seconds
+
+[ROUND UPDATE] Growth: 91, Total consumption: 219, New fish: 4079
+4079.2700223466636
+[START] Round 6 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:37:34
+[END]   Round 6 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:37:43
+[ROUND TIME] Round 6 completed in 8.12 seconds
+
+[ROUND UPDATE] Growth: 91, Total consumption: 212, New fish: 3949
+3949.931702517989
+[START] Round 7 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:37:43
+[END]   Round 7 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:37:52
+[ROUND TIME] Round 7 completed in 9.53 seconds
+
+[ROUND UPDATE] Growth: 93, Total consumption: 206, New fish: 3827
+3827.5807281520592
+[START] Round 8 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:37:52
+[END]   Round 8 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:38:01
+[ROUND TIME] Round 8 completed in 8.77 seconds
+
+[ROUND UPDATE] Growth: 92, Total consumption: 200, New fish: 3709
+3709.6501973214067
+[START] Round 9 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:38:01
+[END]   Round 9 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:38:09
+[ROUND TIME] Round 9 completed in 7.77 seconds
+
+[ROUND UPDATE] Growth: 86, Total consumption: 194, New fish: 3593
+3593.5135935745798
+[START] Round 10 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:38:09
+[END]   Round 10 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:38:16
+[ROUND TIME] Round 10 completed in 7.69 seconds
+
+[ROUND UPDATE] Growth: 97, Total consumption: 189, New fish: 3492
+3492.4720114291763
+[START] Round 11 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:38:16
+[END]   Round 11 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:38:25
+[ROUND TIME] Round 11 completed in 8.40 seconds
+
+[ROUND UPDATE] Growth: 99, Total consumption: 184, New fish: 3397
+3397.8839891707116
+[START] Round 12 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:38:25
+[END]   Round 12 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:38:33
+[ROUND TIME] Round 12 completed in 8.05 seconds
+
+[ROUND UPDATE] Growth: 87, Total consumption: 179, New fish: 3295
+3295.8967540240146
+[START] Round 13 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:38:33
+[END]   Round 13 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:38:41
+[ROUND TIME] Round 13 completed in 7.75 seconds
+
+[ROUND UPDATE] Growth: 88, Total consumption: 174, New fish: 3200
+3200.5304609902587
+[START] Round 14 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:38:41
+[END]   Round 14 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:38:48
+[ROUND TIME] Round 14 completed in 7.54 seconds
+
+[ROUND UPDATE] Growth: 87, Total consumption: 169, New fish: 3108
+NonAtomicCongestion - Round 8
+5000
+[START] Round 0 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:38:50
+[END]   Round 0 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:38:58
+[ROUND TIME] Round 0 completed in 8.12 seconds
+
+[ROUND UPDATE] Growth: 79, Total consumption: 254, New fish: 4820
+4820.471619012961
+[START] Round 1 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:38:58
+[END]   Round 1 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:39:06
+[ROUND TIME] Round 1 completed in 8.21 seconds
+
+[ROUND UPDATE] Growth: 82, Total consumption: 245, New fish: 4652
+4652.963399305249
+[START] Round 2 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:39:06
+[END]   Round 2 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:39:15
+[ROUND TIME] Round 2 completed in 8.32 seconds
+
+[ROUND UPDATE] Growth: 80, Total consumption: 237, New fish: 4491
+4491.197553754733
+[START] Round 3 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:39:15
+[END]   Round 3 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:39:23
+[ROUND TIME] Round 3 completed in 7.78 seconds
+
+[ROUND UPDATE] Growth: 85, Total consumption: 229, New fish: 4342
+4342.459047889245
+[START] Round 4 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:39:23
+[END]   Round 4 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:39:30
+[ROUND TIME] Round 4 completed in 7.81 seconds
+
+[ROUND UPDATE] Growth: 85, Total consumption: 225, New fish: 4194
+4194.408815214224
+[START] Round 5 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:39:30
+[END]   Round 5 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:39:39
+[ROUND TIME] Round 5 completed in 8.64 seconds
+
+[ROUND UPDATE] Growth: 100, Total consumption: 218, New fish: 4068
+4068.1878188630644
+[START] Round 6 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:39:39
+[END]   Round 6 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:39:47
+[ROUND TIME] Round 6 completed in 8.07 seconds
+
+[ROUND UPDATE] Growth: 85, Total consumption: 212, New fish: 3931
+3931.216390280256
+[START] Round 7 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:39:47
+[END]   Round 7 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:39:55
+[ROUND TIME] Round 7 completed in 8.14 seconds
+
+[ROUND UPDATE] Growth: 97, Total consumption: 206, New fish: 3812
+3812.6244025577175
+[START] Round 8 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:39:55
+[END]   Round 8 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:40:03
+[ROUND TIME] Round 8 completed in 7.35 seconds
+
+[ROUND UPDATE] Growth: 95, Total consumption: 200, New fish: 3698
+3698.1441304984614
+[START] Round 9 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:40:03
+[END]   Round 9 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:40:11
+[ROUND TIME] Round 9 completed in 8.78 seconds
+
+[ROUND UPDATE] Growth: 102, Total consumption: 194, New fish: 3597
+3597.065230982593
+[START] Round 10 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:40:11
+[END]   Round 10 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:40:20
+[ROUND TIME] Round 10 completed in 8.19 seconds
+
+[ROUND UPDATE] Growth: 94, Total consumption: 189, New fish: 3492
+3492.4604172839086
+[START] Round 11 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:40:20
+[END]   Round 11 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:40:27
+[ROUND TIME] Round 11 completed in 7.52 seconds
+
+[ROUND UPDATE] Growth: 95, Total consumption: 184, New fish: 3394
+3394.4295048104223
+[START] Round 12 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:40:27
+[END]   Round 12 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:40:35
+[ROUND TIME] Round 12 completed in 7.50 seconds
+
+[ROUND UPDATE] Growth: 84, Total consumption: 179, New fish: 3289
+3289.6462840286117
+[START] Round 13 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:40:35
+[END]   Round 13 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:40:43
+[ROUND TIME] Round 13 completed in 8.14 seconds
+
+[ROUND UPDATE] Growth: 98, Total consumption: 173, New fish: 3204
+3204.939566379713
+[START] Round 14 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:40:43
+[END]   Round 14 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:40:51
+[ROUND TIME] Round 14 completed in 7.84 seconds
+
+[ROUND UPDATE] Growth: 85, Total consumption: 169, New fish: 3111
+NonAtomicCongestion - Round 9
+5000
+[START] Round 0 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:40:53
+[END]   Round 0 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:41:01
+[ROUND TIME] Round 0 completed in 8.66 seconds
+
+[ROUND UPDATE] Growth: 91, Total consumption: 254, New fish: 4832
+4832.530756807135
+[START] Round 1 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:41:01
+[END]   Round 1 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:41:09
+[Warning] Invalid consumption from together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3: 62. Defaulting to 0.
+[ROUND TIME] Round 1 completed in 7.93 seconds
+
+[ROUND UPDATE] Growth: 94, Total consumption: 251, New fish: 4665
+4665.673290215255
+[START] Round 2 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:41:09
+[END]   Round 2 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:41:17
+[ROUND TIME] Round 2 completed in 7.71 seconds
+
+[ROUND UPDATE] Growth: 83, Total consumption: 238, New fish: 4506
+4506.2492335788
+[START] Round 3 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:41:17
+[END]   Round 3 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:41:25
+[ROUND TIME] Round 3 completed in 8.40 seconds
+
+[ROUND UPDATE] Growth: 86, Total consumption: 230, New fish: 4358
+4358.032393941975
+[START] Round 4 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:41:25
+[END]   Round 4 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:41:33
+[ROUND TIME] Round 4 completed in 8.23 seconds
+
+[ROUND UPDATE] Growth: 92, Total consumption: 227, New fish: 4213
+4213.697591470038
+[START] Round 5 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:41:33
+[END]   Round 5 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:41:41
+[ROUND TIME] Round 5 completed in 7.45 seconds
+
+[ROUND UPDATE] Growth: 96, Total consumption: 219, New fish: 4082
+4082.3981801361097
+[START] Round 6 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:41:41
+[END]   Round 6 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:41:48
+[ROUND TIME] Round 6 completed in 7.52 seconds
+
+[ROUND UPDATE] Growth: 85, Total consumption: 213, New fish: 3944
+3944.522046805012
+[START] Round 7 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:41:48
+[END]   Round 7 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:41:57
+[ROUND TIME] Round 7 completed in 8.25 seconds
+
+[ROUND UPDATE] Growth: 98, Total consumption: 206, New fish: 3826
+3826.8532361597613
+[START] Round 8 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:41:57
+[END]   Round 8 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:42:04
+[ROUND TIME] Round 8 completed in 7.80 seconds
+
+[ROUND UPDATE] Growth: 95, Total consumption: 200, New fish: 3711
+3711.959398124284
+[START] Round 9 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:42:04
+[END]   Round 9 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:42:13
+[ROUND TIME] Round 9 completed in 8.51 seconds
+
+[ROUND UPDATE] Growth: 91, Total consumption: 195, New fish: 3597
+3597.989660240577
+[START] Round 10 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:42:13
+[END]   Round 10 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:42:21
+[ROUND TIME] Round 10 completed in 7.65 seconds
+
+[ROUND UPDATE] Growth: 102, Total consumption: 189, New fish: 3501
+3501.6352962177575
+[START] Round 11 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:42:21
+[END]   Round 11 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:42:29
+[ROUND TIME] Round 11 completed in 8.23 seconds
+
+[ROUND UPDATE] Growth: 96, Total consumption: 184, New fish: 3403
+3403.888304748373
+[START] Round 12 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:42:29
+[END]   Round 12 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:42:37
+[ROUND TIME] Round 12 completed in 8.52 seconds
+
+[ROUND UPDATE] Growth: 100, Total consumption: 179, New fish: 3314
+3314.967201271192
+[START] Round 13 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:42:37
+[END]   Round 13 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:42:45
+[ROUND TIME] Round 13 completed in 7.65 seconds
+
+[ROUND UPDATE] Growth: 92, Total consumption: 175, New fish: 3222
+3222.7981894731356
+[START] Round 14 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:42:45
+[END]   Round 14 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:42:53
+[ROUND TIME] Round 14 completed in 7.87 seconds
+
+[ROUND UPDATE] Growth: 94, Total consumption: 170, New fish: 3136
+NonAtomicCongestion - Round 10
+5000
+[START] Round 0 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:42:55
+[END]   Round 0 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:43:03
+[ROUND TIME] Round 0 completed in 7.90 seconds
+
+[ROUND UPDATE] Growth: 90, Total consumption: 254, New fish: 4831
+4831.656186111149
+[START] Round 1 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:43:03
+[END]   Round 1 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:43:11
+[ROUND TIME] Round 1 completed in 8.34 seconds
+
+[ROUND UPDATE] Growth: 84, Total consumption: 246, New fish: 4665
+4665.092480064199
+[START] Round 2 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:43:11
+[END]   Round 2 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:43:20
+[ROUND TIME] Round 2 completed in 8.44 seconds
+
+[ROUND UPDATE] Growth: 94, Total consumption: 240, New fish: 4511
+4511.6917640068195
+[START] Round 3 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:43:20
+[END]   Round 3 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:43:27
+[ROUND TIME] Round 3 completed in 7.74 seconds
+
+[ROUND UPDATE] Growth: 91, Total consumption: 229, New fish: 4369
+4369.790305864292
+[START] Round 4 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:43:27
+[END]   Round 4 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:43:35
+[ROUND TIME] Round 4 completed in 7.65 seconds
+
+[ROUND UPDATE] Growth: 90, Total consumption: 227, New fish: 4222
+4222.843229964441
+[START] Round 5 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:43:35
+[END]   Round 5 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:43:43
+[ROUND TIME] Round 5 completed in 7.88 seconds
+
+[ROUND UPDATE] Growth: 89, Total consumption: 220, New fish: 4082
+4082.387128869923
+[START] Round 6 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:43:43
+[END]   Round 6 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:43:51
+[ROUND TIME] Round 6 completed in 8.47 seconds
+
+[ROUND UPDATE] Growth: 86, Total consumption: 213, New fish: 3946
+3946.0953095986206
+[START] Round 7 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:43:51
+[END]   Round 7 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:43:59
+[ROUND TIME] Round 7 completed in 7.58 seconds
+
+[ROUND UPDATE] Growth: 100, Total consumption: 206, New fish: 3830
+3830.5367726530317
+[START] Round 8 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:43:59
+[END]   Round 8 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:44:07
+[ROUND TIME] Round 8 completed in 7.92 seconds
+
+[ROUND UPDATE] Growth: 89, Total consumption: 201, New fish: 3709
+3709.0338871140584
+[START] Round 9 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:44:07
+[END]   Round 9 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:44:15
+[ROUND TIME] Round 9 completed in 7.77 seconds
+
+[ROUND UPDATE] Growth: 93, Total consumption: 194, New fish: 3598
+3598.7232861911743
+[START] Round 10 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:44:15
+[END]   Round 10 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:44:23
+[ROUND TIME] Round 10 completed in 8.31 seconds
+
+[ROUND UPDATE] Growth: 91, Total consumption: 189, New fish: 3490
+3490.8655692726143
+[START] Round 11 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:44:23
+[END]   Round 11 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:44:31
+[ROUND TIME] Round 11 completed in 7.74 seconds
+
+[ROUND UPDATE] Growth: 102, Total consumption: 184, New fish: 3399
+3399.248886812615
+[START] Round 12 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:44:31
+[END]   Round 12 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:44:38
+[ROUND TIME] Round 12 completed in 7.69 seconds
+
+[ROUND UPDATE] Growth: 97, Total consumption: 179, New fish: 3307
+3307.4468244665954
+[START] Round 13 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:44:38
+[END]   Round 13 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:44:46
+[ROUND TIME] Round 13 completed in 7.89 seconds
+
+[ROUND UPDATE] Growth: 95, Total consumption: 174, New fish: 3219
+3219.3301624221076
+[START] Round 14 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:44:46
+[END]   Round 14 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:44:55
+[ROUND TIME] Round 14 completed in 8.33 seconds
+
+[ROUND UPDATE] Growth: 97, Total consumption: 170, New fish: 3136
+NonAtomicCongestion - Round 1
+2000
+[START] Round 0 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:44:57
+[END]   Round 0 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:45:05
+[ROUND TIME] Round 0 completed in 8.19 seconds
+
+[ROUND UPDATE] Growth: 35, Total consumption: 104, New fish: 1926
+1926.4454454875074
+[START] Round 1 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:45:05
+[END]   Round 1 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:45:12
+[ROUND TIME] Round 1 completed in 6.88 seconds
+
+[ROUND UPDATE] Growth: 36, Total consumption: 96, New fish: 1867
+1867.3397037701402
+[START] Round 2 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:45:12
+[END]   Round 2 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:45:18
+[ROUND TIME] Round 2 completed in 6.31 seconds
+
+[ROUND UPDATE] Growth: 34, Total consumption: 98, New fish: 1798
+1798.5718702156812
+[START] Round 3 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:45:18
+[END]   Round 3 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:45:25
+[ROUND TIME] Round 3 completed in 6.83 seconds
+
+[ROUND UPDATE] Growth: 38, Total consumption: 94, New fish: 1738
+1738.4372124566232
+[START] Round 4 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:45:25
+[END]   Round 4 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:45:31
+[ROUND TIME] Round 4 completed in 6.39 seconds
+
+[ROUND UPDATE] Growth: 37, Total consumption: 91, New fish: 1680
+1680.1712108969923
+[START] Round 5 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:45:31
+[END]   Round 5 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:45:38
+[ROUND TIME] Round 5 completed in 6.73 seconds
+
+[ROUND UPDATE] Growth: 39, Total consumption: 88, New fish: 1626
+1626.9799228627817
+[START] Round 6 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:45:38
+[END]   Round 6 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:45:44
+[ROUND TIME] Round 6 completed in 6.42 seconds
+
+[ROUND UPDATE] Growth: 35, Total consumption: 86, New fish: 1570
+1570.9946702389261
+[START] Round 7 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:45:44
+[END]   Round 7 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:45:51
+[ROUND TIME] Round 7 completed in 6.41 seconds
+
+[ROUND UPDATE] Growth: 36, Total consumption: 83, New fish: 1519
+1519.6720926891187
+[START] Round 8 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:45:51
+[END]   Round 8 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:45:57
+[ROUND TIME] Round 8 completed in 6.34 seconds
+
+[ROUND UPDATE] Growth: 41, Total consumption: 80, New fish: 1475
+1475.881395716696
+[START] Round 9 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:45:57
+[END]   Round 9 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:46:03
+[ROUND TIME] Round 9 completed in 6.43 seconds
+
+[ROUND UPDATE] Growth: 34, Total consumption: 78, New fish: 1426
+1426.9413382826242
+[START] Round 10 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:46:03
+[END]   Round 10 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:46:10
+[ROUND TIME] Round 10 completed in 6.35 seconds
+
+[ROUND UPDATE] Growth: 37, Total consumption: 76, New fish: 1383
+1383.9114523023875
+[START] Round 11 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:46:10
+[END]   Round 11 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:46:16
+[ROUND TIME] Round 11 completed in 6.43 seconds
+
+[ROUND UPDATE] Growth: 33, Total consumption: 73, New fish: 1339
+NonAtomicCongestion - Round 2
+2000
+[START] Round 0 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:46:18
+[END]   Round 0 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:46:25
+[ROUND TIME] Round 0 completed in 6.37 seconds
+
+[ROUND UPDATE] Growth: 34, Total consumption: 104, New fish: 1925
+1925.0690547839063
+[START] Round 1 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 running on thread 125562812954176 at 01:46:25
+[END]   Round 1 | LLM together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3 finished on thread 125562812954176 at 01:46:31

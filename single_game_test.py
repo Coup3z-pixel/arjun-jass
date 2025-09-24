@@ -3,6 +3,9 @@ from typing import Type
 from datetime import datetime
 import time
 import asyncio
+from dotenv import load_dotenv
+
+load_dotenv()
 
 from helper.game.atomic_congestion import AtomicCongestion
 from helper.game.cost_sharing_scheduling import CostSharingGame
@@ -23,9 +26,9 @@ async def main():
             #HedonicGame,
             #AtomicCongestion,
             #SocialContext,
-            #NonAtomicCongestion,
+            NonAtomicCongestion,
             #CostSharingGame,
-            DictatorGame,
+            #DictatorGame,
             #GenCoalition,
     ]
 
@@ -34,13 +37,13 @@ async def main():
             #"HedonicGame.csv",
             #"AtomicCongestion.csv",
             #"SocialContext.csv",
-            #"NonAtomicCongestion.csv",
+            "NonAtomicCongestion.csv",
             #"CostSharingGame.csv",
-            "DictatorGame.csv",
+            #"DictatorGame.csv",
             #"GenCoalition.csv"
     ]
 
-
+#if it's from together , there must be a together: prefix
     llm_models: list[str] = [
         #"openai/chatgpt-4o-latest",
         #"openai/gpt-3.5-turbo",
@@ -55,11 +58,10 @@ async def main():
         #"together:jaspertsh08_a03a/Llama-3.3-70B-Instruct-Reference-8b98da31-79f56385"
         #"together:jaspertsh08_a03a/Llama-4-Scout-17B-16E-70144409-1afad6eb",
         #"vertex:projects/buoyant-ground-472514-s0/locations/us-central1/models/4604485316777082880",
-        "together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7",
+        #"together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7",
         #"mistralai/mixtral-8x7b-instruct",
         #"qwen/qwen3-14b",
-
-
+        "together:jaspertsh08_a03a/Mixtral-8x7B-v0.1-50e88a5a-d680bff3",
     ]
 
     llms: list[LLM] = []
