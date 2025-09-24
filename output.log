@@ -13837,110 +13837,109 @@ NonAtomicCongestion - Round 3
 [START] Round 6 | LLM qwen/qwen3-14b running on thread 127729990170176 at 01:39:33
 [END]   Round 6 | LLM qwen/qwen3-14b finished on thread 127729990170176 at 01:39:35
 [Warning] Invalid consumption from qwen/qwen3-14b: 500. Defaulting to 0.
-[END]   Round 6 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 finished on thread 127730006955584 at 01:39:35l-8x7b-instruct running on thread 123344829384256 at 23:54:53
-[START] Round 12 | LLM qwen/qwen3-14b running on thread 123344749852224 at 23:54:53
+[END]   Round 6 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 finished on thread 127730006955584 at 01:39:35
+[Warning] Invalid consumption from together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7: 11883. Defaulting to 0.
+[END]   Round 6 | LLM mistralai/mixtral-8x7b-instruct finished on thread 127729998562880 at 01:39:39
+[Warning] Invalid consumption from mistralai/mixtral-8x7b-instruct: 50. Defaulting to 0.
+[ROUND TIME] Round 6 completed in 6.72 seconds
 
-[END]   Round 12 | LLM mistralai/mixtral-8x7b-instruct finished on thread 123344829384256 at 23:54:55
-[END]   Round 12 | LLM qwen/qwen3-14b finished on thread 123344749852224 at 23:54:55
-[Warning] Invalid consumption from qwen/qwen3-14b: 9665. Defaulting to 0.
-[END]   Round 12 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 finished on thread 123344837776960 at 23:54:55
-[Warning] Invalid consumption from together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7: 9165. Defaulting to 0.
-[ROUND TIME] Round 12 completed in 2.59 seconds
+[ROUND UPDATE] Growth: 268, Total consumption: 651, New fish: 11441
+11441.046554887871
+[START] Round 7 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 running on thread 127729990170176 at 01:39:39
+[START] Round 7 | LLM mistralai/mixtral-8x7b-instruct running on thread 127730006955584 at 01:39:39
+[START] Round 7 | LLM qwen/qwen3-14b running on thread 127729998562880 at 01:39:39
+[END]   Round 7 | LLM mistralai/mixtral-8x7b-instruct finished on thread 127730006955584 at 01:39:41
+[END]   Round 7 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 finished on thread 127729990170176 at 01:39:42
+[Warning] Invalid consumption from together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7: 10941. Defaulting to 0.
+[END]   Round 7 | LLM qwen/qwen3-14b finished on thread 127729998562880 at 01:39:42
+[Warning] Invalid consumption from qwen/qwen3-14b: 11441. Defaulting to 0.
+[ROUND TIME] Round 7 completed in 3.12 seconds
 
-[ROUND UPDATE] Growth: 266, Total consumption: 521, New fish: 9370
-9370.94996285608
-[START] Round 13 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 running on thread 123344829384256 at 23:54:55
-[START] Round 13 | LLM mistralai/mixtral-8x7b-instruct running on thread 123344749852224 at 23:54:55
-[START] Round 13 | LLM qwen/qwen3-14b running on thread 123344837776960 at 23:54:55
-[END]   Round 13 | LLM mistralai/mixtral-8x7b-instruct finished on thread 123344749852224 at 23:54:57
-[Warning] Invalid consumption from mistralai/mixtral-8x7b-instruct: 9300. Defaulting to 0.
-[END]   Round 13 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 finished on thread 123344829384256 at 23:54:57
-[Warning] Invalid consumption from together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7: 8870. Defaulting to 0.
-[END]   Round 13 | LLM qwen/qwen3-14b finished on thread 123344837776960 at 23:54:58
-[Warning] Invalid consumption from qwen/qwen3-14b: 8871. Defaulting to 0.
-[ROUND TIME] Round 13 completed in 2.76 seconds
+[ROUND UPDATE] Growth: 292, Total consumption: 610, New fish: 11084
+11084.039352824637
+[START] Round 8 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 running on thread 127730006955584 at 01:39:42
+[START] Round 8 | LLM mistralai/mixtral-8x7b-instruct running on thread 127729990170176 at 01:39:42
+[START] Round 8 | LLM qwen/qwen3-14b running on thread 127729998562880 at 01:39:42
+[END]   Round 8 | LLM mistralai/mixtral-8x7b-instruct finished on thread 127729990170176 at 01:39:44
+[Warning] Invalid consumption from mistralai/mixtral-8x7b-instruct: 10484. Defaulting to 0.
+[END]   Round 8 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 finished on thread 127730006955584 at 01:39:44
+[Warning] Invalid consumption from together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7: 11084. Defaulting to 0.
+[END]   Round 8 | LLM qwen/qwen3-14b finished on thread 127729998562880 at 01:44:13
+[ROUND TIME] Round 8 completed in 270.54 seconds
 
-[ROUND UPDATE] Growth: 284, Total consumption: 525, New fish: 9070
-9070.880703656312
-[START] Round 14 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 running on thread 123344749852224 at 23:54:58
-[START] Round 14 | LLM mistralai/mixtral-8x7b-instruct running on thread 123344829384256 at 23:54:58
-[START] Round 14 | LLM qwen/qwen3-14b running on thread 123344837776960 at 23:54:58
-[END]   Round 14 | LLM mistralai/mixtral-8x7b-instruct finished on thread 123344829384256 at 23:55:00
-[Warning] Invalid consumption from mistralai/mixtral-8x7b-instruct: 471. Defaulting to 0.
-[END]   Round 14 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 finished on thread 123344749852224 at 23:55:00
-[Warning] Invalid consumption from together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7: 8570. Defaulting to 0.
-[END]   Round 14 | LLM qwen/qwen3-14b finished on thread 123344837776960 at 23:55:05
-[Warning] Invalid consumption from qwen/qwen3-14b: 8570. Defaulting to 0.
-[ROUND TIME] Round 14 completed in 6.45 seconds
-
-[ROUND UPDATE] Growth: 273, Total consumption: 510, New fish: 8774
-8774.318153492351
-[START] Round 15 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 running on thread 123344829384256 at 23:55:05
-[START] Round 15 | LLM mistralai/mixtral-8x7b-instruct running on thread 123344749852224 at 23:55:05
-[START] Round 15 | LLM qwen/qwen3-14b running on thread 123344837776960 at 23:55:05
-[END]   Round 15 | LLM mistralai/mixtral-8x7b-instruct finished on thread 123344749852224 at 23:55:06
-[Warning] Invalid consumption from mistralai/mixtral-8x7b-instruct: 490. Defaulting to 0.
-[END]   Round 15 | LLM qwen/qwen3-14b finished on thread 123344837776960 at 23:55:07
+[ROUND UPDATE] Growth: 262, Total consumption: 611, New fish: 10675
+10675.623542485342
+[START] Round 9 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 running on thread 127729990170176 at 01:44:13
+[START] Round 9 | LLM mistralai/mixtral-8x7b-instruct running on thread 127730006955584 at 01:44:13
+[START] Round 9 | LLM qwen/qwen3-14b running on thread 127729998562880 at 01:44:13
+[END]   Round 9 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 finished on thread 127729990170176 at 01:44:15
+[Warning] Invalid consumption from together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7: 1000. Defaulting to 0.
+[END]   Round 9 | LLM mistralai/mixtral-8x7b-instruct finished on thread 127730006955584 at 01:44:15
+[Warning] Invalid consumption from mistralai/mixtral-8x7b-instruct: 50. Defaulting to 0.
+[END]   Round 9 | LLM qwen/qwen3-14b finished on thread 127729998562880 at 01:44:25
 [Warning] Invalid consumption from qwen/qwen3-14b: 500. Defaulting to 0.
-[END]   Round 15 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 finished on thread 123344829384256 at 23:55:07
-[Warning] Invalid consumption from together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7: 8274. Defaulting to 0.
-[ROUND TIME] Round 15 completed in 2.59 seconds
+[ROUND TIME] Round 9 completed in 12.17 seconds
 
-[ROUND UPDATE] Growth: 264, Total consumption: 495, New fish: 8483
-8483.476922884809
-[START] Round 16 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 running on thread 123344749852224 at 23:55:07
-[START] Round 16 | LLM mistralai/mixtral-8x7b-instruct running on thread 123344837776960 at 23:55:07
-[START] Round 16 | LLM qwen/qwen3-14b running on thread 123344829384256 at 23:55:07
-[END]   Round 16 | LLM mistralai/mixtral-8x7b-instruct finished on thread 123344837776960 at 23:55:09
-[Warning] Invalid consumption from mistralai/mixtral-8x7b-instruct: 920. Defaulting to 0.
-[END]   Round 16 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 finished on thread 123344749852224 at 23:55:09
-[Warning] Invalid consumption from together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7: 7983. Defaulting to 0.
-[END]   Round 16 | LLM qwen/qwen3-14b finished on thread 123344829384256 at 23:55:10
+[ROUND UPDATE] Growth: 255, Total consumption: 590, New fish: 10281
+10281.17543199868
+[START] Round 10 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 running on thread 127729990170176 at 01:44:25
+[START] Round 10 | LLM mistralai/mixtral-8x7b-instruct running on thread 127730006955584 at 01:44:25
+[START] Round 10 | LLM qwen/qwen3-14b running on thread 127729998562880 at 01:44:25
+[END]   Round 10 | LLM mistralai/mixtral-8x7b-instruct finished on thread 127730006955584 at 01:44:27
+[Warning] Invalid consumption from mistralai/mixtral-8x7b-instruct: 9719. Defaulting to 0.
+[END]   Round 10 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 finished on thread 127729990170176 at 01:44:27
+[Warning] Invalid consumption from together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7: 9781. Defaulting to 0.
+[END]   Round 10 | LLM qwen/qwen3-14b finished on thread 127729998562880 at 01:44:36
 [Warning] Invalid consumption from qwen/qwen3-14b: 500. Defaulting to 0.
-[ROUND TIME] Round 16 completed in 2.49 seconds
+[ROUND TIME] Round 10 completed in 10.67 seconds
 
-[ROUND UPDATE] Growth: 240, Total consumption: 481, New fish: 8182
-8182.91792937949
-[START] Round 17 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 running on thread 123344837776960 at 23:55:10
-[START] Round 17 | LLM mistralai/mixtral-8x7b-instruct running on thread 123344749852224 at 23:55:10
-[START] Round 17 | LLM qwen/qwen3-14b running on thread 123344829384256 at 23:55:10
-[END]   Round 17 | LLM mistralai/mixtral-8x7b-instruct finished on thread 123344749852224 at 23:55:11
-[Warning] Invalid consumption from mistralai/mixtral-8x7b-instruct: 8133. Defaulting to 0.
-[END]   Round 17 | LLM qwen/qwen3-14b finished on thread 123344829384256 at 23:55:12
-[Warning] Invalid consumption from qwen/qwen3-14b: 14500. Defaulting to 0.
-[END]   Round 17 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 finished on thread 123344837776960 at 23:55:12
-[Warning] Invalid consumption from together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7: 7682. Defaulting to 0.
-[ROUND TIME] Round 17 completed in 2.02 seconds
+[ROUND UPDATE] Growth: 255, Total consumption: 571, New fish: 9905
+9905.54021225725
+[START] Round 11 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 running on thread 127730006955584 at 01:44:36
+[START] Round 11 | LLM mistralai/mixtral-8x7b-instruct running on thread 127729990170176 at 01:44:36
+[START] Round 11 | LLM qwen/qwen3-14b running on thread 127729998562880 at 01:44:36
+[END]   Round 11 | LLM mistralai/mixtral-8x7b-instruct finished on thread 127729990170176 at 01:44:38
+[Warning] Invalid consumption from mistralai/mixtral-8x7b-instruct: 9500. Defaulting to 0.
+[END]   Round 11 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 finished on thread 127730006955584 at 01:44:38
+[Warning] Invalid consumption from together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7: 9405. Defaulting to 0.
+[END]   Round 11 | LLM qwen/qwen3-14b finished on thread 127729998562880 at 01:44:38
+[Warning] Invalid consumption from qwen/qwen3-14b: 9905. Defaulting to 0.
+[ROUND TIME] Round 11 completed in 2.32 seconds
 
-[ROUND UPDATE] Growth: 246, Total consumption: 466, New fish: 7903
-7903.830425861472
-[START] Round 18 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 running on thread 123344749852224 at 23:55:12
-[START] Round 18 | LLM mistralai/mixtral-8x7b-instruct running on thread 123344829384256 at 23:55:12
-[START] Round 18 | LLM qwen/qwen3-14b running on thread 123344837776960 at 23:55:12
-[END]   Round 18 | LLM mistralai/mixtral-8x7b-instruct finished on thread 123344829384256 at 23:55:14
-[Warning] Invalid consumption from mistralai/mixtral-8x7b-instruct: 291. Defaulting to 0.
-[END]   Round 18 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 finished on thread 123344749852224 at 23:55:14
-[Warning] Invalid consumption from together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7: 7903. Defaulting to 0.
-[END]   Round 18 | LLM qwen/qwen3-14b finished on thread 123344837776960 at 23:55:25
+[ROUND UPDATE] Growth: 283, Total consumption: 552, New fish: 9577
+9577.273130684945
+[START] Round 12 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 running on thread 127729990170176 at 01:44:38
+[START] Round 12 | LLM mistralai/mixtral-8x7b-instruct running on thread 127730006955584 at 01:44:38
+[START] Round 12 | LLM qwen/qwen3-14b running on thread 127729998562880 at 01:44:38
+[END]   Round 12 | LLM mistralai/mixtral-8x7b-instruct finished on thread 127730006955584 at 01:44:40
+[Warning] Invalid consumption from mistralai/mixtral-8x7b-instruct: 94. Defaulting to 0.
+[END]   Round 12 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 finished on thread 127729990170176 at 01:44:40
+[Warning] Invalid consumption from together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7: 9077. Defaulting to 0.
+[END]   Round 12 | LLM qwen/qwen3-14b finished on thread 127729998562880 at 01:44:53
 [Warning] Invalid consumption from qwen/qwen3-14b: 500. Defaulting to 0.
-[ROUND TIME] Round 18 completed in 13.03 seconds
+[ROUND TIME] Round 12 completed in 14.69 seconds
 
-[ROUND UPDATE] Growth: 251, Total consumption: 452, New fish: 7643
-7643.153669990253
-[START] Round 19 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 running on thread 123344829384256 at 23:55:25
-[START] Round 19 | LLM mistralai/mixtral-8x7b-instruct running on thread 123344749852224 at 23:55:25
-[START] Round 19 | LLM qwen/qwen3-14b running on thread 123344837776960 at 23:55:25
-[END]   Round 19 | LLM mistralai/mixtral-8x7b-instruct finished on thread 123344749852224 at 23:55:26
-[END]   Round 19 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 finished on thread 123344829384256 at 23:55:27
-[Warning] Invalid consumption from together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7: 7143. Defaulting to 0.
-[END]   Round 19 | LLM qwen/qwen3-14b finished on thread 123344837776960 at 23:55:27
+[ROUND UPDATE] Growth: 282, Total consumption: 535, New fish: 9264
+9264.489783838468
+[START] Round 13 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 running on thread 127730006955584 at 01:44:53
+[START] Round 13 | LLM mistralai/mixtral-8x7b-instruct running on thread 127729990170176 at 01:44:53
+[START] Round 13 | LLM qwen/qwen3-14b running on thread 127729998562880 at 01:44:53
+[END]   Round 13 | LLM mistralai/mixtral-8x7b-instruct finished on thread 127729990170176 at 01:44:55
+[Warning] Invalid consumption from mistralai/mixtral-8x7b-instruct: 9200. Defaulting to 0.
+[END]   Round 13 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 finished on thread 127730006955584 at 01:44:55
+[Warning] Invalid consumption from together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7: 8764. Defaulting to 0.
+[END]   Round 13 | LLM qwen/qwen3-14b finished on thread 127729998562880 at 01:44:55
 [Warning] Invalid consumption from qwen/qwen3-14b: 500. Defaulting to 0.
-[ROUND TIME] Round 19 completed in 2.54 seconds
+[ROUND TIME] Round 13 completed in 2.57 seconds
 
-[ROUND UPDATE] Growth: 236, Total consumption: 421, New fish: 7418
-7418.102804782629
-[START] Round 20 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 running on thread 123344749852224 at 23:55:27
-[START] Round 20 | LLM mistralai/mixtral-8x7b-instruct running on thread 123344829384256 at 23:55:27[START] Round 20 | LLM qwen/qwen3-14b running on thread 123344837776960 at 23:55:27
+[ROUND UPDATE] Growth: 256, Total consumption: 520, New fish: 8941
+8941.453039334907
+[START] Round 14 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 running on thread 127729990170176 at 01:44:55
+[START] Round 14 | LLM mistralai/mixtral-8x7b-instruct running on thread 127730006955584 at 01:44:55
+[START] Round 14 | LLM qwen/qwen3-14b running on thread 127729998562880 at 01:44:55
+[END]   Round 14 | LLM mistralai/mixtral-8x7b-instruct finished on thread 127730006955584 at 01:44:57
+[Warning] Invalid consumption from mistralai/mixtral-8x7b-instruct: 495. Defaulting to 0.
+[END]   Round 14 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 finished on thread 127729990170176 at 01:44:57829384256 at 23:55:27[START] Round 20 | LLM qwen/qwen3-14b running on thread 123344837776960 at 23:55:27
 
 [END]   Round 20 | LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7 finished on thread 123344749852224 at 23:55:29
 [Warning] Invalid consumption from together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7: 7418. Defaulting to 0.
