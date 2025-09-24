@@ -130,6 +130,10 @@ class NonAtomicCongestion(Game):
             print(f"[END]   Round {self.curr_round} | LLM {llm.get_model_name()} "
                   f"finished on thread {thread_id} at {end_time}")
 
+            # Convert to int if it's a float, then validate
+            if isinstance(value, float):
+                value = round(value)  # Round to nearest integer instead of truncating
+            
             if not isinstance(value, int) or value < 0 or value > self.consumption_limit:
                 print(f"[Warning] Invalid consumption from {llm.get_model_name()}: {value}. Defaulting to 0.")
                 value = self.consumption_limit if value > 0 else 0
