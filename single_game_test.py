@@ -23,24 +23,24 @@ from helper.game.prisoner_dilemma import PrisonersDilemma
 async def main():
     type_of_games: list[Type[Game]] = [
             #PrisonersDilemma,
-            #HedonicGame,
+            HedonicGame,
             #AtomicCongestion,
             #SocialContext,
-            NonAtomicCongestion,
+            #NonAtomicCongestion,
             #CostSharingGame,
-            #DictatorGame,
-            #GenCoalition,
+            DictatorGame,
+            GenCoalition,
     ]
 
     file_names: list[str] = [
             #"PrisonnersDilemma.csv",
-            #"HedonicGame.csv",
+            "HedonicGame.csv",
             #"AtomicCongestion.csv",
             #"SocialContext.csv",
-            "NonAtomicCongestion.csv",
+            #"NonAtomicCongestion.csv",
             #"CostSharingGame.csv",
-            #"DictatorGame.csv",
-            #"GenCoalition.csv"
+            "DictatorGame.csv",
+            "GenCoalition.csv"
     ]
 
 #if it's from together , there must be a together: prefix
