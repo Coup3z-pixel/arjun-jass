@@ -19,25 +19,25 @@ from helper.game.prisoner_dilemma import PrisonersDilemma
 
 async def main():
     type_of_games: list[Type[Game]] = [
-            PrisonersDilemma,
-            #HedonicGame,
+            #PrisonersDilemma,
+            HedonicGame,
             #AtomicCongestion,
-            SocialContext,
+            #SocialContext,
             #NonAtomicCongestion,
-            CostSharingGame,
-            DictatorGame,
-            #GenCoalition,
+            #CostSharingGame,
+            #DictatorGame,
+            GenCoalition,
     ]
 
     file_names: list[str] = [
-            "PrisonnersDilemma.csv",
-            #"HedonicGame.csv",
+            #"PrisonnersDilemma.csv",
+            "HedonicGame.csv",
             #"AtomicCongestion.csv",
-            "SocialContext.csv",
+            #"SocialContext.csv",
             #"NonAtomicCongestion.csv",
-            "CostSharingGame.csv",
-            "DictatorGame.csv",
-            #"GenCoalition.csv"
+            #"CostSharingGame.csv",
+            #"DictatorGame.csv",
+            "GenCoalition.csv"
     ]
 
 
@@ -55,7 +55,7 @@ async def main():
         #"together:jaspertsh08_a03a/Llama-3.3-70B-Instruct-Reference-8b98da31-79f56385"
         #"together:jaspertsh08_a03a/Llama-4-Scout-17B-16E-70144409-1afad6eb",
         #"vertex:projects/buoyant-ground-472514-s0/locations/us-central1/models/4604485316777082880",
-        "together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7",
+       #"together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7",
         "mistralai/mixtral-8x7b-instruct",
         "qwen/qwen3-14b",
 
