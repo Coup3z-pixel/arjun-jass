@@ -13555,3 +13555,54 @@ DictatorGame - Round 2
 [DEBUG] Sending prompt to LLM mistralai/mixtral-8x7b-instruct
 [DEBUG] Sending prompt to LLM qwen/qwen3-14b
 Response: reasoning='The decision to keep or donate the $800 should be based on the importance of the research and the potential impact of the donation. If the research is critical and requires further funding, it may be wise to keep a larger portion of the money. However, if the research is less critical or if there are other pressing needs, donating a larger portion may be more beneficial.' keep_percent=60 donate_percent=40
+Response: reasoning='As a responsible research team, we believe in giving back to the community that supports us. Therefore, we have decided to donate a significant portion of our budget to local organizations. However, we also need to keep some funds for potential future expenses, such as travel or equipment costs. After careful consideration, we have decided to keep 60% of the budget and donate 40%.' keep_percent=60 donate_percent=40
+[DEBUG] Pydantic validation error on attempt 1: 1 validation error for DictatorGameAnswerFormat
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='h.\n{"reasoning": "A bal..., "donate_percent": 50}', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid
+[DEBUG] Pydantic validation error on attempt 2: 1 validation error for DictatorGameAnswerFormat
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='l.\n{"reasoning": "The u..., "donate_percent": 50}', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid
+Response: reasoning="I decide to keep 75% of the money and donate 25% because I need to ensure personal financial stability while also contributing to the team's shared goals. Keeping a larger portion allows me to handle individual expenses, while donating supports collective efforts and maintains team cohesion." keep_percent=75 donate_percent=25
+DictatorGame - Round 3
+536062
+[DEBUG] Sending prompt to LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7
+[DEBUG] Sending prompt to LLM mistralai/mixtral-8x7b-instruct
+[DEBUG] Sending prompt to LLM qwen/qwen3-14b
+Response: reasoning='The decision to keep or donate the $800 should be based on the importance of the research and the potential impact of the donation. If the research is critical and requires further funding, it may be wise to keep a larger portion of the money. However, if the research is less critical or if there are other pressing needs, donating a larger portion may be more beneficial.' keep_percent=60 donate_percent=40
+Response: reasoning='As a responsible research team, we believe in giving back to the community that supports us. Therefore, we have decided to donate a significant portion of our budget to local organizations. However, we also need to keep some funds for potential future expenses, such as travel or equipment costs. After careful consideration, we have decided to keep 60% of the budget and donate 40%.' keep_percent=60 donate_percent=40
+[DEBUG] Pydantic validation error on attempt 1: 1 validation error for DictatorGameAnswerFormat
+  Invalid JSON: invalid number at line 2 column 0 [type=json_invalid, input_value='0.\n{"reasoning": "The d..., "donate_percent": 50}', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid
+[DEBUG] Pydantic validation error on attempt 2: 1 validation error for DictatorGameAnswerFormat
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='s.\n{"reasoning": "A bal..., "donate_percent": 50}', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid
+[DEBUG] Pydantic validation error on attempt 3: 1 validation error for DictatorGameAnswerFormat
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='e.\n{"reasoning": "The d..., "donate_percent": 50}', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid
+[DEBUG] Creating fallback response after 3 attempts
+Response: reasoning='The decision to split the funds equally between keeping and donating ensures a balanced approach, allowing personal use while contributing to a cause. With no specific guidelines provided, a 50-50 spl' keep_percent=50 donate_percent=50
+DictatorGame - Round 4
+537727
+[DEBUG] Sending prompt to LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7
+[DEBUG] Sending prompt to LLM mistralai/mixtral-8x7b-instruct
+[DEBUG] Sending prompt to LLM qwen/qwen3-14b
+Response: reasoning='The decision to keep or donate the $800 should be based on the importance of the research and the potential impact of the donation. If the research is critical and requires further funding, it may be wise to keep a larger portion of the money. However, if the research is less critical or if there are other pressing needs, donating a larger portion may be more beneficial.' keep_percent=60 donate_percent=40
+Response: reasoning='As a responsible research team, we wanted to ensure that our collaborative efforts were reflected in the distribution of the funds. We decided to keep 70% of the money to cover any future expenses or investments for the research. The remaining 30% will be donated to support further scientific research and advancements. This decision was made unanimously and with the goal of promoting the spirit of collaboration and giving back to the scientific community.' keep_percent=70 donate_percent=30
+[DEBUG] Pydantic validation error on attempt 1: 1 validation error for DictatorGameAnswerFormat
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='}.\n{"reasoning": "Split..., "donate_percent": 50}', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid
+Response: reasoning="I decide to keep 75% of the money and donate 25% because I need to ensure personal financial stability while also contributing to the team's shared goals. Keeping a larger portion allows me to handle individual expenses, while donating supports collective efforts and maintains team cohesion." keep_percent=75 donate_percent=25
+DictatorGame - Round 5
+539560
+[DEBUG] Sending prompt to LLM together:jaspertsh08_a03a/Qwen3-14B-Base-9cde0ab7-7630b2c7
+[DEBUG] Sending prompt to LLM mistralai/mixtral-8x7b-instruct
+[DEBUG] Sending prompt to LLM qwen/qwen3-14b
+Response: reasoning='As a responsible research team, we believe in giving back to the community that supports us. Therefore, we have decided to donate a significant portion of our budget to local organizations. However, we also need to keep some funds for potential future expenses, such as travel or equipment costs. After careful consideration, we have decided to keep 60% of the budget and donate 40%.' keep_percent=60 donate_percent=40
+Response: reasoning='The decision to keep or donate the $800 should be based on the importance of the research and the potential impact of the donation. If the research is critical and requires further funding, it may be wise to keep a larger portion of the money. However, if the research is less critical or if there are other pressing needs, donating a larger portion may be more beneficial.' keep_percent=60 donate_percent=40
+[DEBUG] Pydantic validation error on attempt 1: 1 validation error for DictatorGameAnswerFormat
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='e.\n{"reasoning": "Split..., "donate_percent": 50}', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid
+[DEBUG] Pydantic validation error on attempt 2: 1 validation error for DictatorGameAnswerFormat
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='h.\n{"reasoning": "A bal..., "donate_percent": 50}', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid
+Response: reasoning="I decide to keep 75% of the money and donate 25% because I need to ensure personal financial stability while also contributing to the team's shared goals. Keeping a larger portion allows me to handle individual expenses, while donating supports collective efforts and maintains team cohesion." keep_percent=75 donate_percent=25

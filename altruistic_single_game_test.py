@@ -21,24 +21,24 @@ from helper.game.prisoner_dilemma import PrisonersDilemma
 async def main():
     type_of_games: list[Type[Game]] = [
             #PrisonersDilemma,
-            #HedonicGame,
-            #GenCoalition,
-             #AtomicCongestion,
-             #SocialContext,
-             #NonAtomicCongestion,
-             CostSharingGame,
-             DictatorGame,
+            HedonicGame,
+            GenCoalition,
+            #AtomicCongestion,
+            #SocialContext,
+            #NonAtomicCongestion,
+            #CostSharingGame,
+            #DictatorGame,
     ]
 
     file_names: list[str] = [
             #"PrisonnersDilemma.csv",
-            #"HedonicGame.csv",
-            #"GenCoalition.csv",
+            "HedonicGame.csv",
+            "GenCoalition.csv",
              #"AtomicCongestion.csv",
              #"SocialContext.csv",
              #"NonAtomicCongestion.csv",
-             "CostSharingGame.csv",
-             "DictatorGame.csv"
+             #"CostSharingGame.csv",
+             #"DictatorGame.csv"
     ]
 
 
@@ -75,26 +75,44 @@ async def main():
             print("File Opened")
             game_configurations = csv.DictReader(config_file)
 
+            # Generate ONE filename per game (not per round)
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            game_name = type_of_games[index].__name__.lower()
+            csv_filename = f"data/altruistic_injected_{game_name}_results_{timestamp}.csv"
+
             for game_config in game_configurations:
                 print(f"\n=== Game Configuration: {game_config} ===")
                 for round in range(int(game_config['simulate_rounds'])):
                     print(f"\n--- Round {round+1} ---")
                     
-                    # Generate filename with altruistic prefix for games that save directly
-                    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-                    game_name = type_of_games[index].__name__.lower()
-                    csv_filename = f"data/altruistic_injected_{game_name}_results_{timestamp}.csv"
+                    # Pass appropriate parameters for different game constructors
+                    try:
+                        if type_of_games[index] in [PrisonersDilemma, AtomicCongestion]:
+                            curr_game = type_of_games[index](game_config, llms=llms, csv_save=csv_filename)
+                        elif type_of_games[index] in [HedonicGame, GenCoalition]:
+                            # These games expect config_dict as first parameter
+                            curr_game = type_of_games[index](game_config, llms=llms, csv_file=csv_filename)
+                        elif type_of_games[index] in [SocialContext, NonAtomicCongestion, CostSharingGame, DictatorGame]:
+                            curr_game = type_of_games[index](game_config, llms=llms, csv_file=csv_filename)
+                        else:
+                            curr_game = type_of_games[index](game_config, llms=llms)
+                        
+                        print(f"[DEBUG] Game created successfully: {type(curr_game)}")
+                        
+                        # Check if curr_game is None
+                        if curr_game is None:
+                            print(f"[ERROR] Failed to create game {type_of_games[index].__name__}")
+                            continue
+                            
+                    except Exception as e:
+                        print(f"[ERROR] Failed to create game {type_of_games[index].__name__}: {e}")
+                        continue
                     
-                    # Pass appropriate CSV parameter for games that save directly
-                    if type_of_games[index] in [PrisonersDilemma, AtomicCongestion]:
-                        curr_game = type_of_games[index](game_config, llms=llms, csv_save=csv_filename)
-                    elif type_of_games[index] in [SocialContext, NonAtomicCongestion, HedonicGame, GenCoalition, CostSharingGame, DictatorGame]:
-                        curr_game = type_of_games[index](game_config, llms=llms, csv_file=csv_filename)
+                    # Properly handle both async and sync simulate_game methods
+                    if asyncio.iscoroutinefunction(curr_game.simulate_game):
+                        await curr_game.simulate_game()
                     else:
-                        curr_game = type_of_games[index](game_config, llms=llms)
-                    
-                    # Properly await the async simulate_game method
-                    await curr_game.simulate_game()
+                        curr_game.simulate_game()
 
                     # Check if the game has get_results method
                     if hasattr(curr_game, 'get_results'):

@@ -1,0 +1,22 @@
+nohup: ignoring input
+File Opened
+File Opened
+
+=== Game Configuration: {'simulate_rounds': '4', 'agent': 'Alice', 'groups': "{'Research': ['Alice', 'Bob'], 'Marketing': ['Charlie'], 'Solo': ['Diana']}", 'friends': "{'Alice': ['Bob', 'Charlie'], 'Bob': ['Alice', 'Charlie'], 'Charlie': ['Alice', 'Bob'], 'Diana': []}", 'enemies': "{'Alice': ['Diana'], 'Bob': ['Diana'], 'Charlie': ['Diana'], 'Diana': ['Alice', 'Bob', 'Charlie']}", 'w_friend': '2.0', 'w_enemy': '1.5'} ===
+
+--- Round 1 ---
+Traceback (most recent call last):
+  File "/root/arjun-jass/altruistic_single_game_test.py", line 181, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/root/arjun-jass/altruistic_single_game_test.py", line 97, in main
+    await curr_game.simulate_game()
+TypeError: object NoneType can't be used in 'await' expression
