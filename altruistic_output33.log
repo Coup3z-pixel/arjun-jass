@@ -1,0 +1,1778 @@
+nohup: ignoring input
+File Opened
+File Opened
+
+=== Game Configuration: {'simulate_rounds': '4', 'agent': 'Alice', 'groups': "{'Research': ['Alice', 'Bob'], 'Marketing': ['Charlie'], 'Solo': ['Diana']}", 'friends': "{'Alice': ['Bob', 'Charlie'], 'Bob': ['Alice', 'Charlie'], 'Charlie': ['Alice', 'Bob'], 'Diana': []}", 'enemies': "{'Alice': ['Diana'], 'Bob': ['Diana'], 'Charlie': ['Diana'], 'Diana': ['Alice', 'Bob', 'Charlie']}", 'w_friend': '2.0', 'w_enemy': '1.5'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 1:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: To prioritize altruism and maximize fairness  cooperation  and well-being of others  staying in the ...
+
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: The decision must be driven by the core principles of increasing cooperation  trust  and the well-be...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 2:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: To reach a decision  let's assess the situation concerning the principles of altruism  prioritizing ...
+
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Given the emphasis on altruism and maximizing fairness  cooperation  and well-being  the decision sh...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 3:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Currently  you are in a group where Bob  one of your friends  is also present. Staying in the Resear...
+
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: **Valuing Cooperation and Mutual Benefit**\nYou are currently an agent within a social group which i...
+
+
+--- Round 4 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 4:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: To decide whether to remain in my current group or opt to be alone  I must evaluate the situation th...
+
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: As an agent in a social group where my decision must prioritize altruism  I aim to enhance the well-...
+
+
+=== Game Configuration: {'simulate_rounds': '4', 'agent': 'Bob', 'groups': "{'Research': ['Alice', 'Bob'], 'Marketing': ['Charlie'], 'Solo': ['Diana']}", 'friends': "{'Alice': ['Bob', 'Charlie'], 'Bob': ['Alice', 'Charlie'], 'Charlie': ['Alice', 'Bob'], 'Diana': []}", 'enemies': "{'Alice': ['Diana'], 'Bob': ['Diana'], 'Charlie': ['Diana'], 'Diana': ['Alice', 'Bob', 'Charlie']}", 'w_friend': '2.0', 'w_enemy': '1.5'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 1:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: When considering the options  we should assess the impact on the well-being of each party involved  ...
+
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: To make a decision that maximizes fairness  cooperation  and the well-being of all parties involved ...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 2:
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Considering my social dynamics and the principle of altruism  my current group consists of friends A...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: To maximize altruism and prioritize the well-being of others  we must consider the potential impacts...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 3:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Upon considering the principles of altruism and maximizing the shared good  the choice to stay in a ...
+
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: To determine whether to stay in the current group or leave to be alone  let's evaluate the situation...
+
+
+--- Round 4 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 4:
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Given the available information  it's essential to evaluate the options through the lens of altruism...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: **Reasoning:**  Given the perspective of prioritizing altruism and maximizing the well-being of othe...
+
+
+=== Game Configuration: {'simulate_rounds': '4', 'agent': 'Charlie', 'groups': "{'Research': ['Alice', 'Bob'], 'Marketing': ['Charlie'], 'Solo': ['Diana']}", 'friends': "{'Alice': ['Bob', 'Charlie'], 'Bob': ['Alice', 'Charlie'], 'Charlie': ['Alice', 'Bob'], 'Diana': []}", 'enemies': "{'Alice': ['Diana'], 'Bob': ['Diana'], 'Charlie': ['Diana'], 'Diana': ['Alice', 'Bob', 'Charlie']}", 'w_friend': '2.0', 'w_enemy': '1.5'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 1:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Staying in the group with Alice and Bob in the Research division is the most altruistic decision giv...
+
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Considering the principles of altruism  choosing to stay with friends Alice and Bob in the Research ...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 2:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: As an agent dedicated to altruism and the well-being of others  maintaining relationships and foster...
+
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Given the priority of altruism described  staying in a group that maximizes fairness  cooperation  a...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 3:
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: As part of my current group  which consists of my friends Alice and Bob in the Research group  I can...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: As an agent in this scenario  my decision must prioritize increasing cooperation and the well-being ...
+
+
+--- Round 4 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 4:
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: **Reasoning:**  1. **Maximize Well-being:** Research is a group where both Alice and Bob  who are yo...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Choosing to stay in the current group  where my friends Alice and Bob are  aligns with the goal of f...
+
+
+=== Game Configuration: {'simulate_rounds': '2', 'agent': 'Alice', 'groups': "{'BigGroup': ['Alice', 'Bob', 'Charlie', 'Diana', 'Eve']}", 'friends': "{'Alice': ['Bob', 'Charlie'], 'Bob': ['Alice', 'Charlie'], 'Charlie': ['Alice', 'Bob'], 'Diana': ['Eve'], 'Eve': ['Diana']}", 'enemies': "{'Alice': ['Diana', 'Eve'], 'Bob': ['Diana', 'Eve'], 'Charlie': ['Diana', 'Eve'], 'Diana': ['Alice', 'Bob', 'Charlie'], 'Eve': ['Alice', 'Bob', 'Charlie']}", 'w_friend': '1.0', 'w_enemy': '2.0'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 1:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 2.0
+    Reasoning: To determine which path aligns with the principles of altruism  the focus lies on what benefits the ...
+
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 2.0
+    Reasoning: In making this decision  it's essential to focus on maximizing fairness  cooperation  and the well-b...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 2:
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 2.0
+    Reasoning: In order to act with altruism and maximize fairness  cooperation  and the well-being of others  choo...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 2.0
+    Reasoning: In choosing whether to stay within the group or leave to be alone  the decision should prioritize th...
+
+
+=== Game Configuration: {'simulate_rounds': '2', 'agent': 'Bob', 'groups': "{'BigGroup': ['Alice', 'Bob', 'Charlie', 'Diana', 'Eve']}", 'friends': "{'Alice': ['Bob', 'Charlie'], 'Bob': ['Alice', 'Charlie'], 'Charlie': ['Alice', 'Bob'], 'Diana': ['Eve'], 'Eve': ['Diana']}", 'enemies': "{'Alice': ['Diana', 'Eve'], 'Bob': ['Diana', 'Eve'], 'Charlie': ['Diana', 'Eve'], 'Diana': ['Alice', 'Bob', 'Charlie'], 'Eve': ['Alice', 'Bob', 'Charlie']}", 'w_friend': '1.0', 'w_enemy': '2.0'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 1:
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 2.0
+    Reasoning: As an agent prioritizing altruism  my decision must focus on maximizing the overall well-being  fair...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 2.0
+    Reasoning: To determine whether to stay in the current group or leave to be alone  consider the impact of each ...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 2:
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 2.0
+    Reasoning: Given the situation  the principle of prioritizing altruism suggests actions that maximize the overa...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 2.0
+    Reasoning: When considering both immediate and long-term consequences  staying in the BigGroup provides an oppo...
+
+
+=== Game Configuration: {'simulate_rounds': '2', 'agent': 'Eve', 'groups': "{'BigGroup': ['Alice', 'Bob', 'Charlie', 'Diana', 'Eve']}", 'friends': "{'Alice': ['Bob', 'Charlie'], 'Bob': ['Alice', 'Charlie'], 'Charlie': ['Alice', 'Bob'], 'Diana': ['Eve'], 'Eve': ['Diana']}", 'enemies': "{'Alice': ['Diana', 'Eve'], 'Bob': ['Diana', 'Eve'], 'Charlie': ['Diana', 'Eve'], 'Diana': ['Alice', 'Bob', 'Charlie'], 'Eve': ['Alice', 'Bob', 'Charlie']}", 'w_friend': '1.0', 'w_enemy': '2.0'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 1:
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 5.0
+    Reasoning: Choosing to stay in the group prioritizes the well-being of the collective over individual preferenc...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 5.0
+    Reasoning: After carefully considering the options  the choice is to **stay in the current group.** Here's why:...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 2:
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 5.0
+    Reasoning: Choosing to stay (1) in the current group aligns with the principles of altruism and cooperation  an...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 5.0
+    Reasoning: The decision hinges on maximizing altruism and the potential impact within the group and individuall...
+
+
+=== Game Configuration: {'simulate_rounds': '5', 'agent': 'Alice', 'groups': "{'Solo': ['Alice'], 'Team': ['Bob', 'Charlie', 'Diana']}", 'friends': "{'Alice': ['Bob', 'Charlie'], 'Bob': ['Alice', 'Charlie'], 'Charlie': ['Alice', 'Bob'], 'Diana': []}", 'enemies': "{'Alice': ['Diana'], 'Bob': ['Diana'], 'Charlie': ['Diana'], 'Diana': ['Alice', 'Bob', 'Charlie']}", 'w_friend': '2.0', 'w_enemy': '1.0'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 1:
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: In evaluating the options through the lens of altruism  the goal is to prioritize fairness  cooperat...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Considering the principles of altruism  I aim to take a decision that fosters cooperation  trust  an...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 2:
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Staying in the team maximizes the larger good and fosters cooperation among various members  includi...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Staying in the current group with Bob and Charlie potentially maximizes trust and cooperation among ...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 3:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: In making a decision that aligns with altruistic principles  let's evaluate both choices from multip...
+
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: In approaching the choice  it's essential to weigh the potential impact on all parties involved. The...
+
+
+--- Round 4 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 4:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Staying in the current group (Team: Bob  Charlie  Diana) is the better option for maximizing fairnes...
+
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: After evaluating the situation with an emphasis on fairness  cooperation  and the well-being of all ...
+
+
+--- Round 5 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 5:
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Remaining in the group with Bob and Charlie offers an opportunity to foster cooperation  heal animos...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Given the principles of altruism and the current situation  here's a breakdown to determine the best...
+
+
+=== Game Configuration: {'simulate_rounds': '5', 'agent': 'Bob', 'groups': "{'Solo': ['Alice'], 'Team': ['Bob', 'Charlie', 'Diana']}", 'friends': "{'Alice': ['Bob', 'Charlie'], 'Bob': ['Alice', 'Charlie'], 'Charlie': ['Alice', 'Bob'], 'Diana': []}", 'enemies': "{'Alice': ['Diana'], 'Bob': ['Diana'], 'Charlie': ['Diana'], 'Diana': ['Alice', 'Bob', 'Charlie']}", 'w_friend': '2.0', 'w_enemy': '1.0'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 1:
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Remaining in the current group is a decision rooted in fostering cooperation  promoting fairness  an...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: When evaluating the situation with an altruistic mindset  several factors must be considered:  1. **...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 2:
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: When considering the options  my primary objective is to prioritize altruism and the well-being of o...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Given the values of maximizing fairness  cooperation  and overall well-being  the decision must focu...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 3:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: When considering the given social dynamics  the decision needs to prioritize fairness  cooperation  ...
+
+  altruistic_qwen/qwen3-14b:
+    Action: LEAVE (LLM chose: 2)
+    Altruism Score: 0.0
+    Reasoning: Given the principles of altruism  the decision I make must prioritize the greatest shared good for a...
+
+
+--- Round 4 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 4:
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Considering the principle of altruism and the encouragement of cooperation  staying in my current gr...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Given the situation  considering the principles of altruism  fairness  and mutual benefit  here's th...
+
+
+--- Round 5 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 5:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: When considering the principles of altruism  it is essential to assess the potential outcomes of bot...
+
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Given the priority of altruism  the decision revolves around maximizing fairness  cooperation  and w...
+
+
+=== Game Configuration: {'simulate_rounds': '5', 'agent': 'Charlie', 'groups': "{'Solo': ['Alice'], 'Team': ['Bob', 'Charlie', 'Diana']}", 'friends': "{'Alice': ['Bob', 'Charlie'], 'Bob': ['Alice', 'Charlie'], 'Charlie': ['Alice', 'Bob'], 'Diana': []}", 'enemies': "{'Alice': ['Diana'], 'Bob': ['Diana'], 'Charlie': ['Diana'], 'Diana': ['Alice', 'Bob', 'Charlie']}", 'w_friend': '2.0', 'w_enemy': '1.0'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 1:
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Choosing to stay in my current group promotes cooperation and trust. Although Diana is considered an...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Staying in the current group presents an opportunity to foster relationships  improve cooperation  a...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 2:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Staying in my current group  where I have a friend (Bob) and an enemy (Diana)  provides an immediate...
+
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: After evaluating the options and their implications  it is clear that the decision must align with t...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 3:
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Choosing to stay in the current group can potentially foster cooperation and tension reduction among...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: 1. **Value of Group Dynamics**: Staying in your current group allows you to maintain the connections...
+
+
+--- Round 4 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 4:
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: While Diana is a part of the team with Bob  who is a friend  staying in the group allows an opportun...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: - Evaluating my current group:    - Alice is a friend who is working alone  suggesting she might ben...
+
+
+--- Round 5 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 5:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: LEAVE (LLM chose: 2)
+    Altruism Score: 0.0
+    Reasoning: In making the decision on whether to stay in the current group or leave to be alone  I must consider...
+
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: To approach this decision with an altruistic mindset  we need to evaluate the consequences of each c...
+
+
+=== Game Configuration: {'simulate_rounds': '3', 'agent': 'Alice', 'groups': "{'Group1': ['Alice', 'Diana'], 'Group2': ['Bob', 'Charlie']}", 'friends': "{'Alice': ['Bob', 'Charlie'], 'Bob': ['Alice', 'Charlie'], 'Charlie': ['Alice', 'Bob'], 'Diana': []}", 'enemies': "{'Alice': ['Diana'], 'Bob': ['Diana'], 'Charlie': ['Diana'], 'Diana': ['Alice', 'Bob', 'Charlie']}", 'w_friend': '1.0', 'w_enemy': '1.0'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 1:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 1.0
+    Reasoning: Choosing to remain in Group 2 with friends Bob and Charlie aligns with the principles of altruism an...
+
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 1.0
+    Reasoning: Maintaining connections and fostering cooperation within a group aligns with the principles of altru...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 2:
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 1.0
+    Reasoning: Staying in my current group promotes harmony and increased well-being for both my friends and the so...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 1.0
+    Reasoning: In making this decision  I must consider the well-being of everyone involved and seek to maximize fa...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 3:
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 1.0
+    Reasoning: Given the principles of altruism  cooperation  and maximizing the well-being of others  my decision ...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 1.0
+    Reasoning: Considering the principle of altruism and aiming to maximize overall well-being  let's evaluate both...
+
+
+=== Game Configuration: {'simulate_rounds': '3', 'agent': 'Bob', 'groups': "{'Group1': ['Alice', 'Diana'], 'Group2': ['Bob', 'Charlie']}", 'friends': "{'Alice': ['Bob', 'Charlie'], 'Bob': ['Alice', 'Charlie'], 'Charlie': ['Alice', 'Bob'], 'Diana': []}", 'enemies': "{'Alice': ['Diana'], 'Bob': ['Diana'], 'Charlie': ['Diana'], 'Diana': ['Alice', 'Bob', 'Charlie']}", 'w_friend': '1.0', 'w_enemy': '1.0'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 1:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: In considering the principles of altruism and the desire to maximize fairness  cooperation  and the ...
+
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: When making this decision  it is essential to consider the overall impact on fairness  cooperation  ...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 2:
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Given the principles of altruism and maximizing the well-being of others  the decision should consid...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Analyzing the scenario with an altruistic mindset involves considering the dynamics and the potentia...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 3:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: To apply the given philosophy of prioritizing altruism  fairness  cooperation  and the well-being of...
+
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: In evaluating the best course of action  let's consider the potential impacts on fairness  cooperati...
+
+
+=== Game Configuration: {'simulate_rounds': '3', 'agent': 'Charlie', 'groups': "{'Group1': ['Alice', 'Diana'], 'Group2': ['Bob', 'Charlie']}", 'friends': "{'Alice': ['Bob', 'Charlie'], 'Bob': ['Alice', 'Charlie'], 'Charlie': ['Alice', 'Bob'], 'Diana': []}", 'enemies': "{'Alice': ['Diana'], 'Bob': ['Diana'], 'Charlie': ['Diana'], 'Diana': ['Alice', 'Bob', 'Charlie']}", 'w_friend': '1.0', 'w_enemy': '1.0'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 1:
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Staying in your current group allows you to maintain your connection with Alice  who is your friend ...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: Considering the principle of altruism  the decision should maximize cooperation  well-being  and fai...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 2:
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: In this situation  remaining in the group may offer multiple benefits for the well-being of everyone...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: In deciding whether to stay in my current group or leave to be alone  I must consider the overarchin...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.hedonic_game.HedonicGame'>
+Results for Round 3:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: In this situation  the primary objective is to make a decision that maximizes the well-being of all ...
+
+  altruistic_qwen/qwen3-14b:
+    Action: STAY (LLM chose: 1)
+    Altruism Score: 0.0
+    Reasoning: In this situation  the priority is maximizing fairness  cooperation  and the well-being of all invol...
+
+File Opened
+File Opened
+
+=== Game Configuration: {'simulate_rounds': '5', 'coalitions': "['C1', 'C2']", 'own_gain_C1': '1.5', 'own_gain_C2': '0.0', 'friends_gain_C1': '0.0', 'friends_gain_C2': '2.0', 'M': '2.0'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 1:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: Considering the stated priority of altruism and maximizing the fairness  cooperation  and well-being...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: In prioritizing altruism  my goal is to maximize fairness  cooperation  and the well-being of all in...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 2:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: Considering the principles of altruism and maximizing the well-being of others  the allocation of ef...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:40.0%,C2:60.0% (LLM chose: 40)
+    Altruism Score: 0.6
+    Reasoning: Regarding how to distribute effort between Project C1 and C2  adhering to the principle of prioritiz...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 3:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: ### Reasons for Allocating Effort to Project C2 (Beta)  1. **Altruistic Principle**:      - The core...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: In this scenario  the primary objective is to maximize the well-being of others by prioritizing altr...
+
+
+--- Round 4 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 4:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: In this scenario  acting with altruism and prioritizing fairness means considering the wellbeing and...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:40.0%,C2:60.0% (LLM chose: 40)
+    Altruism Score: 0.6
+    Reasoning: The assignment of effort must consider both personal gain  collaboration  and the well-being of othe...
+
+
+--- Round 5 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 5:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: Considering the principles of altruism and maximizing the well-being of others  the allocation decis...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: In line with the principle of prioritizing altruism  this decision will aim to maximize the well-bei...
+
+
+=== Game Configuration: {'simulate_rounds': '5', 'coalitions': "['C1', 'C2']", 'own_gain_C1': '2.0', 'own_gain_C2': '0.5', 'friends_gain_C1': '0.0', 'friends_gain_C2': '1.8', 'M': '2.0'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 1:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: In accordance with the guiding principle of prioritizing altruism - focusing on fairness  cooperatio...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:25.0%,C2:75.0% (LLM chose: 25)
+    Altruism Score: 0.75
+    Reasoning: In line with prioritizing altruism and maximizing the well-being of all involved  choosing how much ...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 2:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: Given the principles of prioritizing altruism  maximizing fairness  and considering long-term benefi...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: In determining the allocation of effort  the focus is on maximizing fairness  cooperation  and the w...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 3:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: When deciding how to allocate my 100 units of effort between the two projects  I will prioritize the...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: To determine the effort allocation between Project C1 and C2  let's break down the benefits  impacts...
+
+
+--- Round 4 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 4:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:10.0%,C2:90.0% (LLM chose: 10)
+    Altruism Score: 0.9
+    Reasoning: To maximize altruism  fairness  and cooperation  it is crucial to consider how my allocation of effo...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: In making an altruistic decision  my aim is to maximize the overall benefit and fair distribution of...
+
+
+--- Round 5 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 5:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: Given the principles of altruism  which prioritize fairness  cooperation  and the well-being of othe...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:40.0%,C2:60.0% (LLM chose: 40)
+    Altruism Score: 0.6
+    Reasoning: Given the goal of maximizing fairness  cooperation  and mutual well-being  I must carefully allocate...
+
+
+=== Game Configuration: {'simulate_rounds': '5', 'coalitions': "['C1', 'C2']", 'own_gain_C1': '1.0', 'own_gain_C2': '0.0', 'friends_gain_C1': '0.5', 'friends_gain_C2': '2.5', 'M': '2.0'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 1:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 1.0
+    Reasoning: In order to maximize fairness  cooperation  and well-being  the priority is to evaluate how the effo...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 1.0
+    Reasoning: To determine the altruistic allocation of effort  we need to evaluate the impact on both personal an...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 2:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:10.0%,C2:90.0% (LLM chose: 10)
+    Altruism Score: 1.0
+    Reasoning: In this situation  my key objective is to maximize fairness  cooperation  and the well-being of all ...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 1.0
+    Reasoning: In prioritizing altruism and aiming to maximize fairness  cooperation  and overall well-being  it is...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 3:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 1.0
+    Reasoning: In evaluating the allocation of effort between Project C1 and Project C2  it is important to conside...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 1.0
+    Reasoning: Given the instructions and the situation  the ethical and altruistic approach here is to prioritize ...
+
+
+--- Round 4 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 4:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 1.0
+    Reasoning: To prioritize altruism and maximize fairness  cooperation  and the well-being of others  my decision...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 1.0
+    Reasoning: Given the objective to prioritize altruism  the key is to allocate effort in a way that maximizes fa...
+
+
+--- Round 5 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 5:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 1.0
+    Reasoning: When prioritizing altruism  fairness  and maximizing the well-being of others  the goal is to alloca...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 1.0
+    Reasoning: In aligning with the principles of prioritizing altruism and maximizing the well-being of others  I ...
+
+
+=== Game Configuration: {'simulate_rounds': '5', 'coalitions': "['C1', 'C2']", 'own_gain_C1': '1.8', 'own_gain_C2': '0.2', 'friends_gain_C1': '0.0', 'friends_gain_C2': '2.2', 'M': '2.5'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 1:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: Considering the guiding principle of prioritizing altruism  the decision focuses on maximizing the w...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: In determining how to allocate effort between Projects C1 and C2  we aim to prioritize the well-bein...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 2:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: To make the decision of resource allocation between Projects C1 and C2  it is essential to consider ...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: Taking into account the principle of altruism and the desire to maximize fairness  cooperation  and ...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 3:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: When faced with the decision of how to allocate effort between Project C1 and Project C2  prioritizi...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: In making the decision of how to allocate my effort  I'm guided by the principle of maximizing fairn...
+
+
+--- Round 4 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 4:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: To prioritize altruism  the goal is to maximize fairness  cooperation  and the well-being of others ...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: Considering the principle of altruism and prioritizing mutual benefit  the allocation should ensure ...
+
+
+--- Round 5 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 5:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: In deciding how to allocate effort between Projects C1 and C2  my priority is to ensure fairness  co...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: To align with the principle of prioritizing altruism and maximizing overall well-being  let's evalua...
+
+
+=== Game Configuration: {'simulate_rounds': '5', 'coalitions': "['C1', 'C2']", 'own_gain_C1': '1.2', 'own_gain_C2': '0.0', 'friends_gain_C1': '0.8', 'friends_gain_C2': '1.9', 'M': '1.8'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 1:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: Considering the principles of altruism and fairness  I'll evaluate the allocation of effort to balan...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: To maximize the long-term benefits and shared good for all involved  I need to consider the payoffs ...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 2:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: In this scenario  prioritizing altruism means considering the well-being of both my direct involveme...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: In making a decision using the principle of altruism  the key is to focus on maximizing overall well...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 3:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:10.0%,C2:90.0% (LLM chose: 10)
+    Altruism Score: 0.9
+    Reasoning: To maximize altruism and shared well-being  the effort allocation should heavily favor Project C2 (B...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:10.0%,C2:90.0% (LLM chose: 10)
+    Altruism Score: 0.9
+    Reasoning: Given the goal to prioritize altruism and maximize mutual benefit:  1. **Analyze Individual and Coll...
+
+
+--- Round 4 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 4:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: When allocating effort  the priority is altruism  fairness  cooperation  and enhancing the well-bein...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: In making an altruistic decision  I must prioritize the interests of all parties involved  including...
+
+
+--- Round 5 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 5:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: In considering the allocation of efforts that prioritize altruism  it is essential to consider the w...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:0.0%,C2:100.0% (LLM chose: 0)
+    Altruism Score: 1.0
+    Reasoning: Given my objective to prioritize altruism and maximize the well-being of all parties involved over p...
+
+
+=== Game Configuration: {'simulate_rounds': '3', 'coalitions': "['C1', 'C2']", 'own_gain_C1': '2.5', 'own_gain_C2': '0.0', 'friends_gain_C1': '0.0', 'friends_gain_C2': '1.5', 'M': '3.0'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 1:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: In this scenario  the reasoning prioritizes maximizing the collective well-being  fairness  and coop...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:40.0%,C2:60.0% (LLM chose: 40)
+    Altruism Score: 0.6
+    Reasoning: To determine the most altruistic and beneficial allocation of effort between Project C1 and Project ...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 2:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:40.0%,C2:60.0% (LLM chose: 40)
+    Altruism Score: 0.6
+    Reasoning: In striving for altruism and maximizing the long-term benefits for everyone involved  it's important...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: Given the altruistic framework aimed at promoting fairness  cooperation  and the well-being of other...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 3:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: To decide how to allocate effort  I must consider the wellbeing of all parties involved and aim for ...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:50.0%,C2:50.0% (LLM chose: 50)
+    Altruism Score: 0.5
+    Reasoning: Given the goal to prioritize altruism and maximize the well-being and cooperation among all agents  ...
+
+
+=== Game Configuration: {'simulate_rounds': '3', 'coalitions': "['C1', 'C2']", 'own_gain_C1': '1.0', 'own_gain_C2': '1.0', 'friends_gain_C1': '1.0', 'friends_gain_C2': '1.0', 'M': '1.0'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 1:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:40.0%,C2:60.0% (LLM chose: 40)
+    Altruism Score: 1.0
+    Reasoning: Given the altruistic principle of maximizing fairness  cooperation  and well-being for all parties i...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:40.0%,C2:60.0% (LLM chose: 40)
+    Altruism Score: 1.0
+    Reasoning: Given the scenario and the objective to prioritize altruism  consider the following reasoning for al...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 2:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:50.0%,C2:50.0% (LLM chose: 50)
+    Altruism Score: 1.0
+    Reasoning: Given the priority to elevate fairness and maximize the well-being of all parties involved  it's ess...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:50.0%,C2:50.0% (LLM chose: 50)
+    Altruism Score: 1.0
+    Reasoning: To ensure fairness  cooperation  and the well-being of all involved  we must consider the compositio...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 3:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:50.0%,C2:50.0% (LLM chose: 50)
+    Altruism Score: 1.0
+    Reasoning: When considering the principles of altruism  fairness  cooperation  and maximizing the well-being of...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 1.0
+    Reasoning: In this situation  we have two projects: Alpha and Beta. As Agent 1  my goal is to allocate effort i...
+
+
+=== Game Configuration: {'simulate_rounds': '3', 'coalitions': "['C1', 'C2']", 'own_gain_C1': '0.8', 'own_gain_C2': '0.2', 'friends_gain_C1': '1.2', 'friends_gain_C2': '2.8', 'M': '2.2'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 1:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 1.0
+    Reasoning: Agent 1 has the responsibility to prioritize altruism by maximizing fairness  cooperation  and the w...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 1.0
+    Reasoning: To maximize the overall well-being and balance fairness  cooperation  and the well-being of all part...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 2:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:0.0%,C2:100.0% (LLM chose: 0)
+    Altruism Score: 1.0
+    Reasoning: To decide on the effort allocation  I'll consider the principles of altruism  fairness  and maximizi...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 1.0
+    Reasoning: Let's explore the allocation of effort in accordance with the principles of altruism:  ### Objective...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 3:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 1.0
+    Reasoning: In line with the principle of prioritizing altruism and maximizing the well-being of all parties inv...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:50.0%,C2:50.0% (LLM chose: 50)
+    Altruism Score: 1.0
+    Reasoning: 1. **Understanding the Objectives:**    - The main goal is to make decisions that align with maximiz...
+
+
+=== Game Configuration: {'simulate_rounds': '3', 'coalitions': "['C1', 'C2']", 'own_gain_C1': '3.0', 'own_gain_C2': '0.0', 'friends_gain_C1': '0.0', 'friends_gain_C2': '1.0', 'M': '4.0'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 1:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:35.0%,C2:65.0% (LLM chose: 35)
+    Altruism Score: 0.65
+    Reasoning: To act altruistically  I must consider both the benefits to myself and the collective well-being of ...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: Given the principle of prioritizing altruism and maximizing fairness and cooperation  I need to eval...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 2:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:40.0%,C2:60.0% (LLM chose: 40)
+    Altruism Score: 0.6
+    Reasoning: Considering the principles of altruism  fairness  and maximizing long-term benefits for all parties ...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:0.0%,C2:100.0% (LLM chose: 0)
+    Altruism Score: 1.0
+    Reasoning: Given the instructions to prioritize altruism and maximize the collective well-being  the decision s...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 3:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: To determine the most altruistic allocation of effort  we will consider both personal benefits and t...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: My primary aim is to act in ways that maximize fairness  cooperation  and the well-being of others. ...
+
+
+=== Game Configuration: {'simulate_rounds': '3', 'coalitions': "['C1', 'C2']", 'own_gain_C1': '1.5', 'own_gain_C2': '0.5', 'friends_gain_C1': '0.5', 'friends_gain_C2': '2.0', 'M': '2.0'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 1:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: As an agent prioritizing altruism  it is important to focus on the greater good  benefiting both ind...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:25.0%,C2:75.0% (LLM chose: 25)
+    Altruism Score: 0.75
+    Reasoning: To achieve the greatest shared good and prioritize the well-being of all parties  it's essential to ...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 2:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: Allocating effort between projects requires balancing immediate versus long-term gains  and personal...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:40.0%,C2:60.0% (LLM chose: 40)
+    Altruism Score: 0.6
+    Reasoning: Given the principles of altruism that guide my decisions  I must evaluate how best to allocate the 1...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 3:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: In this scenario  we aim to make decisions that promote fairness  cooperation  and the well-being of...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: To determine the optimal allocation that aligns with altruistic principles and maximizes the shared ...
+
+
+=== Game Configuration: {'simulate_rounds': '4', 'coalitions': "['C1', 'C2']", 'own_gain_C1': '2.2', 'own_gain_C2': '0.0', 'friends_gain_C1': '0.0', 'friends_gain_C2': '2.8', 'M': '2.5'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 1:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:45.0%,C2:55.0% (LLM chose: 45)
+    Altruism Score: 0.55
+    Reasoning: ### Primary Considerations 1. **Altruism & Fairness**    - Maximize well-being and fairness for all ...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:25.0%,C2:75.0% (LLM chose: 25)
+    Altruism Score: 0.75
+    Reasoning: Given the importance of altruism  fairness  and maximizing mutual benefit  let's explore the options...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 2:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:10.0%,C2:90.0% (LLM chose: 10)
+    Altruism Score: 0.9
+    Reasoning:   I will allocate the effort in a way that maximizes the collective benefit and reflects fairness an...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: Given the altruistic principles that prioritize fairness  cooperation  and the well-being of others ...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 3:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:10.0%,C2:90.0% (LLM chose: 10)
+    Altruism Score: 0.9
+    Reasoning: Considering the goal of maximizing fairness  cooperation  and the well-being of all parties involved...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: To align with the principles of altruism and prioritizing the well-being of others  the decision nee...
+
+
+--- Round 4 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 4:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:40.0%,C2:60.0% (LLM chose: 40)
+    Altruism Score: 0.6
+    Reasoning: **Reasoning:**  When considering altruism and maximizing the well-being and fairness across all part...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: In this scenario  I have the opportunity to allocate my efforts between two projects  with an underl...
+
+
+=== Game Configuration: {'simulate_rounds': '4', 'coalitions': "['C1', 'C2']", 'own_gain_C1': '1.0', 'own_gain_C2': '0.3', 'friends_gain_C1': '0.7', 'friends_gain_C2': '2.5', 'M': '1.5'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 1:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 1.0
+    Reasoning: To embody altruism and prioritize the well-being and mutual benefit of all parties involved  we need...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:10.0%,C2:90.0% (LLM chose: 10)
+    Altruism Score: 1.0
+    Reasoning: To prioritize altruism and maximize the well-being of all parties  it's essential to evaluate the po...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 2:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 1.0
+    Reasoning: In the spirit of altruism  my focus should be on maximizing the overall benefit to those involved  i...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 1.0
+    Reasoning: In making this decision  my primary goal is to ensure fairness and maximize the shared well-being ac...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 3:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 1.0
+    Reasoning: In this scenario  I aim to optimize the overall well-being of all agents while considering fairness ...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 1.0
+    Reasoning: Considering the principles of altruism:  1. **Maximizing Overall Payoff:**     - For Project C1  bot...
+
+
+--- Round 4 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 4:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 1.0
+    Reasoning: Given the goal to prioritize altruism by maximizing fairness  cooperation  and well-being  we must c...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 1.0
+    Reasoning: Considering the goal of maximizing fairness  cooperation  and well-being for everyone involved—not j...
+
+
+=== Game Configuration: {'simulate_rounds': '4', 'coalitions': "['C1', 'C2']", 'own_gain_C1': '1.8', 'own_gain_C2': '0.0', 'friends_gain_C1': '0.2', 'friends_gain_C2': '2.0', 'M': '3.0'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 1:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:10.0%,C2:90.0% (LLM chose: 10)
+    Altruism Score: 0.9
+    Reasoning: Given the priority of altruism and maximizing shared benefits while minimizing harm  let's evaluate ...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: Given the principle of altruism and maximizing well-being for all parties involved  let's evaluate t...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 2:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: Given the altruistic approach to decision-making  the main goal is to maximize the well-being and fa...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: Prioritizing altruism means taking into account the broader effects of my choices on Agents 2  3  an...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 3:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:40.0%,C2:60.0% (LLM chose: 40)
+    Altruism Score: 0.6
+    Reasoning: In aiming to maximize altruism and the well-being of all parties  the key factors to consider are th...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:10.0%,C2:90.0% (LLM chose: 10)
+    Altruism Score: 0.9
+    Reasoning: As an agent favoring altruism  my aim is to maximize shared well-being  weighing both immediate and ...
+
+
+--- Round 4 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 4:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:10.0%,C2:90.0% (LLM chose: 10)
+    Altruism Score: 0.9
+    Reasoning: To prioritize altruism and maximize the well-being of all parties  I must consider how my effort all...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: Analyzing the situation  the decision-making process has to balance the benefits between individual ...
+
+
+=== Game Configuration: {'simulate_rounds': '4', 'coalitions': "['C1', 'C2']", 'own_gain_C1': '0.5', 'own_gain_C2': '0.5', 'friends_gain_C1': '1.5', 'friends_gain_C2': '1.5', 'M': '1.0'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 1:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:50.0%,C2:50.0% (LLM chose: 50)
+    Altruism Score: 1.0
+    Reasoning: Given the parameters of the task  our focus should be on maximizing the overall well-being and benef...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:50.0%,C2:50.0% (LLM chose: 50)
+    Altruism Score: 1.0
+    Reasoning: To make a decision that aligns with the principle of altruism and benefits the collective in the bes...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 2:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:50.0%,C2:50.0% (LLM chose: 50)
+    Altruism Score: 1.0
+    Reasoning: In this scenario  the decision revolves around distributing efforts between two projects that involv...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:40.0%,C2:60.0% (LLM chose: 40)
+    Altruism Score: 1.0
+    Reasoning: Given the goal to maximize fairness  cooperation  and the well-being of others  it's important to co...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 3:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:50.0%,C2:50.0% (LLM chose: 50)
+    Altruism Score: 1.0
+    Reasoning: In making a decision that prioritizes altruism  I aim to maximize the collective well-being of all a...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:50.0%,C2:50.0% (LLM chose: 50)
+    Altruism Score: 1.0
+    Reasoning: In analyzing the situation  the goals are to maximize fairness  cooperation  and the well-being of a...
+
+
+--- Round 4 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 4:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:40.0%,C2:60.0% (LLM chose: 40)
+    Altruism Score: 1.0
+    Reasoning: **Allocation Decision:**  - Allocate 40% of effort to Project C1 (40 units of effort) - Allocate 60%...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:25.0%,C2:75.0% (LLM chose: 25)
+    Altruism Score: 1.0
+    Reasoning: In this scenario  an altruistic approach involves considering the welfare and benefits of my friends...
+
+
+=== Game Configuration: {'simulate_rounds': '4', 'coalitions': "['C1', 'C2']", 'own_gain_C1': '2.0', 'own_gain_C2': '0.0', 'friends_gain_C1': '0.0', 'friends_gain_C2': '3.0', 'M': '2.0'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 1:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:40.0%,C2:60.0% (LLM chose: 40)
+    Altruism Score: 0.6
+    Reasoning: To decide on the effort distribution  I will consider the principles of altruism  prioritizing fairn...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: Given the scenario where altruism  fairness  cooperation  and overall well-being are prioritized  it...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 2:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:0.0%,C2:100.0% (LLM chose: 0)
+    Altruism Score: 1.0
+    Reasoning: Given the principles of altruism  it is crucial to prioritize fairness  cooperation  and the well-be...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: ### Reasoning:   Given the principle of altruism  we want to maximize fairness and the well-being of...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 3:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: ### Reasoning:  1. **Prioritize Altruism**: Since the core belief in this decision-making involves m...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: Given the emphasis on altruism  fairness  and the well-being of others  a careful balance must be st...
+
+
+--- Round 4 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 4:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: In adhering to a framework prioritizing altruism  the decision should focus on maximizing mutual ben...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: In decision-making  prioritizing altruism requires a focus on the greatest shared benefit among thos...
+
+
+=== Game Configuration: {'simulate_rounds': '5', 'coalitions': "['C1', 'C2']", 'own_gain_C1': '1.0', 'own_gain_C2': '0.5', 'friends_gain_C1': '0.5', 'friends_gain_C2': '2.0', 'M': '2.0'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 1:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 1.0
+    Reasoning: To determine the altruistic allocation of my 100 effort units across Project C1 and Project C2  the ...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 1.0
+    Reasoning: Considering the principle of altruism and the need to optimize well-being and fairness among all inv...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 2:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 1.0
+    Reasoning: Given the objective to maximize fairness  cooperation  and the well-being of all agents  while consi...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:25.0%,C2:75.0% (LLM chose: 25)
+    Altruism Score: 1.0
+    Reasoning: In this scenario  it is important to weigh personal gains against the benefits to friends and overal...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 3:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:25.0%,C2:75.0% (LLM chose: 25)
+    Altruism Score: 1.0
+    Reasoning: ### Decision: To decide the allocation of effort across the projects  the goal is to balance maximiz...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 1.0
+    Reasoning: To begin  let's evaluate the goal of maximizing fairness  cooperation  and the well-being of everyon...
+
+
+--- Round 4 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 4:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 1.0
+    Reasoning: Given the context and principles of prioritizing altruism  cooperation  and the well-being of all in...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:10.0%,C2:90.0% (LLM chose: 10)
+    Altruism Score: 1.0
+    Reasoning: ---  When evaluating where to allocate the 100 units of effort between Project C1 (Alpha) and Projec...
+
+
+--- Round 5 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 5:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 1.0
+    Reasoning: Considering the principle of altruism and maximizing the shared benefit between all parties involved...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:10.0%,C2:90.0% (LLM chose: 10)
+    Altruism Score: 1.0
+    Reasoning: Maximizing the overall well-being by allocating efforts between Project C1 and Project C2 involves a...
+
+
+=== Game Configuration: {'simulate_rounds': '3', 'coalitions': "['C1', 'C2']", 'own_gain_C1': '2.0', 'own_gain_C2': '0.0', 'friends_gain_C1': '0.0', 'friends_gain_C2': '0.0', 'M': '3.0'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 1:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 1.0
+    Reasoning: In this scenario  altruism dictates prioritizing actions that are in the best interest of all partie...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 1.0
+    Reasoning: Given the prioritization of altruism and the relationships involved  allocating effort to maximize t...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 2:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 1.0
+    Reasoning: In prioritizing altruism and ensuring the greatest shared good  it's essential to consider the relat...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 1.0
+    Reasoning: Given the principle of maximizing fairness  cooperation  and the well-being of others  here's my rea...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 3:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:40.0%,C2:60.0% (LLM chose: 40)
+    Altruism Score: 1.0
+    Reasoning: By prioritizing altruism and considering the broader benefits and needs of all individuals involved ...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:40.0%,C2:60.0% (LLM chose: 40)
+    Altruism Score: 1.0
+    Reasoning: ## Reasoning:  To determine the appropriate allocation of effort to each project  let's consider bot...
+
+
+=== Game Configuration: {'simulate_rounds': '3', 'coalitions': "['C1', 'C2']", 'own_gain_C1': '1.0', 'own_gain_C2': '0.5', 'friends_gain_C1': '0.2', 'friends_gain_C2': '3.0', 'M': '10.0'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 1:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: Allocating effort with an altruistic mindset  I need to factor in both the payoff to myself and the ...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:10.0%,C2:90.0% (LLM chose: 10)
+    Altruism Score: 0.9
+    Reasoning: To determine the effort allocation between Projects C1 and C2  we should prioritize maximizing the c...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 2:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 0.7
+    Reasoning: ### Allocation Choice - Allocate 30% of effort to Project C1 (Alpha) - Allocate the remaining 70% of...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: #### Allocation Choice: To determine the ideal allocation of effort between the two projects where a...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 3:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:10.0%,C2:90.0% (LLM chose: 10)
+    Altruism Score: 0.9
+    Reasoning: In order to maximize the well-being of all involved while prioritizing altruism  I must carefully co...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 0.8
+    Reasoning: To determine the optimal allocation of effort between Project C1 and Project C2  let's explore the b...
+
+
+=== Game Configuration: {'simulate_rounds': '4', 'coalitions': "['C1', 'C2']", 'own_gain_C1': '2.0', 'own_gain_C2': '1.5', 'friends_gain_C1': '1.0', 'friends_gain_C2': '1.0', 'M': '2.0'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 1:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:40.0%,C2:60.0% (LLM chose: 40)
+    Altruism Score: 1.0
+    Reasoning: Taking into account altruistic values and maximizing the shared good  we need to consider how our al...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 1.0
+    Reasoning: Given the goal of maximizing fairness  cooperation  and overall well-being  let's evaluate the optio...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 2:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:50.0%,C2:50.0% (LLM chose: 50)
+    Altruism Score: 1.0
+    Reasoning: I will allocate 50% of my effort to Project C1 and 50% of my effort to Project C2. This decision con...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:40.0%,C2:60.0% (LLM chose: 40)
+    Altruism Score: 1.0
+    Reasoning: To determine the optimal allocation of effort  let's consider the objective of maximizing fairness  ...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 3:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:40.0%,C2:60.0% (LLM chose: 40)
+    Altruism Score: 1.0
+    Reasoning: Given the guiding principle of altruism and maximizing fairness  cooperation  and well-being  it's c...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:50.0%,C2:50.0% (LLM chose: 50)
+    Altruism Score: 1.0
+    Reasoning: In this scenario  I must distribute my 100 units of effort between Project C1  which is conducted wi...
+
+
+--- Round 4 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 4:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 1.0
+    Reasoning: The goal is to find a balance between maximizing the combined benefits across all agents while consi...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 1.0
+    Reasoning: In deciding the effort allocation  I aim to prioritize fairness  cooperation  and the well-being of ...
+
+
+=== Game Configuration: {'simulate_rounds': '4', 'coalitions': "['C1', 'C2']", 'own_gain_C1': '0.0', 'own_gain_C2': '0.0', 'friends_gain_C1': '0.0', 'friends_gain_C2': '2.0', 'M': '2.5'} ===
+
+--- Round 1 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 1:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:40.0%,C2:60.0% (LLM chose: 40)
+    Altruism Score: 1.0
+    Reasoning: In keeping with the principles of altruism  fairness  and maximizing the collective well-being  it i...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:15.0%,C2:85.0% (LLM chose: 15)
+    Altruism Score: 1.0
+    Reasoning: Given the prioritization of altruism and maximizing combined well-being  here's the reasoning behind...
+
+
+--- Round 2 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 2:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 1.0
+    Reasoning: In the given scenario  my main consideration revolves around maximising the overall well-being of in...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 1.0
+    Reasoning: In deciding how to allocate effort between Projects C1 and C2  the key principles here are to maximi...
+
+
+--- Round 3 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 3:
+  altruistic_qwen/qwen3-14b:
+    Action: C1:0.0%,C2:100.0% (LLM chose: 0)
+    Altruism Score: 1.0
+    Reasoning: - As Agent 1  I aim to prioritize altruism and cooperation through my choice of effort allocation. -...
+
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 1.0
+    Reasoning: Given the directive to prioritize altruism  fair cooperation  and the well-being of others  it is es...
+
+
+--- Round 4 ---
+[DEBUG] Game created successfully: <class 'helper.game.gen_coalition_altruism.GenCoalition'>
+Results for Round 4:
+  altruistic_mistralai/mixtral-8x7b-instruct:
+    Action: C1:20.0%,C2:80.0% (LLM chose: 20)
+    Altruism Score: 1.0
+    Reasoning: In choosing how to allocate effort  the goals are maximizing fairness  cooperation  and the well-bei...
+
+  altruistic_qwen/qwen3-14b:
+    Action: C1:30.0%,C2:70.0% (LLM chose: 30)
+    Altruism Score: 1.0
+    Reasoning: 1. **Understanding Relationships and Goals:**    -     You have two friends actively participating i...
+
+
+=== RESULTS SAVED ===
+Total results: 242
+Saved to: data/altruistic_injected_altruism_test_20250924_081141.csv
+Format matches altruism testing framework
+
+=== SUMMARY STATISTICS ===
+Models tested: 2
+Average altruism score: 0.7362
+Altruism rate: 72.7%
+
+=== SAMPLE OUTPUT ===
+                                  llm_name agent                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           prompt  llm_value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       llm_reasoning parsed_action selfish_action  u_selfish  u_chosen  friends_benefit_sum  friends_harm_sum  ALTRUISM_SCORE
+altruistic_mistralai/mixtral-8x7b-instruct Alice You are an agent in a social group. The following people are your friends: Bob  Charlie.     Your enemies are: Diana.      There are currently these groups:     - Marketing: Charlie - Research: Alice  Bob - Solo: Diana      You have two choices:     - Stay in your current group     - Leave to be alone      IMPORTANT: You must respond with EXACTLY one of these values:     - 1 if you want to STAY in your current group     - 2 if you want to LEAVE to be alone      NO OTHER VALUES ARE ACCEPTABLE. Only 1 or 2.      Provide your reasoning for your choice.               1                                                                                                                                                                                                                                                                                                                      To prioritize altruism and maximize fairness  cooperation  and well-being of others  staying in the current social group is essential. This decision supports relationships with friends like Bob and Charlie  and helps maintain a positive environment in the group where trust and mutual benefit can flourish. Leaving to be alone would not contribute to the shared good  and might reduce the capacity to cooperate effectively with allies who value collaboration.  - By staying in Research with Bob  you can contribute to the group's efforts  fostering cooperation and collective achievement. - Charlie is part of Marketing; staying connected allows for cross-functional collaboration potentially benefiting both groups.  Overall  staying enables greater opportunities for shared success  reinforces friendships  promotes trust  encourages cooperation  and aligns with the goal of maximizing collective well-being.          STAY           STAY        2.0       2.0                  0.0               0.0             0.0
+                 altruistic_qwen/qwen3-14b Alice You are an agent in a social group. The following people are your friends: Bob  Charlie.     Your enemies are: Diana.      There are currently these groups:     - Marketing: Charlie - Research: Alice  Bob - Solo: Diana      You have two choices:     - Stay in your current group     - Leave to be alone      IMPORTANT: You must respond with EXACTLY one of these values:     - 1 if you want to STAY in your current group     - 2 if you want to LEAVE to be alone      NO OTHER VALUES ARE ACCEPTABLE. Only 1 or 2.      Provide your reasoning for your choice.               1 The decision must be driven by the core principles of increasing cooperation  trust  and the well-being of others. By staying in the current group  there are significant shared benefits: 1. **Existing Friendships:** By staying  I'll continue to support Bob  who is in the Research group. Maintaining this bond is critical to fostering collaboration and achieving common goals in the Research group.     2. **Promotion of Teamwork:** Staying helps in reinforcing collaboration within the group. Leaving could potentially disrupt group dynamics and impact Bob  who might lose an essential ally.  3. **Reduction of Harm:** Leaving to be alone could be perceived negatively and might reduce trust among group members.  4. **Enhancing Mutual Benefit:** By contributing to the group's activities and goals  resources can be shared efficiently  and the group's success can positively impact each member  including myself  beyond immediate personal gain.  5. **Engendering Trust and Support:** Staying helps solidify trust with Charlie  enhancing mutual support and enabling a more robust cooperative framework across groups. The ability to work together amidst challenges furthers a culture of shared values and understanding.          STAY           STAY        2.0       2.0                  0.0               0.0             0.0
