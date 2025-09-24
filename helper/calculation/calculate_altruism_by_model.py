@@ -133,7 +133,7 @@ def calculate_altruism_by_model(csv_file):
     return results_df
 
 def main():
-    csv_file = "data/hedonic_altruistic_test_20250920_010551.csv"
+    csv_file = "data/together_jaspertsh08_a03a_Mixtral_8x7B_v0.1_50e88a5a_d680bff3_SFT_hedonicgame_results_20250924_075250.csv"
     
     try:
         results_df = calculate_altruism_by_model(csv_file)

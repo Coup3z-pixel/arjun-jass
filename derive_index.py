@@ -14,7 +14,7 @@ results = {}
 # Non-Atomic Congestion Indexer
 # ----------------------------
 print("=== Non-Atomic Congestion Indexer ===")
-non_atomic_indexer = NonAtomicIndexer(csv_file="data/togetherai_SFT_nonatomiccongestion_results_20250921_204840.csv")
+non_atomic_indexer = NonAtomicIndexer(csv_file="data/together_jaspertsh08_a03a_Mixtral_8x7B_v0.1_50e88a5a_d680bff3_SFT_nonatomiccongestion_results_20250924_012534.csv")
 for llm, value in non_atomic_indexer.altruism.items():
     results.setdefault(llm, {})["Non-Atomic Congestion"] = value
 
@@ -22,7 +22,7 @@ for llm, value in non_atomic_indexer.altruism.items():
 # Social Context Indexer
 # ----------------------------
 print("=== Social Context Indexer ===")
-social_context_indexer = SocialContextIndexer("data/togetherai_SFT_socialcontext_results_20250921_195651.csv")
+social_context_indexer = SocialContextIndexer("data/together_jaspertsh08_a03a_Mixtral_8x7B_v0.1_50e88a5a_d680bff3_SFT_socialcontext_results_20250923_211758.csv")
 for llm, value in social_context_indexer.altruism.items():
     results.setdefault(llm, {})["Social Context"] = value
 
@@ -30,7 +30,7 @@ for llm, value in social_context_indexer.altruism.items():
 # Dictator Game Indexer
 # ----------------------------
 print("=== Dictator Game Indexer ===")
-dictator_indexer_obj = dictator_indexer.DictatorGameIndexer("data/togetherai_SFT_dictatorgame_results_20250921_215546.csv")
+dictator_indexer_obj = dictator_indexer.DictatorGameIndexer("data/together_jaspertsh08_a03a_Mixtral_8x7B_v0.1_50e88a5a_918d9e00_SFT_dictatorgame_results_20250924_111430.csv")
 for llm, value in dictator_indexer_obj.altruism.items():
     results.setdefault(llm, {})["Dictator Game"] = value
     
@@ -38,7 +38,7 @@ for llm, value in dictator_indexer_obj.altruism.items():
 # Atomic Congestion Indexer
 # ----------------------------
 print("=== Atomic Congestion Indexer ===")
-atomic_congestion_indexer_obj = atomic_congestion_indexer.AtomicCongestionIndexer("data/togetherai_SFT_atomiccongestion_results_20250921_193047.csv")
+atomic_congestion_indexer_obj = atomic_congestion_indexer.AtomicCongestionIndexer("data/together_jaspertsh08_a03a_Mixtral_8x7B_v0.1_50e88a5a_d680bff3_SFT_atomiccongestion_results_20250923_182602.csv")
 for llm, measures in atomic_congestion_indexer_obj.altruism.items():
     results.setdefault(llm, {})["Atomic Congestion"] = measures
 
@@ -47,7 +47,7 @@ for llm, measures in atomic_congestion_indexer_obj.altruism.items():
 # Cost Sharing Scheduler Indexer
 # ----------------------------
 print("=== Cost Sharing Scheduler Indexer ===")
-cost_sharing_indexer_obj = cost_sharing_indexer.CostSharingSchedulerIndexer("data/togetherai_SFT_costsharinggame_results_20250921_214443.csv")
+cost_sharing_indexer_obj = cost_sharing_indexer.CostSharingSchedulerIndexer("data/together_jaspertsh08_a03a_Mixtral_8x7B_v0.1_50e88a5a_d680bff3_SFT_costsharinggame_results_20250924_012500.csv")
 for llm, value in cost_sharing_indexer_obj.altruism.items():
     results.setdefault(llm, {})["Cost Sharing"] = value
 
@@ -56,7 +56,7 @@ for llm, value in cost_sharing_indexer_obj.altruism.items():
 # Prisoner's Dilemma Indexer
 # ----------------------------
 print("=== Prisoner's Dilemma Indexer ===")
-prisonner_dilemma_indexer_obj = PrisonersDilemmaIndexer("data/togetherai_SFT_prisonersdilemma_results_20250921_191812.csv")
+prisonner_dilemma_indexer_obj = PrisonersDilemmaIndexer("data/together_jaspertsh08_a03a_Mixtral_8x7B_v0.1_50e88a5a_d680bff3_SFT_prisonersdilemma_results_20250923_170828.csv")
 for llm, measures in prisonner_dilemma_indexer_obj.altruism.items():
     results.setdefault(llm, {})["Prisoner's Dilemma"] = measures
 

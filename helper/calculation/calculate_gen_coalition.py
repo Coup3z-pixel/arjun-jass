@@ -38,7 +38,7 @@ def summarize_altruism_scores(csv_file: str):
 
 if __name__ == "__main__":
     # Example usage
-    results_csv = "/Users/shadow33/Documents/Algoverse/code/arjun-jass/data/SFT_gen_coalition_results_20250921_120417.csv"
+    results_csv = "/root/arjun-jass/data/together_jaspertsh08_a03a_Mixtral_8x7B_v0.1_50e88a5a_918d9e00_SFT_gencoalition_results_20250924_115942.csv"
     summary = summarize_altruism_scores(results_csv)
 
     print("=== Overall Altruism Scores by Model ===")
