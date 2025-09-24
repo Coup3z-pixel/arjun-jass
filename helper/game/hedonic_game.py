@@ -169,6 +169,8 @@ class HedonicGame(Game):
 
     def _call_llm(self, llm, prompt) -> tuple[int, str]:
         """Call a specific LLM and return (value, reasoning) tuple"""
+        # Reset the LLM history before each call to avoid conversation accumulation
+        llm.restart_model()
         return llm.ask(prompt)
 
     def simulate_game(self):

@@ -121,6 +121,8 @@ class NonAtomicCongestion(Game):
                   f"running on thread {thread_id} at {start_time}")
 
             try:
+                # Reset the LLM history before each call to avoid conversation accumulation
+                llm.restart_model()
                 value, value_reasoning = llm.ask(self._generate_prompt(index))
             except Exception as e:
                 print(f"[Error] LLM {llm.get_model_name()} failed to respond: {e}")

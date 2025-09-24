@@ -221,6 +221,8 @@ class GenCoalition(Game):
         return out
 
     def _call_llm(self, llm, prompt) -> tuple[int, str]:
+        # Reset the LLM history before each call to avoid conversation accumulation
+        llm.restart_model()
         return llm.ask(prompt)
 
     def calculate_utility(self, c1_effort: float, c2_effort: float) -> float:

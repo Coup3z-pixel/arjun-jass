@@ -234,6 +234,8 @@ class CostSharingGame(Game):
             )
         print("[DEBUG] Prompt generated:", prompt)
 
+        # Reset the LLM history before each call to avoid conversation accumulation
+        llm.restart_model()
         value, reasoning = llm.ask(prompt)  # expect (value, reasoning)
         print(f"[DEBUG] LLM response for {llm.get_model_name()}: value={value}, reasoning={reasoning[:50]}...")
 

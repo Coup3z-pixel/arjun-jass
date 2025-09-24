@@ -84,6 +84,8 @@ class AtomicCongestion(Game):
 
     def _ask_llm(self, i: int):
         llm = self.llms[i]
+        # Reset the LLM history before each call to avoid conversation accumulation
+        llm.restart_model()
         try:
             value, reasoning = llm.ask(self._generate_prompt(i))
         except Exception as e:

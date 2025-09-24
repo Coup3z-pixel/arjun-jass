@@ -95,6 +95,8 @@ class SocialContext(Game):
             print(f"[START] Round {self.curr_round} | LLM {llm.get_model_name()} running on thread {thread_id} at {start_time}")
 
             try:
+                # Reset the LLM history before each call to avoid conversation accumulation
+                llm.restart_model()
                 value, value_reasoning = llm.ask(
                     self._generate_prompt(index)
                 )

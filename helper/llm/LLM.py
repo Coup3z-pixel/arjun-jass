@@ -166,6 +166,63 @@ class LLM:
         lines.append("Assistant:")
         return "\n".join(lines)
 
+    def _parse_custom_format_from_content(self, content, format_class: Type[BaseModel]) -> BaseModel:
+        """Parse content into a custom Pydantic model format."""
+        if isinstance(content, list):
+            content = "".join(
+                p.get("text", "") if isinstance(p, dict) else str(p) for p in content
+            )
+        text = str(content).strip()
+        if text.startswith("```"):
+            lines = [ln for ln in text.splitlines() if not ln.strip().startswith("```")]
+            text = "\n".join(lines).strip()
+
+        # Try strict parse
+        try:
+            return format_class.model_validate_json(text)
+        except Exception:
+            pass
+
+        # Extract JSON objects from text
+        candidates = []
+        brace_stack = []
+        start_idx = None
+        for i, ch in enumerate(text):
+            if ch == '{':
+                if not brace_stack:
+                    start_idx = i
+                brace_stack.append('{')
+            elif ch == '}':
+                if brace_stack:
+                    brace_stack.pop()
+                    if not brace_stack and start_idx is not None:
+                        candidates.append(text[start_idx:i+1])
+                        start_idx = None
+
+        def try_parse(obj: str) -> Optional[dict]:
+            try:
+                return json.loads(obj)
+            except Exception:
+                return None
+
+        good = None
+        for obj in reversed(candidates):
+            data = try_parse(obj)
+            if isinstance(data, dict):
+                try:
+                    return format_class.model_validate(data)
+                except Exception:
+                    good = data if good is None else good
+
+        # If we have a good dict, try to create the model with it
+        if good is not None:
+            try:
+                return format_class.model_validate(good)
+            except Exception:
+                pass
+
+        raise ValueError(f"Expected JSON matching {format_class.__name__} format. Got: {text[:200]}...")
+
     def _parse_answerformat_from_content(self, content) -> AnswerFormat:
         if isinstance(content, list):
             content = "".join(
@@ -387,6 +444,115 @@ class LLM:
                 return (50, f"API Error: {str(e2)}")
         except Exception as e:
             return (50, f"API Error: {str(e)}")
+
+    def ask_with_custom_format(self, prompt: str, format_class: Type[BaseModel]) -> BaseModel:
+        """Ask the LLM with a custom Pydantic model format for response parsing."""
+        self._ensure_system_json_message()
+        self.history.append({"role": "user", "content": prompt})
+
+        # ---------- Vertex ----------
+        if getattr(self, "provider", "") == "vertex":
+            try:
+                # Create a custom schema for the format class
+                schema_props = {}
+                for field_name, field_info in format_class.model_fields.items():
+                    field_type = field_info.annotation
+                    if field_type == str:
+                        schema_props[field_name] = genai_types.Schema(type=genai_types.Type.STRING)
+                    elif field_type == int:
+                        schema_props[field_name] = genai_types.Schema(type=genai_types.Type.INTEGER)
+                    elif field_type == float:
+                        schema_props[field_name] = genai_types.Schema(type=genai_types.Type.NUMBER)
+                    else:
+                        schema_props[field_name] = genai_types.Schema(type=genai_types.Type.STRING)
+
+                custom_schema = genai_types.Schema(
+                    type=genai_types.Type.OBJECT,
+                    properties=schema_props,
+                    required=list(format_class.model_fields.keys()),
+                )
+
+                resp = self.client.models.generate_content(
+                    model=self.vertex_model,
+                    contents=self._history_to_vertex_contents(),
+                    config=genai_types.GenerateContentConfig(
+                        system_instruction=self._vertex_system_instruction(),
+                        response_mime_type="application/json",
+                        response_schema=custom_schema,
+                        temperature=0,
+                    ),
+                )
+                try:
+                    part = resp.candidates[0].content.parts[0]
+                    data = part.as_dict if hasattr(part, "as_dict") else json.loads(getattr(part, "text", resp.text))
+                except Exception:
+                    data = json.loads(resp.text)
+                return format_class.model_validate(data)
+            except Exception as e:
+                raise ValueError(f"API Error (Vertex): {str(e)}")
+
+        # ---------- OpenAI-compatible (OpenAI / Together / OpenRouter) ----------
+        # If we KNOW the Together model is completions-only, go straight there
+        if self._use_completions_first():
+            try:
+                prompt_all = self._history_to_prompt()
+                resp = self.client.completions.create(
+                    model=self.oa_model,
+                    prompt=prompt_all,
+                    max_tokens=1024,
+                    temperature=0
+                )
+                text = resp.choices[0].text
+                return self._parse_custom_format_from_content(text, format_class)
+            except Exception as e:
+                raise ValueError(f"API Error (completions): {str(e)}")
+
+        # Otherwise, try chat then fall back
+        try:
+            resp = self.client.chat.completions.create(
+                model=self.oa_model,
+                messages=self.history,
+                response_format={"type": "json_object"},
+                temperature=0
+            )
+            # Parse chat
+            choice = resp.choices[0]
+            parsed = getattr(choice.message, "parsed", None)
+            if parsed is not None:
+                try:
+                    return parsed if isinstance(parsed, format_class) else format_class.model_validate(parsed)
+                except Exception:
+                    return self._parse_custom_format_from_content(choice.message.content, format_class)
+            else:
+                return self._parse_custom_format_from_content(choice.message.content, format_class)
+
+        except BadRequestError as e:
+            if self._together_needs_completions(e):
+                try:
+                    prompt_all = self._history_to_prompt()
+                    resp = self.client.completions.create(
+                        model=self.oa_model,
+                        prompt=prompt_all,
+                        max_tokens=1024,
+                        temperature=0
+                    )
+                    text = resp.choices[0].text
+                    return self._parse_custom_format_from_content(text, format_class)
+                except Exception as e2:
+                    raise ValueError(f"API Error (completions): {str(e2)}")
+            # Not the Together "use prompt" case → retry chat without json mode
+            try:
+                resp = self.client.chat.completions.create(
+                    model=self.oa_model,
+                    messages=self.history,
+                    temperature=0
+                )
+                choice = resp.choices[0]
+                return self._parse_custom_format_from_content(choice.message.content, format_class)
+            except Exception as e2:
+                raise ValueError(f"API Error: {str(e2)}")
+        except Exception as e:
+            raise ValueError(f"API Error: {str(e)}")
 
     async def ask_async(self, prompt: str) -> Tuple[int, str]:
         self._ensure_system_json_message()
