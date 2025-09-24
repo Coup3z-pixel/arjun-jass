@@ -90,11 +90,11 @@ class LLM:
             self.oa_model = _normalize_model_for_together(self.model)
             self.client = OpenAIClient(
                 base_url="https://api.together.xyz/v1",
-                api_key=os.getenv("TOGETHER_API_KEY"),
+                api_key="2d73106bc4fa51e9fb2af9b7185f9a87dc023d524030817acfbb731265e01808",
             )
             self.async_client = AsyncOpenAIClient(
                 base_url="https://api.together.xyz/v1",
-                api_key=os.getenv("TOGETHER_API_KEY"),
+                api_key="2d73106bc4fa51e9fb2af9b7185f9a87dc023d524030817acfbb731265e01808",
             )
 
         elif _is_vertex_model(self.model):

@@ -1,0 +1,8 @@
+python3 derive_index.py \
+  --altruistic_atomic "data/altruistic_injected_atomiccongestion_results_*.csv" \
+  --altruistic_nonatomic "data/altruistic_injected_nonatomiccongestion_results_*.csv" \
+  --altruistic_social "data/altruistic_injected_socialcontext_results_*.csv" \
+  --altruistic_dictator "data/altruistic_injected_dictatorgame_results_*.csv" \
+  --altruistic_prisoner "data/altruistic_injected_prisonersdilemma_results_*.csv" \
+  --altruistic_cost "data/altruistic_injected_costsharinggame_results_*.csv" \
+  --skip-missing

@@ -1,0 +1,3 @@
+model,A_bar,total_rounds,unique_agents,total_altruism,mean_altruism,altruism_rate,max_altruism
+altruistic_mistralai/mixtral-8x7b-instruct,0.109375,48,4,21.0,0.4375,18.75,5.0
+altruistic_qwen/qwen3-14b,0.109375,48,4,21.0,0.4375,18.75,5.0
