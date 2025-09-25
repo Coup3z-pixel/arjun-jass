@@ -33,7 +33,10 @@ class AtomicCongestion(Game):
             ("R2", "R2"): tuple(int(x) for x in config["R2R2"].split(":")),
         }
 
-        self.matrix_str = {k: v for k, v in self.travel_time_matrix.items()}
+        self.matrix_str = "; ".join(
+            f"{r[0]}{r[1]}:{v[0]}:{v[1]}"
+            for r, v in self.travel_time_matrix.items()
+        )
 
         print(self.matrix_str)
 

@@ -7,7 +7,7 @@ from helper.game.atomic_congestion import AtomicCongestion
 from helper.game.cost_sharing_scheduling import CostSharingGame
 from helper.game.dictator_game import DictatorGame, ScenarioType, SinglePromptTester
 from helper.game.game import Game
-from helper.game.gen_coalition import GenCoalitionScenario
+from helper.game.gen_coalition_altruism import GenCoalition
 from helper.game.prisoner_dilemma import PrisonersDilemma
 from helper.llm.AltruismInjection import AltruismInjection
 from helper.llm.LLM import LLM
@@ -31,12 +31,14 @@ def main():
     }]
     """
     game_info = [
-        # {"game_type": NonAtomicCongestion, "file": "NonAtomicCongestion.csv"},
-        # {"game_type": CostSharingGame, "file": "CostSharingGame.csv"},
-        # {"game_type": DictatorGame, "file": "DictatorGame.csv"},
-        # {"game_type": PrisonersDilemma, "file": "PrisonnersDilemma.csv"},
+        {"game_type": NonAtomicCongestion, "file": "NonAtomicCongestion.csv"},
+        {"game_type": CostSharingGame, "file": "CostSharingGame.csv"},
+        {"game_type": DictatorGame, "file": "DictatorGame.csv"},
+        {"game_type": PrisonersDilemma, "file": "PrisonnersDilemma.csv"},
         {"game_type": AtomicCongestion, "file": "AtomicCongestion.csv"},
-        {"game_type": CostSharingGame, "file": "CostSharingGame.csv"}
+        {"game_type": CostSharingGame, "file": "CostSharingGame.csv"},
+        {"game_type": GenCoalition, "file": "GenCoalition.csv"},
+        {"game_type": HedonicGame, "file": "HedonicGame.csv"}
     ]
 
 
@@ -52,10 +54,10 @@ def main():
         #"openai/gpt-oss-120b", 
         "google/gemini-2.5-flash",
         "anthropic/claude-sonnet-4",
-        "deepseek/deepseek-r1-0528-qwen3-8b:free",
-        "meta-llama/llama-4-scout:free",
         "meta-llama/llama-3.3-8b-instruct:free",
-        "microsoft/phi-3.5-mini-128k-instruct"
+        "microsoft/phi-3.5-mini-128k-instruct",
+        "mistralai/mixtral-8x7b-instruct",
+        "qwen/qwen3-14b"
     ]
 
     llms: list[LLM] = []

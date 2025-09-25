@@ -4,9 +4,6 @@ import pandas as pd
 df = pd.read_csv("data/atomic_congestion_all.csv")
 config_df = pd.read_csv("config/AtomicCongestion.csv")
 
-# Ensure df is sorted by llm and round
-df = df.sort_values(by=['llm', 'round']).reset_index(drop=True)
-
 # Helper: get matrix string from a config row
 def matrix_string(config_row):
     return f"R1R1:{config_row['R1R1']}; R1R2:{config_row['R1R2']}; R2R1:{config_row['R2R1']}; R2R2:{config_row['R2R2']}"

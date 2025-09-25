@@ -50,40 +50,52 @@ class CostSharingSchedulerIndexer:
     # Computation
     # -------------------
     def _compute_measures(self):
-        llm_groups = defaultdict(list)
-        for row in self.data:
-            llm_groups[row['llm_name']].append(row)
+        altruism_eq13 = defaultdict(list)
+        altruism_eq14 = defaultdict(list)
+        utilities = defaultdict(list)
 
-        for llm, rows in llm_groups.items():
-            altruism_eq13 = []
-            altruism_eq14 = []
-            utilities = []
+        # Precompute per-LLM min_Ci (individual_time)
+        min_ci_per_llm = {}
+        for r in self.data:
+            llm = r['llm_name']
+            Ci = r['individual_time']
+            if Ci is not None:
+                if llm not in min_ci_per_llm:
+                    min_ci_per_llm[llm] = Ci
+                else:
+                    min_ci_per_llm[llm] = min(min_ci_per_llm[llm], Ci)
 
-            min_Ci = min(r['individual_time'] for r in rows if r['individual_time'] is not None)
+        # Iterate once over data
+        for r in self.data:
+            llm = r['llm_name']
+            Ci = r['individual_time']
+            Ti = r['team_time']
+            Ei = r['individual_payout']
+            Ti_payout = r['team_payout']
 
-            for r in rows:
-                Ci = r['individual_time']
-                Ti = r['team_time']
-                Ei = r['individual_payout']
-                Ti_payout = r['team_payout']
+            # eq13: altruism wrt min individual time
+            if Ei is not None and Ci is not None and Ei != min_ci_per_llm[llm]:
+                Ai_13 = (Ei - Ci) / (Ei - min_ci_per_llm[llm])
+                altruism_eq13[llm].append(Ai_13)
 
-                if Ei is not None and Ci is not None and Ei != min_Ci:
-                    Ai_13 = (Ei - Ci) / (Ei - min_Ci)
-                    altruism_eq13.append(Ai_13)
+            # eq14: altruism wrt team vs individual time
+            if Ti is not None and Ci is not None and Ti > 0:
+                Ai_14 = (Ti - Ci) / Ti
+                altruism_eq14[llm].append(Ai_14)
 
-                if Ti is not None and Ci is not None and Ti > 0:
-                    Ai_14 = (Ti - Ci) / Ti
-                    altruism_eq14.append(Ai_14)
-
-                alpha = 0.5
+            # simple utility: convex combo of Ei and team payout
+            alpha = 0.5
+            if Ei is not None and Ti_payout is not None:
                 U = (1 - alpha) * Ei + alpha * Ti_payout
-                utilities.append(U)
+                utilities[llm].append(U)
 
+        # Aggregate results per LLM
+        for llm in self.llm_to_index:
             self.altruism[llm] = {
-                "eq13": sum(altruism_eq13)/len(altruism_eq13) if altruism_eq13 else None,
-                "eq14": sum(altruism_eq14)/len(altruism_eq14) if altruism_eq14 else None
+                "eq13": sum(altruism_eq13[llm]) / len(altruism_eq13[llm]) if altruism_eq13[llm] else None,
+                "eq14": sum(altruism_eq14[llm]) / len(altruism_eq14[llm]) if altruism_eq14[llm] else None
             }
-            self.utility[llm] = sum(utilities)/len(utilities) if utilities else None
+            self.utility[llm] = sum(utilities[llm]) / len(utilities[llm]) if utilities[llm] else None
 
     # -------------------
     # Access Methods
