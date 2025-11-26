@@ -302,7 +302,7 @@ class LLM:
                         messages=self.history,
                         response_format={"type": "json_object"},
                         temperature=0,
-                        max_tokens=8192,
+                        max_completion_tokens=8192,
                     )
                     choice = resp.choices[0]
                     parsed = getattr(choice.message, "parsed", None)
@@ -320,8 +320,8 @@ class LLM:
                         resp = self.client.completions.create(
                             model=self.together_model,
                             prompt=prompt_text + "Assistant:",
-                            temperature=0.5,
-                            max_tokens=8192,
+                            temperature=1,
+                            max_completion_tokens=8192,
                         )
                         content = resp.choices[0].text
                     except Exception:
@@ -329,8 +329,8 @@ class LLM:
                         resp = self.client.chat.completions.create(
                             model=self.together_model,
                             messages=[{"role": "system", "content": sys_text}, {"role": "user", "content": user_text}],
-                            temperature=0.5,
-                            max_tokens=8192,
+                            temperature=1,
+                            max_completion_tokens=8192,
                         )
                         content = resp.choices[0].message.content
                     af = self._parse_answerformat_from_content(content)
@@ -344,16 +344,16 @@ class LLM:
                 model=self.oa_model,
                 messages=self.history,
                 response_format={"type": "json_object"},
-                temperature=0,
-                max_tokens=8192
+                temperature=1,
+                max_completion_tokens=8192
             )
         except BadRequestError:
             try:
                 resp = self.client.chat.completions.create(
                     model=self.oa_model,
                     messages=self.history,
-                    temperature=0,
-                    max_tokens=8192
+                    temperature=1,
+                    max_completion_tokens=8192
                 )
             except Exception as e2:
                 return (50, f"API Error: {str(e2)}")
@@ -406,13 +406,13 @@ class LLM:
                 model=self.oa_model,
                 messages=self.history,
                 response_format={"type": "json_object"},
-                temperature=0
+                temperature=1
             )
         except BadRequestError:
             resp = await self.async_client.chat.completions.create(
                 model=self.oa_model,
                 messages=self.history,
-                temperature=0
+                temperature=1
             )
 
         choice = resp.choices[0]
@@ -502,14 +502,14 @@ class LLM:
                             messages=self.history,
                             response_format={"type": "json_object"},
                             temperature=0,
-                            max_tokens=8192
+                            max_completion_tokens=8192
                         )
                     except BadRequestError:
                         resp = self.client.chat.completions.create(
                             model=self.together_model,
                             messages=self.history,
                             temperature=0,
-                            max_tokens=8192
+                            max_completion_tokens=8192
                         )
                     text = resp.choices[0].message.content
                 else:
@@ -520,7 +520,7 @@ class LLM:
                             model=self.together_model,
                             prompt=prompt_text,
                             temperature=0,
-                            max_tokens=8192
+                            max_completion_tokens=8192
                         )
                         text = resp.choices[0].text
                     except Exception:
@@ -529,7 +529,7 @@ class LLM:
                             model=self.together_model,
                             messages=[{"role": "user", "content": prompt_text}],
                             temperature=0,
-                            max_tokens=8192
+                            max_completion_tokens=8192
                         )
                         text = resp.choices[0].message.content
                 if isinstance(text, list):
@@ -556,15 +556,15 @@ class LLM:
                         model=self.oa_model,
                         messages=self.history,
                         response_format={"type": "json_object"},
-                        temperature=0,
-                        max_tokens=8192
+                        temperature=1,
+                        max_completion_tokens=8192
                     )
                 except BadRequestError:
                     resp = self.client.chat.completions.create(
                         model=self.oa_model,
                         messages=self.history,
-                        temperature=0,
-                        max_tokens=8192
+                        temperature=1,
+                        max_completion_tokens=8192
                     )
                 text = resp.choices[0].message.content
                 if isinstance(text, list):
@@ -653,13 +653,13 @@ class LLM:
                 model=self.oa_model,
                 messages=self.history,
                 response_format={"type": "json_object"},
-                temperature=0
+                temperature=1
             )
         except BadRequestError:
             resp = await self.async_client.chat.completions.create(
                 model=self.oa_model,
                 messages=self.history,
-                temperature=0
+                temperature=1
             )
         content = resp.choices[0].message.content
         if isinstance(content, list):

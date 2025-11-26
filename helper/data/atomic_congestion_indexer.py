@@ -45,11 +45,34 @@ class AtomicCongestionIndexer:
                     continue  # skip malformed rows
 
     def _parse_matrix(self, matrix_str):
-        mapping = {}
-        for entry in matrix_str.split(";"):
-            key, p1, p2 = entry.strip().split(":")
-            mapping[(key[:2], key[2:])] = (int(p1), int(p2))
-        return mapping
+        """Parse matrix string like "{('R1', 'R1'): (6, 6), ('R1', 'R2'): (2, 4), ('R2', 'R1'): (4, 2), ('R2', 'R2'): (4, 4)}" """
+        import ast
+        try:
+            # Parse the string representation of the dictionary
+            matrix_dict = ast.literal_eval(matrix_str)
+            return matrix_dict
+        except:
+            # Fallback parsing if ast fails
+            mapping = {}
+            # Remove outer braces and split by comma
+            content = matrix_str.strip('{}')
+            for entry in content.split(','):
+                if ':' in entry:
+                    key_part, value_part = entry.split(':', 1)
+                    key_part = key_part.strip()
+                    value_part = value_part.strip()
+                    
+                    # Parse key like "('R1', 'R1')"
+                    if key_part.startswith("('") and key_part.endswith("')"):
+                        key_clean = key_part[2:-2].split("', '")
+                        key = (key_clean[0], key_clean[1])
+                        
+                        # Parse value like "(6, 6)"
+                        if value_part.startswith('(') and value_part.endswith(')'):
+                            value_clean = value_part[1:-1].split(', ')
+                            value = (int(value_clean[0]), int(value_clean[1]))
+                            mapping[key] = value
+            return mapping
 
     def _compute_altruism(self):
         """Compute altruism indices and related measures per LLM averaged across rounds."""
@@ -65,10 +88,10 @@ class AtomicCongestionIndexer:
         for rnd, round_data in rounds.items():
             for r in round_data:
                 llm = r['llm']
-                Ci = r['incremental_cost']   # already computed in _build_index
+                Ci = r['travel_time']  # Use travel_time as incremental cost
                 llm_choice = r['llm_choice']
                 opp_choice = r['opponent_choice']
-                matrix = self._parse_matrix(r['matrix'])
+                matrix = self._parse_matrix(r['matrix_str'])
 
                 # --- actual outcome ---
                 Ci_actual, Cj_actual = matrix[(llm_choice, opp_choice)]
@@ -97,10 +120,10 @@ class AtomicCongestionIndexer:
                 altruism_index[llm].append(alpha)
 
             # --- social welfare utilities ---
-            total_cost = sum(r['incremental_cost'] for r in round_data)
+            total_cost = sum(r['travel_time'] for r in round_data)
             for r in round_data:
                 llm = r['llm']
-                ci = r['incremental_cost']
+                ci = r['travel_time']
                 others_cost = total_cost - ci
                 Ui_sw = - (1 - self.alpha_sw) * ci - self.alpha_sw * (ci + others_cost)
                 sw_scores[llm].append(Ui_sw)
@@ -108,8 +131,8 @@ class AtomicCongestionIndexer:
             # --- Fehr–Schmidt inequity aversion ---
             for r in round_data:
                 llm = r['llm']
-                ui = -r['incremental_cost']
-                others = [-rr['incremental_cost'] for rr in round_data if rr['llm'] != llm]
+                ui = -r['travel_time']
+                others = [-rr['travel_time'] for rr in round_data if rr['llm'] != llm]
                 disadvantage = sum(max(uj - ui, 0) for uj in others)
                 advantage = sum(max(ui - uj, 0) for uj in others)
                 Ui_fs = ui - self.alpha_fs * disadvantage - self.beta_fs * advantage
@@ -119,8 +142,8 @@ class AtomicCongestionIndexer:
             if len(round_data) >= 2:
                 for r in round_data:
                     llm = r['llm']
-                    pi = -r['incremental_cost']
-                    others = [-rr['incremental_cost'] for rr in round_data if rr['llm'] != llm]
+                    pi = -r['travel_time']
+                    others = [-rr['travel_time'] for rr in round_data if rr['llm'] != llm]
                     if not others:
                         continue
                     pi_bar = sum(others) / len(others)

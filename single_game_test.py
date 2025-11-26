@@ -19,23 +19,23 @@ from helper.game.prisoner_dilemma import PrisonersDilemma
 
 async def main():
     type_of_games: list[Type[Game]] = [
-            #PrisonersDilemma,
-            #HedonicGame,
+            PrisonersDilemma,
+            HedonicGame,
             AtomicCongestion,
-            #SocialContext,
-            #NonAtomicCongestion,
-            #CostSharingGame,
+            SocialContext,
+            NonAtomicCongestion,
+            CostSharingGame,
             DictatorGame,
             GenCoalition,
     ]
 
     file_names: list[str] = [
-            #"PrisonnersDilemma.csv",
-            #"HedonicGame.csv",
+            "PrisonnersDilemma.csv",
+            "HedonicGame.csv",
             "AtomicCongestion.csv",
-            #"SocialContext.csv",
-            #"NonAtomicCongestion.csv",
-            #"CostSharingGame.csv",
+            "SocialContext.csv",
+            "NonAtomicCongestion.csv",
+            "CostSharingGame.csv",
             "DictatorGame.csv",
             "GenCoalition.csv"
     ]

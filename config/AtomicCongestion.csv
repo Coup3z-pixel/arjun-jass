@@ -1,11 +1,11 @@
 simulate_rounds,total_rounds,R1R1,R1R2,R2R1,R2R2,prompt
 10,10,6:6,2:4,4:2,4:4,"You and I are drivers from Point A to B. Choose Route 1 or Route 2. Last round, you played: {last_move}, opponent played: {opponent_move}. Total travel time: {travel_time}. 1 = Route 1, 2 = Route 2."
 10,8,7:7,3:5,5:3,5:5,"We are driving in rush hour. Last round, you played: {last_move}, opponent played: {opponent_move}. Total travel time: {travel_time}. 1 = Route 1, 2 = Route 2."
-10,12,6:6,2:4,4:2,4:4,"Drive from A to B. Highway (R1) or Local streets (R2). Last moves: you {last_move}, opponent {opponent_move}. Travel so far: {travel_time}. Pick 1 = R1, 2 = R2."
+10,12,6:6,2:4,4:2,4:4,"Drive from A fromto B. Highway (R1) or Local streets (R2). Last moves: you {last_move}, opponent {opponent_move}. Travel so far: {travel_time}. Pick 1 = R1, 2 = R2."
 10,15,7:7,3:5,5:3,5:5,"It’s raining. Driving from A to B. Last moves: you {last_move}, opponent {opponent_move}. Travel so far: {travel_time}. Pick 1 = R1, 2 = R2."
 10,10,6:6,2:4,4:2,4:4,"Point A to B. Main road (R1) may be blocked. Last moves: you {last_move}, opponent {opponent_move}. Total travel: {travel_time}. Pick 1 = R1, 2 = R2."
 10,9,6:6,2:4,4:2,4:4,"Driving at night from A to B. Last moves: you {last_move}, opponent {opponent_move}. Travel total: {travel_time}. Pick 1 = R1, 2 = R2."
 10,11,6:6,2:4,4:2,4:4,"Festival day! Many drivers A to B. Last moves: you {last_move}, opponent {opponent_move}. Travel total: {travel_time}. Pick 1 = R1, 2 = R2."
 10,13,8:8,3:5,5:3,5:5,"Route 1 may have an accident. Last moves: you {last_move}, opponent {opponent_move}. Total travel: {travel_time}. Pick 1 = R1, 2 = R2."
 10,10,6:6,2:4,4:2,4:4,"Normal commute A to B. Last moves: you {last_move}, opponent {opponent_move}. Travel so far: {travel_time}. Pick 1 = R1, 2 = R2."
-10,14,5:5,2:3,3:2,4:4,"Weekend drive from A to B. Last moves: you {last_move}, opponent {opponent_move}. Total travel: {travel_time}. Pick 1 = R1, 2 = R2."
+10,14,5:5,2:3,3:2,4:4,"Weekend drive  A to B. Last moves: you {last_move}, opponent {opponent_move}. Total travel: {travel_time}. Pick 1 = R1, 2 = R2."
