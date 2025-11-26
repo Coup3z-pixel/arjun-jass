@@ -119,15 +119,12 @@ propcache==0.3.0
 psutil==7.0.0
 ptyprocess==0.7.0
 pure_eval==0.2.3
-pycairo==1.28.0
 pycodestyle==2.12.1
 pycparser==2.22
 pydocstyle==6.3.0
 pyflakes==3.2.0
-pygame==2.6.1
 PyGithub==2.6.1
 Pygments==2.19.1
-PyGObject==3.52.3
 PyJWT==2.10.1
 pylint==3.3.4
 pylint-venv==3.0.4

@@ -7,7 +7,6 @@ from helper.game.atomic_congestion import AtomicCongestion
 from helper.game.cost_sharing_scheduling import CostSharingGame
 from helper.game.dictator_game import DictatorGame, ScenarioType, SinglePromptTester
 from helper.game.game import Game
-from helper.game.gen_coalition import GenCoalitionScenario
 from helper.game.prisoner_dilemma import PrisonersDilemma
 from helper.llm.AltruismInjection import AltruismInjection
 from helper.llm.LLM import LLM
@@ -45,17 +44,23 @@ def main():
         which are dependency injection for the llm interface
     """
     llm_models: list[str] = [
-        "openai/chatgpt-4o-latest",
-        "openai/gpt-3.5-turbo",
+        
+        #"openai/chatgpt-4o-latest",
+        #"openai/gpt-3.5-turbo",
         #To add in, pending
         #"openai/gpt-5-chat", 
         #"openai/gpt-oss-120b", 
-        "google/gemini-2.5-flash",
-        "anthropic/claude-sonnet-4",
-        "deepseek/deepseek-r1-0528-qwen3-8b:free",
-        "meta-llama/llama-4-scout:free",
-        "meta-llama/llama-3.3-8b-instruct:free",
-        "microsoft/phi-3.5-mini-128k-instruct"
+        #"google/gemini-2.5-flash",
+        #"anthropic/claude-sonnet-4",
+        #"deepseek/deepseek-r1-0528-qwen3-8b:free",
+        #"meta-llama/llama-4-scout:free",
+        #"meta-llama/llama-3.3-8b-instruct:free",
+        #"microsoft/phi-3.5-mini-128k-instruct",
+        #"google/gemini-2.5-pro",
+        "openai/gpt-5.1",
+        #"openai/gpt-5",
+        #"google/gemini-3-pro-preview",
+        "meta-llama/llama-3.3-70b-instruct"
     ]
 
     llms: list[LLM] = []

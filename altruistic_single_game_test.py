@@ -21,7 +21,7 @@ from helper.game.prisoner_dilemma import PrisonersDilemma
 if __name__ == "__main__":
     type_of_games: list[Type[Game]] = [
             #PrisonersDilemma,
-            #HedonicGame,
+            HedonicGame,
             GenCoalition,
             # AtomicCongestion,
             # SocialContext,
@@ -32,7 +32,7 @@ if __name__ == "__main__":
 
     file_names: list[str] = [
             #"PrisonnersDilemma.csv",
-            #"HedonicGame.csv",
+            "HedonicGame.csv",
             "GenCoalition.csv",
             # "AtomicCongestion.csv",
             # "SocialContext.csv",
@@ -51,7 +51,9 @@ if __name__ == "__main__":
         #"meta-llama/llama-4-scout:free",
         #"meta-llama/llama-3.3-8b-instruct:free",
         #"microsoft/phi-3.5-mini-128k-instruct",
-        "ft:gpt-3.5-turbo-1106:personal::CH9gv0W1"
+        #"ft:gpt-3.5-turbo-1106:personal::CH9gv0W1",
+        "openai/gpt-5.1",
+        "meta-llama/llama-3.3-70b-instruct"
     ]
 
     llms: list[LLM] = []
